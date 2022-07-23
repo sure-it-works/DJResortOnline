@@ -1,0 +1,202 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DJResortOnline.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <%--<meta name="viewport" content="width=device-width, initial-scale=2.0" />--%>
+    <title>DJ RESORT</title>
+
+    <%--  <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>--%>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="/image/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/MasterPage.css" />
+
+</head>
+<body>
+    <form runat="server">
+        <%-- <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>--%>
+
+
+        <%--<div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" runat="server" href="~/">
+                        <img src="/image/logo.png" height="30" alt="" /></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" style="color: #000000" href="~/">Home</a></li>
+                        <li><a runat="server" style="color: #000000" href="~/About">About</a></li>
+                        <li><a runat="server" style="color: #000000" href="~/About">Deals</a></li>
+                        <li><a runat="server" style="color: #000000" href="~/About">Facilities</a></li>
+                        <li><a runat="server" style="color: #000000" href="~/Contact">Contact Us</a></li>
+                    </ul>
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right; background-color: #00cc00; color: #FFFFFF; margin-top: 20px;">Reserve Now</button>
+                    <button style="float: right; visibility: hidden"></button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" href="~/LoginPage.aspx" style="float: right; background-color: #00cc00; color: #FFFFFF; margin-top: 20px;">Login</button>
+
+                </div>
+            </div>
+        </div>--%>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand"><img src="/image/logo.png" height="30" alt="" /></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a runat="server" class="nav-item nav-link active"  href="~/">Home</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About">About</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About">Deals</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About">Facilities</a>
+                        <a runat="server" class="nav-item nav-link" href="~/Contact">Contact Us</a>
+                        <%--<a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">Profile</a>
+                        <a href="#" class="nav-item nav-link">Messages</a>
+                        <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>--%>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-item nav-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container body-content container-lg">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+
+
+            <%--<footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>--%>
+
+            <!--footer start-->
+            <footer>
+                <div class="footer-wrap">
+
+                    <div class="second_class">
+                        <div class="container second_class_bdr">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+
+                                    <div class="footer-logo">
+                                        <img src="/image/footer-logo.png" alt="logo" height="180">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <h3>DISCOVER US</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="#">Home</a>
+                                        </li>
+                                        <li><a href="#">About us</a>
+                                        </li>
+                                        <li><a href="#">Deals</a>
+                                        </li>
+                                        <li><a href="#">Facilities</a>
+                                        </li>
+                                        <li><a href="#">Owner</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <h3>BE UPDATED</h3>
+                                    <ul class="footer-category">
+                                        <li><a href="#">Feedbacks</a>
+                                        </li>
+                                        <li><a href="#">Announcements</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <h3>GET IN TOUCH</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="#">Inquiry</a>
+                                        </li>
+
+                                        <li><a href="#">Reservation</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container first_class">
+                        <div class="row">
+                            <%--<div class="col-md-4 col-sm-6">--%>
+                            <div class="col-md-12">
+                                <div class="standard_social_links">
+                                    <div style="float: right; height: 60px">
+                                        <li class="round-btn btn-facebook"><a href="https://m.facebook.com/profile.php?id=246746552184127"><i class="fab fa-facebook-f"></i></a>
+
+                                        </li>
+                                        <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-12">
+                                <h3 style="text-align: right;">Stay Connected</h3>
+
+                            </div>
+                            <div class="col-md-12">
+                                <h5 style="text-align: right; color: #FFCC29;">Since 1983, WE LOVE OUR USERS!</h5>
+
+                            </div>
+                        </div>
+                        <%--</div>--%>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="container-fluid">
+                            <div class="copyright">©2022 DJ RESORT - ALL RIGHTS RESERVED.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
+            <!--footer end-->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            <!-- Font Awesome 5 links-->
+            <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+
+        </div>
+
+    </form>
+</body>
+</html>
