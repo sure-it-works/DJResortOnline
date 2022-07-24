@@ -1,6 +1,47 @@
-﻿body {
+﻿/*
+  =========================================================================================
+                                    NavBar
+  =========================================================================================
+  */
+
+.navbar{
+    background-color: white;
+}
+.navbar img{
+    margin-top: 0px;
+}
+
+.a navbar-brand{
+    padding:0px;
+}
+
+
+.navbar container-fluid{
+    
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+    /*padding-top: 20px;*/
+    background-size: cover;
+}
+
+    .container body-content {
+        background-size: cover;
+    }
+
+
+
+body {
     width: 100%;
-    background-attachment: fixed;
     background-size: cover;
 }
 

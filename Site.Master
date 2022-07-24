@@ -5,7 +5,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <%--<meta name="viewport" content="width=device-width, initial-scale=2.0" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-
     <title>DJ RESORT</title>
 
     <%--  <asp:PlaceHolder runat="server">
@@ -38,13 +38,16 @@
         </asp:ScriptManager>--%>
 
 
-        <%--<div class="navbar navbar-fixed-top">
+       <%-- <div class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" runat="server" href="~/">
                         <img src="/image/logo.png" height="30" alt="" /></a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 </div>
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" style="color: #000000" href="~/">Home</a></li>
                         <li><a runat="server" style="color: #000000" href="~/About">About</a></li>
@@ -59,33 +62,34 @@
 
                 </div>
             </div>
-        </div>--%>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand"><img src="/image/logo.png" height="30" alt="" /></a>
+        </div>
+       --%>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+            <div class="container-fluid" style="color: #FFFFFF; padding: 0px; margin: 0px;height:100px;">
+                <a href="#" class="navbar-brand" style="height:100px;"><img src="/image/logo.png" height="80" alt="DJ RESORT" style="padding: 0px; margin: 0px" /></a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a runat="server" class="nav-item nav-link active"  href="~/">Home</a>
-                        <a runat="server" class="nav-item nav-link" href="~/About">About</a>
-                        <a runat="server" class="nav-item nav-link" href="~/About">Deals</a>
-                        <a runat="server" class="nav-item nav-link" href="~/About">Facilities</a>
-                        <a runat="server" class="nav-item nav-link" href="~/Contact">Contact Us</a>
-                        <%--<a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">Profile</a>
-                        <a href="#" class="nav-item nav-link">Messages</a>
-                        <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>--%>
+                <div class="collapse navbar-collapse" id="navbarCollapse" style="height:100px;">
+                    <div class="navbar-nav" style="height:100px;">
+                        <a runat="server" class="nav-item nav-link"  href="~/" style="font-size: x-large; padding-right:15px; color: #000000; vertical-align: middle; text-align: center">Home</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About" style="font-size: x-large; padding-right:15px; color: #000000; vertical-align: middle; text-align: center">About</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About" style="font-size: x-large; padding-right:15px; color: #000000; vertical-align: middle; text-align: center">Deals</a>
+                        <a runat="server" class="nav-item nav-link" href="~/About" style="font-size: x-large; padding-right:15px; color: #000000; vertical-align: middle; text-align: center">Facilities</a>
+                        <a runat="server" class="nav-item nav-link" href="~/Contact" style="font-size: x-large; padding-right:15px; color: #000000; vertical-align: middle; text-align: center">Contact Us</a>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right; background-color: #00cc00; color: #FFFFFF; margin-top: 20px;">Reserve Now</button>
+                    <button style="float: right; visibility: hidden"></button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" href="~/LoginPage.aspx" style="float: right; background-color: #00cc00; color: #FFFFFF; margin-top: 20px;">Login</button>
+
                     </div>
-                    <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link">Login</a>
+                       
                     </div>
                 </div>
-            </div>
+            
         </nav>
 
-        <div class="container body-content container-lg">
+        <div class="container">
+        <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
@@ -196,7 +200,7 @@
             <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
 
         </div>
-
+</div>
     </form>
 </body>
 </html>

@@ -160,7 +160,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="image\footer-logo.png" />
+    <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
+    <Content Include="Login.css" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MasterPage.css" />
     <Content Include="Scripts\bootstrap.js" />
