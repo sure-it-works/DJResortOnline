@@ -87,7 +87,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="Reserved.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
+                                <%--<i class="nav-icon fas fa-columns"></i>--%>
+                                <i class="fas fa-angle-left right"></i>
                                 <p>
                                     Reservation
                                 </p>
@@ -95,7 +96,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="Status.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
+                                <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Status
                                 </p>
@@ -111,7 +112,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="Emails.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
+                                <i class="nav-icon far fa-envelope"></i>
                                 <p>
                                     Send Emails
                                 </p>
@@ -119,7 +120,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="Invoice.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
+                                <i class="nav-icon fas fa-file"></i>
                                 <p>
                                     Invoice
                                 </p>
