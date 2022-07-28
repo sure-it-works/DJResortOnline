@@ -712,28 +712,22 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <%--<p>One fine body&hellip;</p>--%>
 
+                    <div class="modal-body">
+                        <%--1st Row--%>
                         <div class="form-group">
                             <div class="row" style="padding-bottom: 0px;">
-                                <div class="col-8" style="visibility: hidden">
-                                    <input type="text" id="" class="form-control" value="">
+                                <div class="col-8">
+                                    <label for="inputDescription" id="TransactionNo">Transaction No: ABCD0123456-789</label>
+                                    <%--<input type="text" id="TransactionNo" class="form-control" value="Transaction No: ABCD0123456-789" style="text-decoration: underline;">--%>
                                 </div>
                                 <div class="col-4">
-                                    <label for="inputDescription" style="float: right">Reservation Date</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-8" style="visibility: hidden">
-                                    <input type="email" id="" class="form-control" value="">
-                                </div>
-                                <div class="col-4">
-                                    <label for="ReservationDate" style="float: right; font-weight: normal">09/07</label>
+                                    <label for="inputDescription" style="float: right">Reservation Date: mm/dd/yyyy</label>
                                 </div>
                             </div>
                         </div>
 
+                        <%--2nd Row--%>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-12">
@@ -742,6 +736,7 @@
                             </div>
                         </div>
 
+                        <%--3rdRow--%>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-8">
@@ -755,6 +750,7 @@
 
                         </div>
 
+                        <%--4th Row--%>
                         <div class="form-group">
                             <div class="row" style="padding-bottom: 0px;">
                                 <div class="col-6">
@@ -766,7 +762,6 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <%--<input type="datetime" id="CheckIn" class="form-control" value="">--%>
                                     <div class="input-group date" id="CheckIn" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
                                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
@@ -776,7 +771,6 @@
 
                                 </div>
                                 <div class="col-6">
-                                    <%--<input type="datetime" id="CheckOut" class="form-control" value="">--%>
                                     <div class="input-group date" id="CheckOut" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
                                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
@@ -787,6 +781,7 @@
                             </div>
                         </div>
 
+                        <%--5th Row--%>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-4">
@@ -794,45 +789,68 @@
                                         <option disabled>Select one</option>
                                         <option>On Hold</option>
                                         <option>Canceled</option>
-                                        <option selected>Success</option>
+                                        <option selected>Deals</option>
                                     </select>
                                 </div>
 
-                                <div class="col-4">
+                                <div class="col-2">
                                     <label for="inputStatus">No. of Adults</label>
+                                </div>
+                                <div class="col-2">
                                     <input type="number" id="Adults" class="form-control" value="">
                                 </div>
-                                <label for="inputStatus">No. of Kids</label>
-                                <div class="col-4">
+                                <div class="col-2">
+                                    <label for="inputStatus">No. of Kids</label>
+                                </div>
+                                <div class="col-2">
                                     <input type="number" id="Kids" class="form-control" value="">
                                 </div>
                             </div>
                         </div>
 
+                        <%--6th Row--%>
                         <div class="form-group">
-                            <label for="inputStatus">Status</label>
-                            <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="text" id="TotalPrice" class="form-control" value="Total Amount: $000">
+                                </div>
 
-                            <select id="inputStatus" class="form-control custom-select">
-                                <option disabled>Select one</option>
-                                <option>On Hold</option>
-                                <option>Canceled</option>
-                                <option selected>Success</option>
-                            </select>
+                                <div class="col-4">
+                                    <input type="text" id="ReservationFee" class="form-control" value="Reservation Fee: $000">
+                                </div>
+                                <div class="col-4">
+                                    <input type="text" id="Balance" class="form-control" value="Remaining Balance: $000">
+                                </div>
+                            </div>
                         </div>
+
+                        <%--7th Row--%>
                         <div class="form-group">
-                            <label for="inputClientCompany">Client Company</label>
-                            <input type="text" id="inputClientCompany" class="form-control" value="Deveint Inc">
+                            <label>Note</label>
+                            <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
                         </div>
+
+                        <%--8th Row--%>
                         <div class="form-group">
-                            <label for="inputProjectLeader">Project Leader</label>
-                            <input type="text" id="inputProjectLeader" class="form-control" value="Tony Chicken">
+                            <div class="row">
+                                <div class="col-8">
+                                    <label for="inputDescription" style="visibility: hidden"></label>
+                                </div>
+                                <div class="col-4">
+                                    <select id="ReservationStatus" class="form-control custom-select">
+                                        <option disabled>Status</option>
+                                        <option>Unpaid</option>
+                                        <option selected>Paid</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">Close</button>
+                        <%--<button type="button" class="btn btn-primary">Save changes</button>--%>
                     </div>
                 </div>
                 <!-- /.modal-content -->
