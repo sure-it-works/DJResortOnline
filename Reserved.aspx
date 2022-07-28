@@ -31,12 +31,11 @@
     <link rel="stylesheet" href="~/plugins/jsgrid/jsgrid-theme.min.css" />
 
     <!-- DataTables -->
-  <link rel="stylesheet" href="~/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="~/plugins/datatables-responsive/css/responsive.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="~/plugins/datatables-buttons/css/buttons.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="~/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="~/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="~/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
 
-<%--    Templates/AdminLTE-3.1.0-rc/pages/examples/projects.html--%>
-
+    <%--    Templates/AdminLTE-3.1.0-rc/pages/examples/projects.html--%>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -84,7 +83,7 @@
 
                     <li class="nav-item">
                         <a href="Dashboard.aspx" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
                             </p>
@@ -92,7 +91,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="Reserved.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Reservation
                             </p>
@@ -100,7 +99,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="Status.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-shopping-cart"></i>
                             <p>
                                 Status
                             </p>
@@ -108,15 +107,15 @@
                     </li>
                     <li class="nav-item">
                         <a href="PriceList.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-umbrella-beach"></i>
                             <p>
-                                Price List
+                                Deals
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-paper-plane"></i>
                             <p>
                                 Send Emails
                             </p>
@@ -124,7 +123,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="Invoice.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-file-alt"></i>
                             <p>
                                 Invoice
                             </p>
@@ -132,7 +131,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="Announcement.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-columns"></i>
+                            <i class="nav-icon fas fa-thumbtack"></i>
                             <p>
                                 Announcement
                             </p>
@@ -140,6 +139,7 @@
                     </li>
                 </nav>
                 <!-- /.sidebar-menu -->
+
             </div>
             <!-- /.sidebar -->
         </aside>

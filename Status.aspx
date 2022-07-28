@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -55,7 +59,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="~/" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
+                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
                 <span class="brand-text font-weight-light">DJ Resort</span>
             </a>
 
@@ -64,7 +68,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image"/>
+                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Admin User</a>
@@ -73,66 +77,66 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"/>
-                        <!-- Add icons to the links using the .nav-icon class
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                    <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                        <li class="nav-item">
-                            <a href="Dashboard.aspx" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Reserved.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Reservation
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Status.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Status
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="PriceList.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Price List
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Emails.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Send Emails
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Invoice.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Invoice
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Announcement.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Announcement
-                                </p>
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="Dashboard.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Reserved.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Reservation
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Status.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-shopping-cart"></i>
+                            <p>
+                                Status
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PriceList.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-umbrella-beach"></i>
+                            <p>
+                                Deals
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Emails.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-paper-plane"></i>
+                            <p>
+                                Send Emails
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Invoice.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            <p>
+                                Invoice
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Announcement.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-thumbtack"></i>
+                            <p>
+                                Announcement
+                            </p>
+                        </a>
+                    </li>
                 </nav>
                 <!-- /.sidebar-menu -->
 
@@ -158,14 +162,685 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
-                   
+
+                <!-- Default box -->
+                <div class="card">
+
+                    <div class="card-body p-0">
+                        <table class="table table-striped projects">
+                            <thead>
+                                <tr>
+                                    <th style="width: 1%" class="text-center">#
+                                    </th>
+                                    <th style="width: 20%" class="text-center">Name
+                                    </th>
+                                    <th style="width: 15%" class="text-center">Deals
+                                    </th>
+                                    <th style="width: 10%" class="text-center">Check In
+                                    </th>
+                                    <th style="width: 10%" class="text-center">Check Out
+                                    </th>
+                                    <th style="width: 12%" class="text-center">Total Price
+                                    </th>
+                                    <th style="width: 12%" class="text-center">Remaining Balance
+                                    </th>
+                                    <th style="width: 20%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
+                                            </div>
+                                        </div>
+                                        <small>57% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" style="width: 47%">
+                                            </div>
+                                        </div>
+                                        <small>47% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
+                                            </div>
+                                        </div>
+                                        <small>77% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            </div>
+                                        </div>
+                                        <small>60% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%">
+                                            </div>
+                                        </div>
+                                        <small>12% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                                            </div>
+                                        </div>
+                                        <small>35% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%">
+                                            </div>
+                                        </div>
+                                        <small>87% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
+                                            </div>
+                                        </div>
+                                        <small>77% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#
+                                    </td>
+                                    <td>
+                                        <a>AdminLTE v3
+                                        </a>
+                                        <br />
+                                        <small>Created 01.01.2019
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="project_progress">
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
+                                            </div>
+                                        </div>
+                                        <small>77% Complete
+                                        </small>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.card -->
+
             </section>
+            <!-- /.content -->
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+
+        <%--modal--%>
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 750px">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Customer Reservation Details</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <%--<p>One fine body&hellip;</p>--%>
+
+                        <div class="form-group">
+                            <div class="row" style="padding-bottom: 0px;">
+                                <div class="col-8" style="visibility: hidden">
+                                    <input type="text" id="" class="form-control" value="">
+                                </div>
+                                <div class="col-4">
+                                    <label for="inputDescription" style="float: right">Reservation Date</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8" style="visibility: hidden">
+                                    <input type="email" id="" class="form-control" value="">
+                                </div>
+                                <div class="col-4">
+                                    <label for="ReservationDate" style="float: right; font-weight: normal">09/07</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" id="inputName" class="form-control" value="Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-8">
+                                    <input type="email" id="Email" class="form-control" value="email@sample.com">
+                                </div>
+                                <div class="col-4">
+
+                                    <input type="text" id="ContactNo" class="form-control" value="Contact Number">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row" style="padding-bottom: 0px;">
+                                <div class="col-6">
+                                    <label for="inputDescription">Check-In</label>
+                                </div>
+                                <div class="col-6">
+                                    <label for="inputDescription">Check-Out</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <%--<input type="datetime" id="CheckIn" class="form-control" value="">--%>
+                                    <div class="input-group date" id="CheckIn" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6">
+                                    <%--<input type="datetime" id="CheckOut" class="form-control" value="">--%>
+                                    <div class="input-group date" id="CheckOut" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-4">
+                                    <select id="Deals" class="form-control custom-select">
+                                        <option disabled>Select one</option>
+                                        <option>On Hold</option>
+                                        <option>Canceled</option>
+                                        <option selected>Success</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4">
+                                    <label for="inputStatus">No. of Adults</label>
+                                    <input type="number" id="Adults" class="form-control" value="">
+                                </div>
+                                <label for="inputStatus">No. of Kids</label>
+                                <div class="col-4">
+                                    <input type="number" id="Kids" class="form-control" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputStatus">Status</label>
+                            <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+
+                            <select id="inputStatus" class="form-control custom-select">
+                                <option disabled>Select one</option>
+                                <option>On Hold</option>
+                                <option>Canceled</option>
+                                <option selected>Success</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Client Company</label>
+                            <input type="text" id="inputClientCompany" class="form-control" value="Deveint Inc">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputProjectLeader">Project Leader</label>
+                            <input type="text" id="inputProjectLeader" class="form-control" value="Tony Chicken">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
         <footer class="main-footer">
             <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
             All rights reserved.
@@ -216,6 +891,21 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- date-range-picker -->
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+    <script>
+        $(function () {
+            //Date range picker
+            $('#reservationdate').datetimepicker({
+                format: 'L'
+            });
+        })
+    </script>
 
 </body>
 </html>

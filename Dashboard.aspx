@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+
+
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -55,7 +59,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="~/" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
+                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
                 <span class="brand-text font-weight-light">DJ Resort</span>
             </a>
 
@@ -64,7 +68,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image"/>
+                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Admin User</a>
@@ -73,67 +77,66 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"/>
-                        <!-- Add icons to the links using the .nav-icon class
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                    <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                        <li class="nav-item">
-                            <a href="Dashboard.aspx" class="nav-link">
-                               <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Reserved.aspx" class="nav-link">
-                                <%--<i class="nav-icon fas fa-columns"></i>--%>
-                                <i class="fas fa-angle-left right"></i>
-                                <p>
-                                    Reservation
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Status.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    Status
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="PriceList.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Price List
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Emails.aspx" class="nav-link">
-                                <i class="nav-icon far fa-envelope"></i>
-                                <p>
-                                    Send Emails
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Invoice.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>
-                                    Invoice
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Announcement.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Announcement
-                                </p>
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="Dashboard.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Reserved.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Reservation
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Status.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-shopping-cart"></i>
+                            <p>
+                                Status
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PriceList.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-umbrella-beach"></i>
+                            <p>
+                                Deals
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Emails.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-paper-plane"></i>
+                            <p>
+                                Send Emails
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Invoice.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            <p>
+                                Invoice
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Announcement.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-thumbtack"></i>
+                            <p>
+                                Announcement
+                            </p>
+                        </a>
+                    </li>
                 </nav>
                 <!-- /.sidebar-menu -->
 
@@ -228,22 +231,20 @@
                     <div class="row">
                         <!-- Left col -->
                         <section class="col-lg-7 connectedSortable">
-                            <!-- Custom tabs (Charts with tabs)-->
-                            <div class="card">
+                            <!-- LINE CHART -->
+                            <div class="card card-success">
                                 <div class="card-header">
-                                    <h3 class="card-title">
-                                        <i class="fas fa-chart-pie mr-1"></i>
-                                        Activity
-                                    </h3>
+                                    <h3 class="card-title">Activity</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <!-- /.card-header -->
                                 <div class="card-body">
-                                    <div class="tab-content p-0">
-                                        <!-- Morris chart - Sales -->
-                                        <div class="chart tab-pane active" id="areaChart"
-                                            style="position: relative; height: 300px;">
-                                            <canvas id="areaChartCanvas" height="300" style="height: 300px;"></canvas>
-                                        </div>
+                                    <div class="chart">
+                                        <canvas id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
@@ -275,7 +276,7 @@
                                     <!--The calendar -->
                                     <div id="calendar" style="width: 100%"></div>
                                     <form runat="server" style="width: 100%">
-                                        <asp:Calendar ID="Calendar" runat="server" Style="width: 100%" BorderColor="#3FB159" CellSpacing="6" ForeColor="White">
+                                        <asp:Calendar ID="Calendar" runat="server" Style="width: 100%" BorderColor="#3FB159" CellSpacing="6" ForeColor="White" Height="280px">
                                             <DayHeaderStyle Font-Bold="True" />
                                             <OtherMonthDayStyle ForeColor="#666666" />
                                             <SelectedDayStyle BackColor="#18672D" BorderColor="#18672D" />
@@ -348,12 +349,21 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+
     <script>
         $(function () {
+
             /* ChartJS
-             * -------
-             * Here we will create a few charts using ChartJS
-             */
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
 
             //--------------
             //- AREA CHART -
@@ -417,6 +427,22 @@
                 options: areaChartOptions
             })
 
+
+            //-------------
+            //- LINE CHART -
+            //--------------
+            var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+            var lineChartOptions = $.extend(true, {}, areaChartOptions)
+            var lineChartData = $.extend(true, {}, areaChartData)
+            lineChartData.datasets[0].fill = false;
+            lineChartData.datasets[1].fill = false;
+            lineChartOptions.datasetFill = false
+
+            var lineChart = new Chart(lineChartCanvas, {
+                type: 'line',
+                data: lineChartData,
+                options: lineChartOptions
+            })
         })
     </script>
 </body>

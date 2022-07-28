@@ -34,7 +34,6 @@
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 
     <%--Templates/AdminLTE-3.1.0-rc/pages/examples/invoice.html--%>
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -58,7 +57,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="~/" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
+                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
                 <span class="brand-text font-weight-light">DJ Resort</span>
             </a>
 
@@ -67,7 +66,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image"/>
+                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Admin User</a>
@@ -76,66 +75,66 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"/>
-                        <!-- Add icons to the links using the .nav-icon class
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                    <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                        <li class="nav-item">
-                            <a href="Dashboard.aspx" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Reserved.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Reservation
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Status.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Status
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="PriceList.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Price List
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Emails.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Send Emails
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Invoice.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Invoice
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Announcement.aspx" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Announcement
-                                </p>
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="Dashboard.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Reserved.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Reservation
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Status.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-shopping-cart"></i>
+                            <p>
+                                Status
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PriceList.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-umbrella-beach"></i>
+                            <p>
+                                Deals
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Emails.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-paper-plane"></i>
+                            <p>
+                                Send Emails
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Invoice.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            <p>
+                                Invoice
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Announcement.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-thumbtack"></i>
+                            <p>
+                                Announcement
+                            </p>
+                        </a>
+                    </li>
                 </nav>
                 <!-- /.sidebar-menu -->
 
@@ -162,7 +161,6 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                   
                 </div>
                 <!-- /.container-fluid -->
             </section>
