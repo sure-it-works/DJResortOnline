@@ -15,6 +15,24 @@ namespace DJResortOnline
     {
 
         /// <summary>
+        /// ClientsCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ClientsCount;
+
+        /// <summary>
+        /// AvailableRoom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AvailableRoom;
+
+        /// <summary>
         /// Calendar control.
         /// </summary>
         /// <remarks>

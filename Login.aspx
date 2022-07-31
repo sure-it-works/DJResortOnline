@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    
+
 </head>
 <body class="hold-transition login-page">
     <style>
@@ -24,57 +27,60 @@
             background-size: 100%;
         }
     </style>
+    <form runat="server">
+        <div class="login-box">
 
-    <div class="login-box">
+            <!-- /.login-logo -->
+            <div class="card" style="border-radius: 10%">
+                <div class="card-body login-card-body" style="border-radius: 10%">
+                    <div class="login-logo">
+                        <a href="~/"><b>DJ</b>Resort</a>
+                    </div>
+                    <form action="~/" method="post">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" id="Username" runat="server" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" id="Password" runat="server" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div>
+                                    <a></a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <%--<button type="submit" class="btn btn-success btn-block">Log In</button>--%>
+                                <asp:Button ID="btnLogin" runat="server" Text="Log In" class="btn btn-success btn-block" OnClick="btnLogin_Click" />
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
 
-        <!-- /.login-logo -->
-        <div class="card" style="border-radius: 10%">
-            <div class="card-body login-card-body" style="border-radius: 10%">
-                <div class="login-logo">
-                    <a href="~/"><b>DJ</b>Resort</a>
+                    <p class="mb-1">
+                        <a></a>
+                    </p>
+                    <p class="mb-1">
+                        <a href="ResetPassword.aspx">I forgot my password</a>
+                    </p>
+
                 </div>
-                <form action="~/" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div>
-                                <a></a>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-success btn-block">Log In</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
-
-                <p class="mb-1">
-                    <a></a>
-                </p>
-                <p class="mb-1">
-                    <a href="ResetPassword.aspx">I forgot my password</a>
-                </p>
-
+                <!-- /.login-card-body -->
             </div>
-            <!-- /.login-card-body -->
         </div>
-    </div>
-    <!-- /.login-box -->
+        <!-- /.login-box -->
+
+    </form>
 
     <!-- jQuery -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -82,5 +88,6 @@
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>
+    
 </body>
 </html>

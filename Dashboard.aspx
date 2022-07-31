@@ -169,7 +169,7 @@
                             <!-- small box -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>150</h3>
+                                    <h3 id="ClientsCount" runat="server">150</h3>
 
                                     <p>Clients</p>
                                 </div>
@@ -199,7 +199,7 @@
                             <!-- small box -->
                             <div class="small-box bg-warning">
                                 <div class="inner">
-                                    <h3>44</h3>
+                                    <h3 id="AvailableRoom" runat="server">44</h3>
 
                                     <p>Available Rooms</p>
                                 </div>
