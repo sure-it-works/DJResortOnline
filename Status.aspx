@@ -36,8 +36,10 @@
     <!-- daterange picker -->
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
 
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<%--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
     
     
 
@@ -474,7 +476,7 @@
 
                             <asp:GridView ID="gvReservation" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true" 
-                                PageSize="10" GridLines="None">
+                                PageSize="10" GridLines="None" OnRowCommand="gvReservation_OnRowCommand">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID">
                                         <ItemTemplate>
@@ -490,11 +492,18 @@
                                     <asp:BoundField ItemStyle-Width="12%" DataField="ReservationFee" HeaderText="Remaining Balance" />
                                     <asp:TemplateField ItemStyle-Width="20%" ShowHeader="False">
                                         <ItemTemplate>
-                                            <%--<asp:Button runat="server" ID="View" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView"--%>
-                                                
-                                            <%--<button id="View" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView"><i class="fas fa-eye">View</i></button>--%>
+                                            <%--<asp:Button runat="server" ID="View" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView" OnClick="Display" />--%>
+                                           <%--     <asp:Button ID="View" runat="server" Text="View"
+                                            class="btn btn-primary btn-sm"
+                                            CommandArgument="<%# Container.DataItemIndex %>" 
+                                            CommandName="Touch"
+                                            />--%>
+
+                                            <%--<button id="View" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView" ><i class="fas fa-eye">View</i></button>--%>
                                              <asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button" 
-                                                OnClick="Display"><i class="fas fa-eye">View</i></asp:LinkButton>
+                                                 CommandArgument="<%# Container.DataItemIndex %>" 
+                                            CommandName="Touch"
+                                                ><i class="fas fa-eye">View</i></asp:LinkButton>
                                             <button id="Edit" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit"><i class="fas fa-pencil-alt">Edit</i></button>
                                             <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash">Delete</i></button>
                                         </ItemTemplate>
@@ -549,7 +558,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <%--<asp:TextBox runat="server" id="txtName" class="form-control" Enabled="False"></asp:TextBox>--%>
-                                        <input type="text" id="txtName" class="form-control" value="Name" disabled="disabled">
+                                        <input type="text" id="txtName" class="form-control" value="Name" disabled="disabled" runat="server"/>
                                     </div>
                                 </div>
                             </div>
@@ -870,7 +879,7 @@
         <!-- ./wrapper -->
 
         <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
+        <%--<script src="plugins/jquery/jquery.min.js"></script>--%>
         <!-- jQuery UI 1.11.4 -->
         <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -889,8 +898,8 @@
         <!-- jQuery Knob Chart -->
         <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
         <!-- daterangepicker -->
-        <script src="plugins/moment/moment.min.js"></script>
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <%--<script src="plugins/moment/moment.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
         <!-- Tempusdominus Bootstrap 4 -->
         <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
         <!-- Summernote -->
@@ -904,13 +913,12 @@
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="dist/js/pages/dashboard.js"></script>
 
-        <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
+  
 
         <!-- date-range-picker -->
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <%--<script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
 
-        <script>
+      <%--  <script>
             $(function () {
                 //Date range picker
                 $('#reservationdate').datetimepicker({
@@ -929,7 +937,7 @@
                 })
 
             })
-        </script>
+        </script>--%>
 
             <script type='text/javascript'>
                 function openModal() {
