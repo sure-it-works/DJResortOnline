@@ -160,7 +160,7 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Costumer Status</h1>
+                                <h1 class="m-0">Customer Status</h1>
                             </div>
                         </div>
                         <!-- /.row -->
@@ -347,7 +347,7 @@
 
                                             <asp:LinkButton ID="Edit" runat="server" CssClass="btn btn-info btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Edit"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
+                                                CommandName="Touch"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
 
                                             <%--<button id="Edit" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit"><i class="fas fa-pencil-alt">Edit</i></button>--%>
                                             <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash">Delete</i></button>
@@ -434,13 +434,19 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
-                                            <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                            <%--<div class="input-group date" id="reservationdate" data-target-input="nearest">
                                                 <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
                                                 <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
+                                            </div>--%>
+                                            <%--<asp:TextBox ID="txtCheckIn" class="form-control form-control-sm txtDateFrom" runat="server" placeholder="Enter value.."></asp:TextBox>--%>
+                                             <div class="input-group date"  data-target-input="nearest">
+                                                <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" runat="server" />
+                                                <div class="input-group-append" >
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
                                             </div>
-
                                         </div>
                                         <div class="col-6">
                                             <div class="input-group date" id="CheckOut" data-target-input="nearest">
@@ -457,13 +463,13 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <select id="txtDeals" class="form-control custom-select" disabled="disabled">
+                                            <%--<select id="txtDeals" class="form-control custom-select" disabled="disabled">
                                                 <option disabled>Select one</option>
                                                 <option>On Hold</option>
                                                 <option>Canceled</option>
                                                 <option selected>Deals</option>
-                                            </select>
-                                            <%--<asp:DropDownList ID="ddlDeals" runat="server"></asp:DropDownList>--%>
+                                            </select>--%>
+                                            <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" Enabled="false"></asp:DropDownList>
                                         </div>
 
                                         <div class="col-3">
@@ -520,12 +526,12 @@
                                             <label for="inputDescription" style="visibility: hidden"></label>
                                         </div>
                                         <div class="col-4">
-                                            <select id="txtStatus" class="form-control custom-select" disabled="disabled" runat="server">
+                                            <%--<select id="txtStatus" class="form-control custom-select" disabled="disabled" runat="server">
                                                 <option disabled>Status</option>
                                                 <option>Unpaid</option>
                                                 <option selected>Paid</option>
-                                            </select>
-                                            <%--<asp:DropDownList runat="server" id="ddlStatus"></asp:DropDownList>--%>
+                                            </select>--%>
+                                            <asp:DropDownList runat="server" id="ddlStatus" class="form-control custom-select" Enabled="false"></asp:DropDownList>
                                         </div>
                                     </div>
                                 </div>
@@ -625,13 +631,13 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <select id="txtDeals" class="form-control custom-select" >
+                                           <%-- <select id="txtDeals" class="form-control custom-select" >
                                                 <option disabled>Select one</option>
                                                 <option>On Hold</option>
                                                 <option>Canceled</option>
                                                 <option selected>Deals</option>
-                                            </select>
-                                            <%--<asp:DropDownList ID="ddlDeals" runat="server"></asp:DropDownList>--%>
+                                            </select>--%>
+                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
                                         </div>
 
                                         <div class="col-3">
@@ -687,13 +693,13 @@
                                         <div class="col-8">
                                             <label for="inputDescription" style="visibility: hidden"></label>
                                         </div>
-                                        <div class="col-4">
+                                        <%--<div class="col-4">
                                             <select id="Select1" class="form-control custom-select" runat="server">
                                                 <option disabled>Status</option>
                                                 <option>Unpaid</option>
                                                 <option selected>Paid</option>
-                                            </select>
-                                            <%--<asp:DropDownList runat="server" id="ddlStatus"></asp:DropDownList>--%>
+                                            </select>--%>
+                                            <asp:DropDownList runat="server" id="ddlEditStatus" class="form-control custom-select" ></asp:DropDownList>
                                         </div>
                                     </div>
                                 </div>
@@ -703,7 +709,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
                                 <%--<button type="button" class="btn btn-primary">Save changes</button>--%>
-                                <asp:Button ID="btnSave" class="btn btn-primary" runat="server" Text="SavChanges" />
+                                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
                             </div>
                         </div>
                         <!-- /.modal-content -->
@@ -800,6 +806,28 @@
                     $('[id*=modalEdit]').modal('show');
                 }
             </script>
+
+        <script type='text/javascript'>
+            jQuery(document).ready(function () {
+                var myChart;
+                var a;
+                var checkin = $("#txtCheckIn");
+                var checkout = $("#txtCheckOut");
+
+                //Makes txtDateFrom a datepicker
+                checkin.flatpickr({
+                    dateFormat: "m-d-Y",
+                    theme: "dark"
+                });
+                //Makes txtDateTo a datepicker
+                checkout.flatpickr({
+                    dateFormat: "m-d-Y",
+                    theme: "dark"
+                });
+            }
+        </script>
+
+
     </form>
 
 </body>

@@ -45,7 +45,7 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="index.html">Vesperr</a></h1>
+                <h1><a href="index.html">DJ RESORT</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -68,7 +68,7 @@
     </header>
     <!-- End Header -->
 
-    <section id="hero" class="d-flex align-items-center">
+    <section id="hero" class="d-flex align-items-center" style="padding: 20px;">
 
         <div class="container">
             <div class="row">
@@ -83,7 +83,7 @@
 
     <main id="main">
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio" style="padding: 20px;">
             <div class="container">
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
@@ -158,14 +158,7 @@
             <div class="row d-flex align-items-center">
                 <div class="col-lg-6 text-lg-left text-center">
                     <div class="copyright">
-                        &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
-                    </div>
-                    <div class="credits">
-                        <!-- All the links in the footer should remain intact. -->
-                        <!-- You can delete the links only if you purchased the pro version. -->
-                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        &copy; Copyright <strong>DJ Resort</strong>. All Rights Reserved
                     </div>
                 </div>
                 <div class="col-lg-6">

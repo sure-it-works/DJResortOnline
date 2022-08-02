@@ -87,6 +87,15 @@ namespace DJResortOnline
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckOut;
 
         /// <summary>
+        /// ddlDeals control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDeals;
+
+        /// <summary>
         /// txtAdults control.
         /// </summary>
         /// <remarks>
@@ -141,13 +150,13 @@ namespace DJResortOnline
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtNotes;
 
         /// <summary>
-        /// txtStatus control.
+        /// ddlStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect txtStatus;
+        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
 
         /// <summary>
         /// lblTransactionNoEdit control.
@@ -213,6 +222,15 @@ namespace DJResortOnline
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckOutEdit;
 
         /// <summary>
+        /// ddlEditDeals control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEditDeals;
+
+        /// <summary>
         /// txtAdultsEdit control.
         /// </summary>
         /// <remarks>
@@ -267,13 +285,13 @@ namespace DJResortOnline
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtNotesEdit;
 
         /// <summary>
-        /// Select1 control.
+        /// ddlEditStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEditStatus;
 
         /// <summary>
         /// btnSave control.
