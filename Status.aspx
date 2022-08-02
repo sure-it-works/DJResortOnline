@@ -350,7 +350,7 @@
                                                 CommandName="Touch"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
 
                                             <%--<button id="Edit" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit"><i class="fas fa-pencil-alt">Edit</i></button>--%>
-                                            <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash">Delete</i></button>
+                                            <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"> Delete</i></button>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

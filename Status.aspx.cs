@@ -194,8 +194,8 @@ namespace DJResortOnline
                         lblReservation.Text = "Reservation Date: " + dt.Rows[0]["CreatedDate"].ToString();
                         txtName.Value = dt.Rows[0]["Name"].ToString();
                         txtEmail.Value = dt.Rows[0]["Email"].ToString();
-                        //txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
-                        txtContact.Value = dt.Rows[0]["ContactNo"].ToString();
+                        txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
+                        //txtContact.Value = dt.Rows[0]["ContactNo"].ToString();
                         //txtEmail.Value = dt.Rows[0]["Deals"].ToString();
                         txtCheckIn.Value = dt.Rows[0]["CheckIn"].ToString();
                         txtCheckOut.Value = dt.Rows[0]["CheckOut"].ToString();
@@ -291,12 +291,54 @@ namespace DJResortOnline
             //    {
             //        sda.Fill(dt);
 
-                    
+
 
 
 
             //    }
             //}
+
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Update_ReservationDetails", myConnection);
+            //using (SqlConnection conn = new SqlConnection((GetConnectionString()))
+            //using (SqlCommand cmd = new SqlCommand("Update_ReservationDetails", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                //cmd.Parameters.AddWithValue("Name", txtNameEdit.Value);
+                //cmd.Parameters.AddWithValue("Email", txtEmailEdit.Value);
+                //cmd.Parameters.AddWithValue("TransactionNo", lblTransactionNoEdit.Text);
+                //cmd.Parameters.AddWithValue("ContactNo", txtContactEdit.Value);
+                ////cmd.Parameters.AddWithValue("Deals", .Value);
+                //cmd.Parameters.AddWithValue("CheckIn", txtCheckInEdit.Value);
+                //cmd.Parameters.AddWithValue("CheckOut", txtCheckOutEdit.Value);
+                //cmd.Parameters.AddWithValue("TotalPayment", txtTotalEdit.Value);
+                //cmd.Parameters.AddWithValue("ReservationFee", txtReservationEdit.Value);
+                //cmd.Parameters.AddWithValue("Notes", txtNotesEdit.Value);
+
+                // add parameters with defined type!
+
+                cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
+                cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
+                cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
+                cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
+                cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = txtAdultsEdit.Value;
+                cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = txtKidsEdit.Value;
+                cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
+                cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
+                cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = txtTotalEdit.Value;
+                cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = txtReservationEdit.Value;
+                cmd.Parameters.Add("@Status", SqlDbType.Int).Value = ddlEditStatus.SelectedItem.Text;
+
+                // open connection, call stored procedure, close connection
+                myConnection.Open();
+                cmd.ExecuteNonQuery();
+                myConnection.Close();
+
+
+            }
+
             Response.Write("<script language=javascript>alert('Done Saving!');</script>");
         }
     }
