@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DJ Resort | Dashboard</title>
+     <!-- Favicons -->
+    <link href="image/logo.png" rel="icon">
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -48,8 +51,19 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">DJ Resort</a>
+                    <a href="Deals.aspx" class="nav-link">DJ Resort</a>
                 </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <!-- Logout Menu -->
+                <li class="nav-item dropdown">
+                    <a  href="Login.aspx" class="breadcrumb-item">
+                        Log Out 
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+
             </ul>
 
         </nav>
@@ -71,7 +85,7 @@
                         <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin User</a>
+                        <a href="Deals.aspx" class="d-block">Admin User</a>
                     </div>
                 </div>
 
@@ -147,17 +161,16 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0">Dashboard</h1>
                         </div>
                     </div>
-                    <!-- /.row -->
                 </div>
                 <!-- /.container-fluid -->
-            </div>
+            </section>
             <!-- /.content-header -->
 
             <!-- Main content -->

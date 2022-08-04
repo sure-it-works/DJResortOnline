@@ -285,6 +285,10 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="image\admin.png" />
     <Content Include="image\dashboard.png" />
+    <Content Include="image\Deals\BarkadaRoom.jpg" />
+    <Content Include="image\Deals\CoupleRoom.jpg" />
+    <Content Include="image\Deals\FamilyRoom.jpg" />
+    <Content Include="image\Deals\VillaCottage.jpg" />
     <Content Include="image\footer-logo.png" />
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
@@ -463,7 +467,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="image\Deals\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DJ Resort | Status</title>
+
+    <!-- Favicons -->
+    <link href="image/logo.png" rel="icon">
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -57,7 +61,7 @@
                         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                     </li>
                     <li class="nav-item d-none d-sm-inline-block">
-                        <a href="index3.html" class="nav-link">DJ Resort</a>
+                        <a href="Deals.aspx" class="nav-link">DJ Resort</a>
                     </li>
                 </ul>
 
@@ -80,7 +84,7 @@
                             <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                         </div>
                         <div class="info">
-                            <a href="#" class="d-block">Admin User</a>
+                            <a href="Deals.aspx" class="d-block">Admin User</a>
                         </div>
                     </div>
 
@@ -176,7 +180,7 @@
                     <div class="card">
 
                         <div class="card-body p-0">
-                           <%-- <table class="table table-striped projects">
+                            <%-- <table class="table table-striped projects">
                                 <thead>
                                     <tr>
                                         <th style="width: 1%" class="text-center">#
@@ -350,7 +354,7 @@
                                                 CommandName="Touch"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
 
                                             <%--<button id="Edit" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit"><i class="fas fa-pencil-alt">Edit</i></button>--%>
-                                            <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"> Delete</i></button>
+                                            <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash">Delete</i></button>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
@@ -441,9 +445,9 @@
                                                 </div>
                                             </div>--%>
                                             <%--<asp:TextBox ID="txtCheckIn" class="form-control form-control-sm txtDateFrom" runat="server" placeholder="Enter value.."></asp:TextBox>--%>
-                                             <div class="input-group date"  data-target-input="nearest">
+                                            <div class="input-group date" data-target-input="nearest">
                                                 <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" runat="server" />
-                                                <div class="input-group-append" >
+                                                <div class="input-group-append">
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
                                             </div>
@@ -531,7 +535,7 @@
                                                 <option>Unpaid</option>
                                                 <option selected>Paid</option>
                                             </select>--%>
-                                            <asp:DropDownList runat="server" id="ddlStatus" class="form-control custom-select" Enabled="false"></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="ddlStatus" class="form-control custom-select" Enabled="false"></asp:DropDownList>
                                         </div>
                                     </div>
                                 </div>
@@ -549,174 +553,178 @@
                 </div>
                 <!-- /.modal -->
 
-                <%--modal-edit--%>
-                <div class="modal fade" id="modalEdit">
-                    <div class="modal-dialog">
-                        <div class="modal-content" style="width: 830px">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Customer Reservation Details</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="modal-body">
-                                <%--1st Row--%>
-                                <div class="form-group">
-                                    <div class="row" style="padding-bottom: 0px;">
-                                        <div class="col-8">
-                                            <asp:Label ID="lblTransactionNoEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                        </div>
-                                        <div class="col-4">
-                                            <asp:Label ID="lblReservationEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                        </div>
-                                    </div>
+                
+                    <%--modal-edit--%>
+                    <div class="modal fade" id="modalEdit">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="width: 830px">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Customer Reservation Details</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
 
-                                <%--2nd Row--%>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <input type="text" id="txtNameEdit" class="form-control" runat="server" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <%--3rdRow--%>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" />
-                                        </div>
-                                        <div class="col-4">
-
-                                            <input type="text" id="txtContactEdit" class="form-control"  runat="server" />
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <%--4th Row--%>
-                                <div class="form-group">
-                                    <div class="row" style="padding-bottom: 0px;">
-                                        <div class="col-6">
-                                            <label for="inputDescription">Check-In</label>
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="inputDescription">Check-Out</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="input-group date" data-target-input="nearest">
-                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
+                                <div class="modal-body">
+                                    <%--1st Row--%>
+                                    <div class="form-group">
+                                        <div class="row" style="padding-bottom: 0px;">
+                                            <div class="col-8">
+                                                <asp:Label ID="lblTransactionNoEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
                                             </div>
-
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="input-group date" data-target-input="nearest">
-                                                <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
+                                            <div class="col-4">
+                                                <asp:Label ID="lblReservationEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <%--5th Row--%>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-4">
-                                           <%-- <select id="txtDeals" class="form-control custom-select" >
+                                    <%--2nd Row--%>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" id="txtNameEdit" class="form-control" runat="server" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <%--3rdRow--%>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <input type="email" id="txtEmailEdit" class="form-control" runat="server" />
+                                            </div>
+                                            <div class="col-4">
+
+                                                <input type="text" id="txtContactEdit" class="form-control" runat="server" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <%--4th Row--%>
+                                    <div class="form-group">
+                                        <div class="row" style="padding-bottom: 0px;">
+                                            <div class="col-6">
+                                                <label for="inputDescription">Check-In</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="inputDescription">Check-Out</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="input-group date" data-target-input="nearest">
+                                                    <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-group date" data-target-input="nearest">
+                                                    <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <%--5th Row--%>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <%-- <select id="txtDeals" class="form-control custom-select" >
                                                 <option disabled>Select one</option>
                                                 <option>On Hold</option>
                                                 <option>Canceled</option>
                                                 <option selected>Deals</option>
                                             </select>--%>
-                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
-                                        </div>
+                                                <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
+                                            </div>
 
-                                        <div class="col-3">
-                                            <label for="inputStatus">No. of Adults: </label>
-                                        </div>
-                                        <div class="col-1">
-                                            <input type="number" id="txtAdultsEdit" class="form-control"  runat="server" />
-                                        </div>
-                                        <div class="col-3">
-                                            <label for="inputStatus">No. of Kids: </label>
-                                        </div>
-                                        <div class="col-1">
-                                            <input type="number" id="txtKidsEdit" class="form-control"  runat="server" />
+                                            <div class="col-3">
+                                                <label for="inputStatus">No. of Adults: </label>
+                                            </div>
+                                            <div class="col-1">
+                                                <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="inputStatus">No. of Kids: </label>
+                                            </div>
+                                            <div class="col-1">
+                                                <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <%--6th Row--%>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label for="inputStatus">Total Amount:  ₱</label>
-                                        </div>
-                                        <div class="col-2">
-                                            <input type="text" id="txtTotalEdit" class="form-control"  runat="server" />
-                                        </div>
+                                    <%--6th Row--%>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <label for="inputStatus">Total Amount:  ₱</label>
+                                            </div>
+                                            <div class="col-2">
+                                                <input type="text" id="txtTotalEdit" class="form-control" runat="server" />
+                                            </div>
 
-                                        <div class="col-2">
-                                            <label for="inputStatus">Reservation Fee:  ₱</label>
-                                        </div>
-                                        <div class="col-2">
-                                            <input type="text" id="txtReservationEdit" class="form-control"  runat="server" />
-                                        </div>
+                                            <div class="col-2">
+                                                <label for="inputStatus">Reservation Fee:  ₱</label>
+                                            </div>
+                                            <div class="col-2">
+                                                <input type="text" id="txtReservationEdit" class="form-control" runat="server" />
+                                            </div>
 
-                                        <div class="col-2">
-                                            <label for="inputStatus">Remaining Balance:  ₱</label>
-                                        </div>
-                                        <div class="col-2">
-                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control"  />
+                                            <div class="col-2">
+                                                <label for="inputStatus">Remaining Balance:  ₱</label>
+                                            </div>
+                                            <div class="col-2">
+                                                <input runat="server" type="text" id="txtBalanceEdit" class="form-control" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <%--7th Row--%>
-                                <div class="form-group">
-                                    <label>Note</label>
-                                    <textarea id="txtNotesEdit" class="form-control" rows="4"  runat="server"></textarea>
-                                </div>
+                                    <%--7th Row--%>
+                                    <div class="form-group">
+                                        <label>Note</label>
+                                        <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server"></textarea>
+                                    </div>
 
-                                <%--8th Row--%>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <label for="inputDescription" style="visibility: hidden"></label>
-                                        </div>
-                                        <div class="col-4">
-                                            <%--<select id="Select1" class="form-control custom-select" runat="server">
+                                    <%--8th Row--%>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <label for="inputDescription" style="visibility: hidden"></label>
+                                            </div>
+                                            <div class="col-4">
+                                                <%--<select id="Select1" class="form-control custom-select" runat="server">
                                                 <option disabled>Status</option>
                                                 <option>Unpaid</option>
                                                 <option selected>Paid</option>
                                             </select>--%>
-                                            <asp:DropDownList runat="server" id="ddlEditStatus" class="form-control custom-select" ></asp:DropDownList>
+                                                <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control custom-select"></asp:DropDownList>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
+                                    <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
+                                    <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
+                                </div>
                             </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
-                                <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
-                                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
-                            </div>
+                            <!-- /.modal-content -->
                         </div>
-                        <!-- /.modal-content -->
+                        <!-- /.modal-dialog -->
                     </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
+                    <!-- /.modal -->
+                
+
+
 
                 <footer class="main-footer">
                     <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
@@ -807,27 +815,25 @@
                 }
             </script>
 
-        <script type='text/javascript'>
-            jQuery(document).ready(function () {
-                var myChart;
-                var a;
-                var checkin = $("#txtCheckIn");
-                var checkout = $("#txtCheckOut");
+            <script type='text/javascript'>
+                jQuery(document).ready(function () {
+                    var myChart;
+                    var a;
+                    var checkin = $("#txtCheckIn");
+                    var checkout = $("#txtCheckOut");
 
-                //Makes txtDateFrom a datepicker
-                checkin.flatpickr({
-                    dateFormat: "m-d-Y",
-                    theme: "dark"
-                });
-                //Makes txtDateTo a datepicker
-                checkout.flatpickr({
-                    dateFormat: "m-d-Y",
-                    theme: "dark"
-                });
-            }
-        </script>
-
-
+                    //Makes txtDateFrom a datepicker
+                    checkin.flatpickr({
+                        dateFormat: "m-d-Y",
+                        theme: "dark"
+                    });
+                    //Makes txtDateTo a datepicker
+                    checkout.flatpickr({
+                        dateFormat: "m-d-Y",
+                        theme: "dark"
+                    });
+                }
+            </script>
     </form>
 
 </body>

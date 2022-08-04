@@ -18,7 +18,6 @@ namespace DJResortOnline
             if (!this.IsPostBack)
             {
                 this.BindGrid();
-                ModalData();
                 ddlDeals_Bind();
                 ddlStatus_Bind();
             }
@@ -67,10 +66,6 @@ namespace DJResortOnline
                 {
                     sda.Fill(dt);
                     //return dt;
-
-                    //lblTransactionNo.Text = "Transaction No: " + dt.Rows[0]["TransactionNo"].ToString();
-                    //lblReservation.Text = "Reservation Date: " + dt.Rows[0]["CreatedDate"].ToString();
-                    ////txtName.Text = dt.Rows[0]["Name"].ToString();
                     int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
                     txtBalance.Value = Convert.ToString(balance);
 
@@ -135,12 +130,12 @@ namespace DJResortOnline
 
                         ddlDeals.DataSource = ds.Tables[0];
                         ddlDeals.DataTextField = "DealsName";
-                        ddlDeals.DataValueField = "DealsName";
+                        //ddlDeals.DataValueField = "DealsName";
                         ddlDeals.DataBind();
 
                         ddlEditDeals.DataSource = ds.Tables[0];
                         ddlEditDeals.DataTextField = "DealsName";
-                        ddlEditDeals.DataValueField = "DealsName";
+                        //ddlEditDeals.DataValueField = "DealsName";
                         ddlEditDeals.DataBind();
 
                     }
@@ -170,16 +165,15 @@ namespace DJResortOnline
                     using (DataSet ds = new DataSet())
                     {
                         sda.Fill(ds);
-                        //return dt;
 
                         ddlStatus.DataSource = ds.Tables[0];
                         ddlStatus.DataTextField = "Status";
-                        ddlStatus.DataValueField = "Status";
+                        //ddlStatus.DataValueField = "Status";
                         ddlStatus.DataBind();
 
                         ddlEditStatus.DataSource = ds.Tables[0];
                         ddlEditStatus.DataTextField = "Status";
-                        ddlEditStatus.DataValueField = "Status";
+                        //ddlEditStatus.DataValueField = "Status";
                         ddlEditStatus.DataBind();
 
                     }
@@ -234,17 +228,17 @@ namespace DJResortOnline
                         lblReservation.Text = "Reservation Date: " + dt.Rows[0]["CreatedDate"].ToString();
                         txtName.Value = dt.Rows[0]["Name"].ToString();
                         txtEmail.Value = dt.Rows[0]["Email"].ToString();
-                        //txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
-                        txtContact.Value = dt.Rows[0]["ContactNo"].ToString();
-                        //txtEmail.Value = dt.Rows[0]["Deals"].ToString();
+                        txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
+                        //txtContact.Value = dt.Rows[0]["ContactNo"].ToString();
+                        ddlDeals.SelectedItem.Text = dt.Rows[0]["Deals"].ToString();
                         txtCheckIn.Value = dt.Rows[0]["CheckIn"].ToString();
                         txtCheckOut.Value = dt.Rows[0]["CheckOut"].ToString();
-                        //txtAdults.Value = dt.Rows[0]["NoOfAdults"].ToString();
-                        //txtKids.Value = dt.Rows[0]["NoOfChildren"].ToString();
+                        txtAdults.Value = dt.Rows[0]["NoOfAdults"].ToString();
+                        txtKids.Value = dt.Rows[0]["NoOfChildren"].ToString();
                         txtTotal.Value = dt.Rows[0]["TotalPayment"].ToString();
                         txtReservation.Value = dt.Rows[0]["ReservationFee"].ToString();
                         txtNotes.Value = dt.Rows[0]["Notes"].ToString();
-                        //txtEmail.Value = dt.Rows[0]["Status"].ToString();
+                        ddlStatus.SelectedItem.Text = dt.Rows[0]["Status"].ToString();
 
 
                         int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
@@ -280,16 +274,16 @@ namespace DJResortOnline
                         lblReservationEdit.Text = "Reservation Date: " + dt.Rows[0]["CreatedDate"].ToString();
                         txtNameEdit.Value = dt.Rows[0]["Name"].ToString();
                         txtEmailEdit.Value = dt.Rows[0]["Email"].ToString();
-                        //txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
-                        //txtEmail.Value = dt.Rows[0]["Deals"].ToString();
+                        txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
+                        ddlEditDeals.SelectedItem.Text = dt.Rows[0]["Deals"].ToString();
                         txtCheckInEdit.Value = dt.Rows[0]["CheckIn"].ToString();
                         txtCheckOutEdit.Value = dt.Rows[0]["CheckOut"].ToString();
-                        //txtAdultsEdit.Value = dt.Rows[0]["NoOfAdults"].ToString();
-                        //txtKidsEdit.Value = dt.Rows[0]["NoOfChildren"].ToString();
+                        txtAdultsEdit.Value = dt.Rows[0]["NoOfAdults"].ToString();
+                        txtKidsEdit.Value = dt.Rows[0]["NoOfChildren"].ToString();
                         txtTotalEdit.Value = dt.Rows[0]["TotalPayment"].ToString();
                         txtReservationEdit.Value = dt.Rows[0]["ReservationFee"].ToString();
                         txtNotesEdit.Value = dt.Rows[0]["Notes"].ToString();
-                        //txtEmail.Value = dt.Rows[0]["Status"].ToString();
+                        ddlEditStatus.SelectedItem.Text = dt.Rows[0]["Status"].ToString();
 
 
                         int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
@@ -308,35 +302,22 @@ namespace DJResortOnline
 
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
             SqlCommand cmd = new SqlCommand("Update_ReservationDetails", myConnection);
-            //using (SqlConnection conn = new SqlConnection((GetConnectionString()))
-            //using (SqlCommand cmd = new SqlCommand("Update_ReservationDetails", conn))
             {
+                myConnection.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                //cmd.Parameters.AddWithValue("Name", txtNameEdit.Value);
-                //cmd.Parameters.AddWithValue("Email", txtEmailEdit.Value);
-                //cmd.Parameters.AddWithValue("TransactionNo", lblTransactionNoEdit.Text);
-                //cmd.Parameters.AddWithValue("ContactNo", txtContactEdit.Value);
-                ////cmd.Parameters.AddWithValue("Deals", .Value);
-                //cmd.Parameters.AddWithValue("CheckIn", txtCheckInEdit.Value);
-                //cmd.Parameters.AddWithValue("CheckOut", txtCheckOutEdit.Value);
-                //cmd.Parameters.AddWithValue("TotalPayment", txtTotalEdit.Value);
-                //cmd.Parameters.AddWithValue("ReservationFee", txtReservationEdit.Value);
-                //cmd.Parameters.AddWithValue("Notes", txtNotesEdit.Value);
-
-                // add parameters with defined type!
 
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
                 cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
                 cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
                 cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
-                //cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
-                //cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdultsEdit.Value);
-                //cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKidsEdit.Value);
+                cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
+                cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdultsEdit.Value);
+                cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKidsEdit.Value);
                 cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
                 cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
                 cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = Convert.ToInt32(txtTotalEdit.Value);
                 cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = Convert.ToInt32(txtReservationEdit.Value);
+                cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotesEdit.Value;
 
                 int StatusValue = 0;
                 if (ddlEditStatus.SelectedItem.Text=="Unpaid")
@@ -351,7 +332,7 @@ namespace DJResortOnline
                 cmd.Parameters.Add("@Status", SqlDbType.Int).Value = StatusValue;
 
                 // open connection, call stored procedure, close connection
-                myConnection.Open();
+                
                 cmd.ExecuteNonQuery();
                 myConnection.Close();
 
@@ -361,51 +342,6 @@ namespace DJResortOnline
             Response.Write("<script language=javascript>alert('Done Saving!');</script>");
         }
 
-        protected void UpdateResDetails(object sender, EventArgs e)
-        {
-            SqlConnection myConnection = new SqlConnection(GetConnectionString());
-            SqlCommand cmd = new SqlCommand("Update_ReservationDetails", myConnection);
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
-                cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
-                cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
-                cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
-                //cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
-                //cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = txtAdultsEdit.Value;
-                //cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = txtKidsEdit.Value;
-                cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
-                cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
-                cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = txtTotalEdit.Value;
-                cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = txtReservationEdit.Value;
-                cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotesEdit.Value;
-
-                int StatusValue = 0;
-                if (ddlEditStatus.SelectedItem.Text == "Unpaid")
-                if (ddlEditStatus.SelectedItem.Text == "Unpaid")
-                {
-                    StatusValue = 0;
-
-                }
-                else if (ddlEditStatus.SelectedItem.Text == "Paid")
-                {
-                    StatusValue = 1;
-                }
-
-                cmd.Parameters.Add("@Status", SqlDbType.Int).Value = StatusValue;
-
-
-                // open connection, call stored procedure, close connection
-                myConnection.Open();
-                cmd.ExecuteNonQuery();
-                myConnection.Close();
-
-
-            }
-
-            Response.Write("<script language=javascript>alert('Done Saving!');</script>");
-        }
     }
 
 }

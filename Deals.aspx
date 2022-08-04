@@ -12,8 +12,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="image/logo.png" rel="icon">
+    <link href="image/logo.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -45,7 +45,7 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="index.html">DJ RESORT</a></h1>
+                <h1><a href="Deals.aspx">DJ RESORT</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -90,13 +90,13 @@
 
                     <div class="col-lg-3 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                            <img src="image/Deals/VillaCottage.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
+                                <h4>Villa Cottage</h4>
+                                <p>Villa Cottage Description</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="image/Deals/VillaCottage.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Villa Cottage Description"><i class="bx bx-plus"></i></a>
+                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -104,13 +104,13 @@
 
                     <div class="col-lg-3 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <img src="image/Deals/FamilyRoom.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
+                                <h4>Family Room</h4>
+                                <p>Family Room Description</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="image/Deals/FamilyRoom.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Family Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -118,13 +118,13 @@
 
                     <div class="col-lg-3 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                            <img src="image/Deals/BarkadaRoom.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
+                                <h4>Barkada Room</h4>
+                                <p>Barkada Room Description</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="image/Deals/BarkadaRoom.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Barkada Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -132,13 +132,13 @@
 
                     <div class="col-lg-3 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <img src="image/Deals/CoupleRoom.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
+                                <h4>Couple Room</h4>
+                                <p>Couple Room Description</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="image/Deals/CoupleRoom.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Couple Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
