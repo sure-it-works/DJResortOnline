@@ -693,8 +693,8 @@
                                         <div class="col-8">
                                             <label for="inputDescription" style="visibility: hidden"></label>
                                         </div>
-                                        <%--<div class="col-4">
-                                            <select id="Select1" class="form-control custom-select" runat="server">
+                                        <div class="col-4">
+                                            <%--<select id="Select1" class="form-control custom-select" runat="server">
                                                 <option disabled>Status</option>
                                                 <option>Unpaid</option>
                                                 <option selected>Paid</option>
@@ -708,7 +708,7 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
-                                <%--<button type="button" class="btn btn-primary">Save changes</button>--%>
+                                <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
                                 <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
                             </div>
                         </div>
