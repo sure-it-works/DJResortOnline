@@ -49,6 +49,16 @@
                     <a href="index3.html" class="nav-link">DJ Resort</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ml-auto">
+                <!-- Logout Menu -->
+                <li class="nav-item dropdown">
+                    <a  href="Login.aspx" class="breadcrumb-item">
+                        Log Out 
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+
+            </ul>
 
         </nav>
         <!-- /.navbar -->

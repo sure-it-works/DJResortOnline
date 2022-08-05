@@ -65,6 +65,17 @@
                     </li>
                 </ul>
 
+                <ul class="navbar-nav ml-auto">
+                <!-- Logout Menu -->
+                <li class="nav-item dropdown">
+                    <a  href="Login.aspx" class="breadcrumb-item">
+                        Log Out 
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+
+            </ul>
+
             </nav>
             <!-- /.navbar -->
 
@@ -180,144 +191,6 @@
                     <div class="card">
 
                         <div class="card-body p-0">
-                            <%-- <table class="table table-striped projects">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 1%" class="text-center">#
-                                        </th>
-                                        <th style="width: 20%" class="text-center">Name
-                                        </th>
-                                        <th style="width: 15%" class="text-center">Deals
-                                        </th>
-                                        <th style="width: 10%" class="text-center">Check In
-                                        </th>
-                                        <th style="width: 10%" class="text-center">Check Out
-                                        </th>
-                                        <th style="width: 12%" class="text-center">Total Price
-                                        </th>
-                                        <th style="width: 12%" class="text-center">Remaining Balance
-                                        </th>
-                                        <th style="width: 20%"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#
-                                        </td>
-                                        <td>
-                                            <a>AdminLTE v3
-                                            </a>
-                                            <br />
-                                            <small>Created 01.01.2019
-                                            </small>
-                                        </td>
-                                        <td>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
-                                                </li>
-                                            </ul>
-                                        </td>
-                                        <td class="project_progress">
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                                                </div>
-                                            </div>
-                                            <small>57% Complete
-                                            </small>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView">
-                                                <i class="fas fa-eye"></i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit">
-                                                <i class="fas fa-pencil-alt"></i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash"></i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#
-                                        </td>
-                                        <td>
-                                            <a>AdminLTE v3
-                                            </a>
-                                            <br />
-                                            <small>Created 01.01.2019
-                                            </small>
-                                        </td>
-                                        <td>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                                                </li>
-                                            </ul>
-                                        </td>
-                                        <td class="project_progress">
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" style="width: 47%">
-                                                </div>
-                                            </div>
-                                            <small>47% Complete
-                                            </small>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-state">
-                                            <span class="badge badge-success">Success</span>
-                                        </td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-eye"></i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt"></i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash"></i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>--%>
-
-
-
-                            <%--  <asp:UpdatePanel runat="server">
-                                <ContentTemplate>--%>
 
                             <asp:GridView ID="gvReservation" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
@@ -337,14 +210,6 @@
                                     <asp:BoundField ItemStyle-Width="12%" DataField="ReservationFee" HeaderText="Remaining Balance" />
                                     <asp:TemplateField ItemStyle-Width="20%" ShowHeader="False">
                                         <ItemTemplate>
-                                            <%--<asp:Button runat="server" ID="View" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView" OnClick="Display" />--%>
-                                            <%--     <asp:Button ID="View" runat="server" Text="View"
-                                            class="btn btn-primary btn-sm"
-                                            CommandArgument="<%# Container.DataItemIndex %>" 
-                                            CommandName="Touch"
-                                            />--%>
-
-                                            <%--<button id="View" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalView" ><i class="fas fa-eye">View</i></button>--%>
                                             <asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
                                                 CommandName="View"><i class="fas fa-eye"> View</i></asp:LinkButton>
@@ -352,19 +217,17 @@
                                             <asp:LinkButton ID="Edit" runat="server" CssClass="btn btn-info btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
                                                 CommandName="Touch"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
+                                            <%--<button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"> Delete</i></button>--%>
 
-                                            <%--<button id="Edit" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-edit"><i class="fas fa-pencil-alt">Edit</i></button>--%>
-                                            <button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash">Delete</i></button>
+                                            <asp:LinkButton ID="Delete" runat="server" CssClass="btn btn-danger btn-sm" type="button"
+                                                CommandArgument="<%# Container.DataItemIndex %>"
+                                                CommandName="Remove"><i class="fas fas fa-trash"> Delete</i></asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                    <%--<asp:CommandField ShowDeleteButton="true"  />--%>
                                 </Columns>
                             </asp:GridView>
 
-                            <%--   </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="gvReservation" EventName="RowCommand" />
-                                </Triggers> 
-                            </asp:UpdatePanel>--%>
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -467,12 +330,6 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <%--<select id="txtDeals" class="form-control custom-select" disabled="disabled">
-                                                <option disabled>Select one</option>
-                                                <option>On Hold</option>
-                                                <option>Canceled</option>
-                                                <option selected>Deals</option>
-                                            </select>--%>
                                             <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" Enabled="false"></asp:DropDownList>
                                         </div>
 
@@ -530,11 +387,6 @@
                                             <label for="inputDescription" style="visibility: hidden"></label>
                                         </div>
                                         <div class="col-4">
-                                            <%--<select id="txtStatus" class="form-control custom-select" disabled="disabled" runat="server">
-                                                <option disabled>Status</option>
-                                                <option>Unpaid</option>
-                                                <option selected>Paid</option>
-                                            </select>--%>
                                             <asp:DropDownList runat="server" ID="ddlStatus" class="form-control custom-select" Enabled="false"></asp:DropDownList>
                                         </div>
                                     </div>
@@ -553,176 +405,171 @@
                 </div>
                 <!-- /.modal -->
 
-                
-                    <%--modal-edit--%>
-                    <div class="modal fade" id="modalEdit">
-                        <div class="modal-dialog">
-                            <div class="modal-content" style="width: 830px">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Customer Reservation Details</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+
+                <%--modal-edit--%>
+                <div class="modal fade" id="modalEdit">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="width: 830px">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Customer Reservation Details</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <%--1st Row--%>
+                                <div class="form-group">
+                                    <div class="row" style="padding-bottom: 0px;">
+                                        <div class="col-8">
+                                            <asp:Label ID="lblTransactionNoEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                        </div>
+                                        <div class="col-4">
+                                            <asp:Label ID="lblReservationEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="modal-body">
-                                    <%--1st Row--%>
-                                    <div class="form-group">
-                                        <div class="row" style="padding-bottom: 0px;">
-                                            <div class="col-8">
-                                                <asp:Label ID="lblTransactionNoEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                            </div>
-                                            <div class="col-4">
-                                                <asp:Label ID="lblReservationEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                            </div>
+                                <%--2nd Row--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="text" id="txtNameEdit" class="form-control" runat="server" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--3rdRow--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" />
+                                        </div>
+                                        <div class="col-4">
+
+                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" />
                                         </div>
                                     </div>
 
-                                    <%--2nd Row--%>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <input type="text" id="txtNameEdit" class="form-control" runat="server" />
-                                            </div>
+                                </div>
+
+                                <%--4th Row--%>
+                                <div class="form-group">
+                                    <div class="row" style="padding-bottom: 0px;">
+                                        <div class="col-6">
+                                            <label for="inputDescription">Check-In</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="inputDescription">Check-Out</label>
                                         </div>
                                     </div>
-
-                                    <%--3rdRow--%>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <input type="email" id="txtEmailEdit" class="form-control" runat="server" />
-                                            </div>
-                                            <div class="col-4">
-
-                                                <input type="text" id="txtContactEdit" class="form-control" runat="server" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <%--4th Row--%>
-                                    <div class="form-group">
-                                        <div class="row" style="padding-bottom: 0px;">
-                                            <div class="col-6">
-                                                <label for="inputDescription">Check-In</label>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="inputDescription">Check-Out</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="input-group date" data-target-input="nearest">
-                                                    <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="input-group date" data-target-input="nearest">
+                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
-
                                             </div>
-                                            <div class="col-6">
-                                                <div class="input-group date" data-target-input="nearest">
-                                                    <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                    </div>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="input-group date" data-target-input="nearest">
+                                                <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <%--5th Row--%>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <%-- <select id="txtDeals" class="form-control custom-select" >
+                                <%--5th Row--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <%-- <select id="txtDeals" class="form-control custom-select" >
                                                 <option disabled>Select one</option>
                                                 <option>On Hold</option>
                                                 <option>Canceled</option>
                                                 <option selected>Deals</option>
                                             </select>--%>
-                                                <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
-                                            </div>
+                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
+                                        </div>
 
-                                            <div class="col-3">
-                                                <label for="inputStatus">No. of Adults: </label>
-                                            </div>
-                                            <div class="col-1">
-                                                <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
-                                            </div>
-                                            <div class="col-3">
-                                                <label for="inputStatus">No. of Kids: </label>
-                                            </div>
-                                            <div class="col-1">
-                                                <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
-                                            </div>
+                                        <div class="col-3">
+                                            <label for="inputStatus">No. of Adults: </label>
+                                        </div>
+                                        <div class="col-1">
+                                            <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="inputStatus">No. of Kids: </label>
+                                        </div>
+                                        <div class="col-1">
+                                            <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
                                         </div>
                                     </div>
-
-                                    <%--6th Row--%>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <label for="inputStatus">Total Amount:  ₱</label>
-                                            </div>
-                                            <div class="col-2">
-                                                <input type="text" id="txtTotalEdit" class="form-control" runat="server" />
-                                            </div>
-
-                                            <div class="col-2">
-                                                <label for="inputStatus">Reservation Fee:  ₱</label>
-                                            </div>
-                                            <div class="col-2">
-                                                <input type="text" id="txtReservationEdit" class="form-control" runat="server" />
-                                            </div>
-
-                                            <div class="col-2">
-                                                <label for="inputStatus">Remaining Balance:  ₱</label>
-                                            </div>
-                                            <div class="col-2">
-                                                <input runat="server" type="text" id="txtBalanceEdit" class="form-control" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <%--7th Row--%>
-                                    <div class="form-group">
-                                        <label>Note</label>
-                                        <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server"></textarea>
-                                    </div>
-
-                                    <%--8th Row--%>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <label for="inputDescription" style="visibility: hidden"></label>
-                                            </div>
-                                            <div class="col-4">
-                                                <%--<select id="Select1" class="form-control custom-select" runat="server">
-                                                <option disabled>Status</option>
-                                                <option>Unpaid</option>
-                                                <option selected>Paid</option>
-                                            </select>--%>
-                                                <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control custom-select"></asp:DropDownList>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
 
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
-                                    <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
-                                    <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
+                                <%--6th Row--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label for="inputStatus">Total Amount:  ₱</label>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="text" id="txtTotalEdit" class="form-control" runat="server" />
+                                        </div>
+
+                                        <div class="col-2">
+                                            <label for="inputStatus">Reservation Fee:  ₱</label>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="text" id="txtReservationEdit" class="form-control" runat="server" />
+                                        </div>
+
+                                        <div class="col-2">
+                                            <label for="inputStatus">Remaining Balance:  ₱</label>
+                                        </div>
+                                        <div class="col-2">
+                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control" />
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <%--7th Row--%>
+                                <div class="form-group">
+                                    <label>Note</label>
+                                    <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server"></textarea>
+                                </div>
+
+                                <%--8th Row--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <label for="inputDescription" style="visibility: hidden"></label>
+                                        </div>
+                                        <div class="col-4">
+                                            <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control custom-select"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <!-- /.modal-content -->
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
+                                <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
+                                <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
+                            </div>
                         </div>
-                        <!-- /.modal-dialog -->
+                        <!-- /.modal-content -->
                     </div>
-                    <!-- /.modal -->
-                
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
 
 
 
@@ -734,11 +581,11 @@
     </div>
                 </footer>
 
-                <!-- Control Sidebar -->
+              <%--  <!-- Control Sidebar -->
                 <aside class="control-sidebar control-sidebar-dark">
                     <!-- Control sidebar content goes here -->
                 </aside>
-                <!-- /.control-sidebar -->
+                <!-- /.control-sidebar -->--%>
             </div>
             <!-- ./wrapper -->
 
