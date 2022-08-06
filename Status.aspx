@@ -488,13 +488,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <%-- <select id="txtDeals" class="form-control custom-select" >
-                                                <option disabled>Select one</option>
-                                                <option>On Hold</option>
-                                                <option>Canceled</option>
-                                                <option selected>Deals</option>
-                                            </select>--%>
-                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control"></asp:DropDownList>
                                         </div>
 
                                         <div class="col-3">
@@ -551,7 +545,10 @@
                                             <label for="inputDescription" style="visibility: hidden"></label>
                                         </div>
                                         <div class="col-4">
-                                            <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control custom-select"></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control">
+                                                <asp:ListItem Value="1">Paid</asp:ListItem>
+                                                <asp:ListItem Value="2">Unpaid</asp:ListItem>
+                                            </asp:DropDownList>
                                         </div>
                                     </div>
                                 </div>
@@ -571,6 +568,7 @@
                 <!-- /.modal -->
 
 
+                </div>
 
 
                 <footer class="main-footer">

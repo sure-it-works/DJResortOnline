@@ -69,170 +69,148 @@
         <!-- End Header -->
 
         <main id="main">
-            <!-- ======= Portfolio Section ======= -->
-            <section id="portfolio" class="portfolio" style="padding: 20px;">
+
+            <!-- ======= Pricing Section ======= -->
+            <section id="pricing" class="pricing" style="margin: 30px 30px 0px 30px" >
                 <div class="container">
 
-                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Customer Reservation Details</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
+                    <div class="row">
 
-                        <div class="modal-body">
-                            <%--1st Row--%>
-                            <div class="form-group">
-                                <div class="row" style="padding-bottom: 0px;">
-                                    <div class="col-8">
-                                        <asp:Label ID="lblTransactionNoEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                    </div>
-                                    <div class="col-4">
-                                        <asp:Label ID="lblReservationEdit" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-lg-12 col-md-6 mt-4 mt-md-0">
+                            <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
+                                <h4>Reservation Form</h4>
+                                <div>
+                                    <div>
+                                        <%--1st Row--%>
 
-                            <%--2nd Row--%>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <input type="text" id="txtNameEdit" class="form-control" runat="server" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <%--3rdRow--%>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <input type="email" id="txtEmailEdit" class="form-control" runat="server" />
-                                    </div>
-                                    <div class="col-4">
-
-                                        <input type="text" id="txtContactEdit" class="form-control" runat="server" />
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <%--4th Row--%>
-                            <div class="form-group">
-                                <div class="row" style="padding-bottom: 0px;">
-                                    <div class="col-6">
-                                        <label for="inputDescription">Check-In</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="inputDescription">Check-Out</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="input-group date" data-target-input="nearest">
-                                            <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        <%--2nd Row--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <input type="text" id="txtName" class="form-control" placeholder="Name" runat="server" />
+                                                </div>
                                             </div>
                                         </div>
 
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="input-group date" data-target-input="nearest">
-                                            <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        <%--3rdRow--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <input type="email" id="txtEmail" class="form-control" placeholder="Email" runat="server" />
+                                                </div>
+                                                <div class="col-4">
+
+                                                    <input type="text" id="txtContact" class="form-control" placeholder="Contact Number" runat="server" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <%--4th Row--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <label for="inputStatus" style="text-align:left"><strong>Check-In</strong></label>
+                                                </div>
+                                                <div class="col-4">
+                                                    <%--<div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                                <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>--%>
+                                                    <%--<asp:TextBox ID="txtCheckIn" class="form-control form-control-sm txtDateFrom" runat="server" placeholder="Enter value.."></asp:TextBox>--%>
+                                                    <div class="input-group date" data-target-input="nearest">
+                                                        <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" runat="server" />
+                                                        <div class="input-group-append">
+                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <label for="inputStatus" style="text-align:left"><strong>Check-Out</strong></label>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="input-group date" id="CheckOut" data-target-input="nearest">
+                                                        <input id="txtCheckOut" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
+                                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <%--5th Row--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" OnSelectedIndexChanged="ddlDeals_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <label for="inputStatus" style="text-align:left"><strong>No. of Adults: </strong></label>
+                                                </div>
+                                                <div class="col-1">
+                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" />
+                                                </div>
+                                                <div class="col-3">
+                                                    <label for="inputStatus"  style="text-align:left"><strong>No. of Kids: </strong></label>
+                                                </div>
+                                                <div class="col-1">
+                                                    <input type="number" id="txtKids" class="form-control" value="" runat="server" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <%--6th Row--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <label for="inputStatus"  style="text-align:left"><strong>Total Amount:  ₱</strong></label>
+                                                </div>
+                                                <div class="col-2">
+                                                    <input type="text" id="txtTotal" class="form-control" value="" disabled="disabled" runat="server" />
+                                                </div>
+
+                                                <div class="col-2">
+                                                    <label for="inputStatus"  style="text-align:left"><strong>Reservation Fee:  ₱</strong></label>
+                                                </div>
+                                                <div class="col-2">
+                                                    <input type="text" id="txtReservation" class="form-control" value="" disabled="disabled" runat="server" />
+                                                </div>
+
+                                                <div class="col-2">
+                                                    <label for="inputStatus"  style="text-align:left"><strong>Remaining Balance:  ₱</strong></label>
+                                                </div>
+                                                <div class="col-2">
+                                                    <input runat="server" type="text" id="txtBalance" class="form-control" value="" disabled="disabled" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <%--7th Row--%>
+                                        <div class="form-group" style="padding: 5px">
+                                            <textarea id="txtNotes" class="form-control" rows="4" placeholder="Notes" runat="server"></textarea>
+                                        </div>
                                     </div>
+                                    <div style="padding: 10px">
+                                        <asp:Button ID="btnPayment" CssClass="btn btn-primary" runat="server" Text="Proceed to Payment" style="float: right"/>
+                                    </div>
+
                                 </div>
                             </div>
-
-                            <%--5th Row--%>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <%-- <select id="txtDeals" class="form-control custom-select" >
-                                                <option disabled>Select one</option>
-                                                <option>On Hold</option>
-                                                <option>Canceled</option>
-                                                <option selected>Deals</option>
-                                            </select>--%>
-                                        <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control custom-select"></asp:DropDownList>
-                                    </div>
-
-                                    <div class="col-3">
-                                        <label for="inputStatus">No. of Adults: </label>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
-                                    </div>
-                                    <div class="col-3">
-                                        <label for="inputStatus">No. of Kids: </label>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <%--6th Row--%>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <label for="inputStatus">Total Amount:  ₱</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <input type="text" id="txtTotalEdit" class="form-control" runat="server" />
-                                    </div>
-
-                                    <div class="col-2">
-                                        <label for="inputStatus">Reservation Fee:  ₱</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <input type="text" id="txtReservationEdit" class="form-control" runat="server" />
-                                    </div>
-
-                                    <div class="col-2">
-                                        <label for="inputStatus">Remaining Balance:  ₱</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <input runat="server" type="text" id="txtBalanceEdit" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <%--7th Row--%>
-                            <div class="form-group">
-                                <label>Note</label>
-                                <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server"></textarea>
-                            </div>
-
-                            <%--8th Row--%>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <label for="inputDescription" style="visibility: hidden"></label>
-                                    </div>
-                                    <div class="col-4">
-                                        <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control custom-select"></asp:DropDownList>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
-                            <%--<button type="button" class="btn btn-primary" onclick="UpdateResDetails">Save changes</button>--%>
-                            <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save Changes" />
-                        </div>
-
                     </div>
 
                 </div>
+
+                </div>
             </section>
-            <!-- End Portfolio Section -->
+            <!-- End Pricing Section -->
+
+
+
         </main>
         <!-- End #main -->
 

@@ -15,147 +15,120 @@ namespace DJResortOnline
     {
 
         /// <summary>
-        /// lblTransactionNoEdit control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTransactionNoEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
 
         /// <summary>
-        /// lblReservationEdit control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblReservationEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
 
         /// <summary>
-        /// txtNameEdit control.
+        /// txtContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNameEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtContact;
 
         /// <summary>
-        /// txtEmailEdit control.
+        /// txtCheckIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmailEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckIn;
 
         /// <summary>
-        /// txtContactEdit control.
+        /// txtCheckOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtContactEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckOut;
 
         /// <summary>
-        /// txtCheckInEdit control.
+        /// ddlDeals control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckInEdit;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDeals;
 
         /// <summary>
-        /// txtCheckOutEdit control.
+        /// txtAdults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCheckOutEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtAdults;
 
         /// <summary>
-        /// ddlEditDeals control.
+        /// txtKids control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEditDeals;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtKids;
 
         /// <summary>
-        /// txtAdultsEdit control.
+        /// txtTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtAdultsEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTotal;
 
         /// <summary>
-        /// txtKidsEdit control.
+        /// txtReservation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtKidsEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtReservation;
 
         /// <summary>
-        /// txtTotalEdit control.
+        /// txtBalance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTotalEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtBalance;
 
         /// <summary>
-        /// txtReservationEdit control.
+        /// txtNotes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtReservationEdit;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtNotes;
 
         /// <summary>
-        /// txtBalanceEdit control.
+        /// btnPayment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtBalanceEdit;
-
-        /// <summary>
-        /// txtNotesEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtNotesEdit;
-
-        /// <summary>
-        /// ddlEditStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEditStatus;
-
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.Button btnPayment;
     }
 }
