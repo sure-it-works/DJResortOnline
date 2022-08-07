@@ -112,7 +112,13 @@ namespace DJResortOnline
                         txtBalance.Value = balance.ToString();
                         txtAdults.Value = ds.Tables[0].Rows[0]["NoOfAdults"].ToString();
                         txtKids.Value = ds.Tables[0].Rows[0]["NoOfKids"].ToString();
-
+                        txtAdults.Attributes.Add("max", ds.Tables[0].Rows[0]["NoOfAdults"].ToString());
+                        txtKids.Attributes.Add("max", ds.Tables[0].Rows[0]["NoOfKids"].ToString());
+                        if (Convert.ToInt32(txtKids.Value) == 0)
+                        {
+                            txtAdults.Attributes.Add("max", Convert.ToString(Convert.ToInt32(ds.Tables[0].Rows[0]["NoOfAdults"].ToString()) + Convert.ToInt32(ds.Tables[0].Rows[0]["NoOfKids"].ToString())) );
+                        }
+                       
                     }
                 }
             }
@@ -120,6 +126,10 @@ namespace DJResortOnline
             {
                 throw ex;
             }
+        }
+
+        private void AllowedCapacity()
+        {
 
         }
     }

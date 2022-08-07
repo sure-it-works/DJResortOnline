@@ -152,13 +152,13 @@
                                                     <label for="inputStatus" style="text-align:left"><strong>No. of Adults: </strong></label>
                                                 </div>
                                                 <div class="col-1">
-                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" />
+                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" min="0" />
                                                 </div>
                                                 <div class="col-3">
                                                     <label for="inputStatus"  style="text-align:left"><strong>No. of Kids: </strong></label>
                                                 </div>
                                                 <div class="col-1">
-                                                    <input type="number" id="txtKids" class="form-control" value="" runat="server" />
+                                                    <input type="number" id="txtKids" class="form-control" value="" runat="server" min="0" />
                                                 </div>
                                             </div>
                                         </div>
