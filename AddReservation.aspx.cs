@@ -19,6 +19,7 @@ namespace DJResortOnline
             {
 
                 ddlDeals_Bind();
+                Validation();
             }
         }
 
@@ -27,6 +28,17 @@ namespace DJResortOnline
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
 
+        private void Validation()
+        {
+            if(txtTransactionNo.Value == "")
+            {
+                btnPayment.Enabled = true;
+            }
+            else
+            {
+                btnPayment.Enabled = false;
+            }
+        }
         private void BindGrid()
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());

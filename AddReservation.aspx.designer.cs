@@ -123,6 +123,15 @@ namespace DJResortOnline
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtNotes;
 
         /// <summary>
+        /// txtTransactionNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTransactionNo;
+
+        /// <summary>
         /// btnPayment control.
         /// </summary>
         /// <remarks>

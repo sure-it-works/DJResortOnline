@@ -17,8 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>
-    </IISExpressSSLPort>
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -294,6 +293,7 @@
     <Content Include="image\footer-logo.png" />
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
+    <Content Include="image\Reservation\QR.jpg" />
     <Content Include="Invoice.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />

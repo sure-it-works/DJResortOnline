@@ -191,11 +191,21 @@
 
                                         <%--7th Row--%>
                                         <div class="form-group" style="padding: 5px">
-                                            <textarea id="txtNotes" class="form-control" rows="4" placeholder="Notes" runat="server"></textarea>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                <textarea id="txtNotes" class="form-control" rows="6" placeholder="Notes" runat="server"></textarea>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label><strong>SCAN THIS GCASH QR CODE FOR PAYMENT</strong></label>
+                                                    <img src="image/Reservation/QR.jpg"  alt="" width="250" />
+                                                    <label>Please input your Gcash payment Ref. No. below</label>
+                                                    <input runat="server" type="text" id="txtTransactionNo" class="form-control" value="" placeholder="Gcash Reference No" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div style="padding: 10px">
-                                        <asp:Button ID="btnPayment" CssClass="btn btn-primary" runat="server" Text="Proceed to Payment" style="float: right"/>
+                                        <asp:Button ID="btnPayment" CssClass="btn btn-primary" runat="server" Text="Add Reservation" style="float: right"/>
                                     </div>
 
                                 </div>
