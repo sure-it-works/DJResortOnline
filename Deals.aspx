@@ -58,7 +58,7 @@
                     <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
                     <li><a class="nav-link scrollto" href="#pricing">Contact Us</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Reserve Now</a></li>
+                    <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>

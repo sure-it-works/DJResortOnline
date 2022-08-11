@@ -54,11 +54,11 @@
                     <ul>
                         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="#services">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
                         <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
                         <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
                         <li><a class="nav-link scrollto" href="#pricing">Contact Us</a></li>
-                        <li><a class="getstarted scrollto" href="#about">Reserve Now</a></li>
+                        <li><a class="getstarted scrollto" disabled="disabled">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
@@ -77,7 +77,7 @@
                     <div class="row">
 
                         <div class="col-lg-12 col-md-6 mt-4 mt-md-0">
-                            <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="box recommended" data-aos="zoom-in" data-aos-delay="50">
                                 <h4>Reservation Form</h4>
                                 <div>
                                     <div>

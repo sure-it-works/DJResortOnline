@@ -17,7 +17,7 @@ namespace DJResortOnline
         {
             if (!this.IsPostBack)
             {
-                
+
                 ddlDeals_Bind();
             }
         }
