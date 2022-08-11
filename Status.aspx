@@ -546,8 +546,8 @@
                                         </div>
                                         <div class="col-4">
                                             <asp:DropDownList runat="server" ID="ddlEditStatus" class="form-control">
-                                                <asp:ListItem Value="1">Paid</asp:ListItem>
-                                                <asp:ListItem Value="2">Unpaid</asp:ListItem>
+                                                <asp:ListItem Value="3">Paid</asp:ListItem>
+                                                <asp:ListItem Value="4">Unpaid</asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
                                     </div>
