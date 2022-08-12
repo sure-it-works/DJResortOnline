@@ -18,7 +18,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
+    
+
+    <!-- CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -30,6 +32,9 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- =======================================================
   * Template Name: Vesperr - v4.8.1
   * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
@@ -40,6 +45,7 @@
 
 <body>
     <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
         <!-- ======= Header ======= -->
         <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container d-flex align-items-center justify-content-between">
@@ -71,7 +77,7 @@
         <main id="main">
 
             <!-- ======= Pricing Section ======= -->
-            <section id="pricing" class="pricing" style="margin: 30px 30px 0px 30px" >
+            <section id="pricing" class="pricing" style="margin: 30px 30px 0px 30px">
                 <div class="container">
 
                     <div class="row">
@@ -87,7 +93,7 @@
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <input type="text" id="txtName" class="form-control" placeholder="Name" runat="server" />
+                                                    <input required="required" type="text" id="txtName" class="form-control" placeholder="Name" runat="server" />
                                                 </div>
                                             </div>
                                         </div>
@@ -96,11 +102,11 @@
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-8">
-                                                    <input type="email" id="txtEmail" class="form-control" placeholder="Email" runat="server" />
+                                                    <input type="email" id="txtEmail" class="form-control" placeholder="Email" runat="server" required="required"/>
                                                 </div>
                                                 <div class="col-4">
 
-                                                    <input type="text" id="txtContact" class="form-control" placeholder="Contact Number" runat="server" />
+                                                    <input type="text" id="txtContact" class="form-control" placeholder="Contact Number" runat="server" required="required"/>
                                                 </div>
                                             </div>
 
@@ -110,7 +116,7 @@
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-2">
-                                                    <label for="inputStatus" style="text-align:left"><strong>Check-In</strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>Check-In</strong></label>
                                                 </div>
                                                 <div class="col-4">
                                                     <%--<div class="input-group date" id="reservationdate" data-target-input="nearest">
@@ -128,7 +134,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-2">
-                                                    <label for="inputStatus" style="text-align:left"><strong>Check-Out</strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>Check-Out</strong></label>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="input-group date" id="CheckOut" data-target-input="nearest">
@@ -149,16 +155,16 @@
                                                 </div>
 
                                                 <div class="col-3">
-                                                    <label for="inputStatus" style="text-align:left"><strong>No. of Adults: </strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>No. of Adults: </strong></label>
                                                 </div>
                                                 <div class="col-1">
-                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" min="0" />
+                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" min="0" required="required"/>
                                                 </div>
                                                 <div class="col-3">
-                                                    <label for="inputStatus"  style="text-align:left"><strong>No. of Kids: </strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>No. of Kids: </strong></label>
                                                 </div>
                                                 <div class="col-1">
-                                                    <input type="number" id="txtKids" class="form-control" value="" runat="server" min="0" />
+                                                    <input type="number" id="txtKids" class="form-control" value="" runat="server" min="0" required="required" />
                                                 </div>
                                             </div>
                                         </div>
@@ -167,57 +173,86 @@
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-2">
-                                                    <label for="inputStatus"  style="text-align:left"><strong>Total Amount:  ₱</strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>Total Amount:  ₱</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input type="text" id="txtTotal" class="form-control" value="" disabled="disabled" runat="server" />
-                                                </div>
-
-                                                <div class="col-2">
-                                                    <label for="inputStatus"  style="text-align:left"><strong>Reservation Fee:  ₱</strong></label>
-                                                </div>
-                                                <div class="col-2">
-                                                    <input type="text" id="txtReservation" class="form-control" value="" disabled="disabled" runat="server" />
+                                                    <input type="text" id="txtTotal" class="form-control" value="" disabled="disabled" runat="server" required="required"/>
                                                 </div>
 
                                                 <div class="col-2">
-                                                    <label for="inputStatus"  style="text-align:left"><strong>Remaining Balance:  ₱</strong></label>
+                                                    <label for="inputStatus" style="text-align: left"><strong>Reservation Fee:  ₱</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input runat="server" type="text" id="txtBalance" class="form-control" value="" disabled="disabled" />
+                                                    <input type="text" id="txtReservation" class="form-control" value="" disabled="disabled" runat="server" required="required"/>
+                                                </div>
+
+                                                <div class="col-2">
+                                                    <label for="inputStatus" style="text-align: left"><strong>Remaining Balance:  ₱</strong></label>
+                                                </div>
+                                                <div class="col-2">
+                                                    <input runat="server" type="text" id="txtBalance" class="form-control" value="" disabled="disabled" required="required"/>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <%--7th Row--%>
+                                        <div class="form-group">
+                                            <textarea id="txtNotes" class="form-control" rows="4" placeholder="Notes" runat="server" ></textarea>
+                                        </div>
+
+                                        <%--8th Row--%>
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
-                                                <div class="col-6">
-                                                <textarea id="txtNotes" class="form-control" rows="6" placeholder="Notes" runat="server"></textarea>
+                                                <div class="col-8">
+                                                    <input runat="server" type="text" id="txtTransactionNo" class="form-control" value="" placeholder="Gcash Reference No" required="required"/>
                                                 </div>
-                                                <div class="col-6">
-                                                    <label><strong>SCAN THIS GCASH QR CODE FOR PAYMENT</strong></label>
-                                                    <img src="image/Reservation/QR.jpg"  alt="" width="250" />
-                                                    <label>Please input your Gcash payment Ref. No. below</label>
-                                                    <input runat="server" type="text" id="txtTransactionNo" class="form-control" value="" placeholder="Gcash Reference No" />
+                                                <div class="col-4">
+                                                    <asp:LinkButton ID="lblQR" runat="server" ForeColor="Black" OnClick="lblQR_Click" Font-Size="X-Large"><strong>CLICK HERE FOR PAYMENT</strong></asp:LinkButton>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div style="padding: 10px">
-                                        <asp:Button ID="btnPayment" CssClass="btn btn-primary" runat="server" Text="Add Reservation" style="float: right"/>
-                                    </div>
 
+                                        <div style="padding: 10px">
+                                            <asp:Button ID="btnPayment" CssClass="btn btn-primary" runat="server" Text="Add Reservation" Style="float: right" OnClick="btnPayment_Click" />
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-
-                </div>
-
-                </div>
             </section>
             <!-- End Pricing Section -->
+
+            <%--modal-view--%>
+            <div class="modal fade" id="modalQR">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" >SCAN THIS GCASH QR CODE FOR PAYMENT</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body" style="align-content:center">
+                            <%--1st Row--%>
+                            <div class="form-group">
+                                <img src="image/Reservation/QR.jpg" alt="" width="250" />
+                            </div>
+
+                            <%--2nd Row--%>
+                            <div class="form-group">
+                                <label>We only accept payment through GCASH!</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
 
 
 
@@ -259,6 +294,21 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+<%--        <script type='text/javascript'>
+            function openModal() {
+                $('[id*=modalQR]').modal('show');
+            }
+        </script>--%>
+
+        <!-- jQuery UI 1.11.4 -->
+            <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+            <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+            <script>
+                $.widget.bridge('uibutton', $.ui.button)
+            </script>
+            <!-- Bootstrap 4 -->
+            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     </form>
 </body>
 </html>

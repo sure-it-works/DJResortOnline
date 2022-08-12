@@ -19,7 +19,7 @@ namespace DJResortOnline
             {
 
                 ddlDeals_Bind();
-                Validation();
+                
             }
         }
 
@@ -30,13 +30,13 @@ namespace DJResortOnline
 
         private void Validation()
         {
-            if(txtTransactionNo.Value == "")
+            if(txtTransactionNo.Value.Length == 0)
             {
-                btnPayment.Enabled = true;
+                btnPayment.Enabled = false;
             }
             else
             {
-                btnPayment.Enabled = false;
+                btnPayment.Enabled = true;
             }
         }
         private void BindGrid()
@@ -143,6 +143,48 @@ namespace DJResortOnline
         private void AllowedCapacity()
         {
 
+        }
+
+        protected void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (txtTransactionNo.Value.Length == 0)
+            {
+                Response.Write("<script language=javascript>alert('Please add the Gcash Reference No!');</script>");
+            }
+            else
+            {
+                SqlConnection myConnection = new SqlConnection(GetConnectionString());
+                SqlCommand cmd = new SqlCommand("Add_Reservation", myConnection);
+                {
+                    myConnection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtName.Value;
+                    cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmail.Value;
+                    cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = txtTransactionNo.Value;
+                    cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContact.Value;
+                    cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlDeals.SelectedItem.Text;
+                    cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdults.Value);
+                    cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKids.Value);
+                    cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = Convert.ToDateTime(txtCheckIn.Value);
+                    cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = Convert.ToDateTime(txtCheckOut.Value);
+                    cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = Convert.ToInt32(txtTotal.Value);
+                    cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = Convert.ToInt32(txtReservation.Value);
+                    cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotes.Value;
+
+
+                    var result = cmd.ExecuteNonQuery();
+                    myConnection.Close();
+
+                    Response.Write("<script language=javascript>alert('Reservation Added!');</script>");
+
+                }
+            }
+        }
+
+        protected void lblQR_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "openModal", "$('#modalQR').modal('show');", true);
         }
     }
 }
