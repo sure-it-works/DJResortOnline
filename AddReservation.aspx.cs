@@ -28,15 +28,49 @@ namespace DJResortOnline
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
 
-        private void Validation()
+        private void AvailableDates()
         {
-            if(txtTransactionNo.Value.Length == 0)
+            try
             {
-                btnPayment.Enabled = false;
+                SqlConnection myConnection = new SqlConnection(GetConnectionString());
+                SqlCommand cmd = new SqlCommand("Get_AvailableDatesvsRoom", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                myConnection.Open();
+
+                cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlDeals.SelectedItem.Text;
+
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmd.Connection = myConnection;
+                    sda.SelectCommand = cmd;
+                    using (DataSet ds = new DataSet())
+                    {
+                        sda.Fill(ds);
+
+
+
+                        txtTotal.Value = ds.Tables[0].Rows[0]["Price"].ToString();
+                        double reservation = 0;
+                        reservation = (0.2) * (Convert.ToInt32(txtTotal.Value));
+                        txtReservation.Value = reservation.ToString();
+                        double balance = 0;
+                        balance = Convert.ToInt32(txtTotal.Value) - reservation;
+                        //txtBalance.Value = balance.ToString();
+                        txtAdults.Value = ds.Tables[0].Rows[0]["NoOfAdults"].ToString();
+                        txtKids.Value = ds.Tables[0].Rows[0]["NoOfKids"].ToString();
+                        txtAdults.Attributes.Add("max", ds.Tables[0].Rows[0]["NoOfAdults"].ToString());
+                        txtKids.Attributes.Add("max", ds.Tables[0].Rows[0]["NoOfKids"].ToString());
+                        if (Convert.ToInt32(txtKids.Value) == 0)
+                        {
+                            txtAdults.Attributes.Add("max", Convert.ToString(Convert.ToInt32(ds.Tables[0].Rows[0]["NoOfAdults"].ToString()) + Convert.ToInt32(ds.Tables[0].Rows[0]["NoOfKids"].ToString())));
+                        }
+
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                btnPayment.Enabled = true;
+                throw ex;
             }
         }
         private void BindGrid()
@@ -76,10 +110,15 @@ namespace DJResortOnline
                     {
                         sda.Fill(ds);
 
+                        ListItem list = new ListItem();
+                        list.Text = "SELECT DEALS";
 
                         ddlDeals.DataSource = ds.Tables[0];
                         ddlDeals.DataTextField = "DealsName";
                         ddlDeals.DataBind();
+                        ddlDeals.Items.Insert(0, list);
+
+                        
 
                     }
                 }
@@ -121,7 +160,7 @@ namespace DJResortOnline
                         txtReservation.Value = reservation.ToString();
                         double balance = 0;
                         balance = Convert.ToInt32(txtTotal.Value) - reservation;
-                        txtBalance.Value = balance.ToString();
+                        //txtBalance.Value = balance.ToString();
                         txtAdults.Value = ds.Tables[0].Rows[0]["NoOfAdults"].ToString();
                         txtKids.Value = ds.Tables[0].Rows[0]["NoOfKids"].ToString();
                         txtAdults.Attributes.Add("max", ds.Tables[0].Rows[0]["NoOfAdults"].ToString());
@@ -140,9 +179,20 @@ namespace DJResortOnline
             }
         }
 
-        private void AllowedCapacity()
+        private void ClearForm()
         {
-
+            txtName.Value = "";
+            txtEmail.Value = "";
+            txtTransactionNo.Value = "";
+            txtContact.Value = "";
+            ddlDeals.SelectedItem.Text = "SELECT DEALS";
+            txtAdults.Value = "0"; 
+            txtKids.Value = "0";
+            txtCheckIn.Value = "mm/dd/yyyy";
+            txtCheckOut.Value = "mm/dd/yyyy";
+            txtTotal.Value = "";
+            txtReservation.Value = "";
+            txtNotes.Value = "";
         }
 
         protected void btnPayment_Click(object sender, EventArgs e)
@@ -179,6 +229,8 @@ namespace DJResortOnline
                     Response.Write("<script language=javascript>alert('Reservation Added!');</script>");
 
                 }
+
+                ClearForm();
             }
         }
 

@@ -362,7 +362,7 @@
                             </div>
 
                             <div class="modal-footer">
-                                <asp:Button ID="btnConfirm" CssClass="btn btn-primary" runat="server" Text="Confirm Reservation" />
+                                <asp:Button ID="btnConfirm" CssClass="btn btn-primary" runat="server" Text="Confirm Reservation" OnClick="btnConfirm_Click" />
                                 <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
                             </div>
                         </div>

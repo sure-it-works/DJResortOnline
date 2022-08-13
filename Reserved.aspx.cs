@@ -154,5 +154,31 @@ namespace DJResortOnline
                 throw ex;
             }
         }
+
+        protected void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Update_Status", myConnection);
+            {
+                myConnection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                
+                cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
+
+                // open connection, call stored procedure, close connection
+
+                var result = cmd.ExecuteNonQuery();
+                myConnection.Close();
+
+
+            }
+
+            Response.Write("<script language=javascript>alert('Done Saving!');</script>");
+
+            BindGrid();
+        }
+    
     }
 }

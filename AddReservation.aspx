@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    
+
 
     <!-- CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -32,15 +32,9 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
-      <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- =======================================================
-  * Template Name: Vesperr - v4.8.1
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 </head>
 
 <body>
@@ -102,11 +96,11 @@
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-8">
-                                                    <input type="email" id="txtEmail" class="form-control" placeholder="Email" runat="server" required="required"/>
+                                                    <input type="email" id="txtEmail" class="form-control" placeholder="Email" runat="server" required="required" />
                                                 </div>
                                                 <div class="col-4">
 
-                                                    <input type="text" id="txtContact" class="form-control" placeholder="Contact Number" runat="server" required="required"/>
+                                                    <input type="text" id="txtContact" class="form-control" placeholder="Contact Number" runat="server" required="required" />
                                                 </div>
                                             </div>
 
@@ -115,34 +109,20 @@
                                         <%--4th Row--%>
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
-                                                <div class="col-2">
-                                                    <label for="inputStatus" style="text-align: left"><strong>Check-In</strong></label>
-                                                </div>
                                                 <div class="col-4">
-                                                    <%--<div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                                <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>--%>
-                                                    <%--<asp:TextBox ID="txtCheckIn" class="form-control form-control-sm txtDateFrom" runat="server" placeholder="Enter value.."></asp:TextBox>--%>
-                                                    <div class="input-group date" data-target-input="nearest">
-                                                        <input id="txtCheckIn" type="text" class="form-control datetimepicker-input" runat="server" />
-                                                        <div class="input-group-append">
-                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                        </div>
-                                                    </div>
+                                                    <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" OnSelectedIndexChanged="ddlDeals_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                 </div>
                                                 <div class="col-2">
-                                                    <label for="inputStatus" style="text-align: left"><strong>Check-Out</strong></label>
+                                                    <label  style="text-align:left"><strong>Check-In</strong></label>
                                                 </div>
-                                                <div class="col-4">
-                                                    <div class="input-group date" id="CheckOut" data-target-input="nearest">
-                                                        <input id="txtCheckOut" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" />
-                                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                        </div>
-                                                    </div>
+                                                <div class="col-2">
+                                                        <input id="txtCheckIn" type="date" class="form-control" runat="server"/>
+                                                </div>
+                                                <div class="col-2">
+                                                    <label  style="text-align:left"><strong>Check-Out</strong></label>
+                                                </div>
+                                                <div class="col-2">
+                                                        <input id="txtCheckOut" type="date" class="form-control" runat="server"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,61 +130,58 @@
                                         <%--5th Row--%>
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
-                                                <div class="col-4">
-                                                    <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" OnSelectedIndexChanged="ddlDeals_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-                                                </div>
-
-                                                <div class="col-3">
+                                                <div class="col-1">
                                                     <label for="inputStatus" style="text-align: left"><strong>No. of Adults: </strong></label>
                                                 </div>
                                                 <div class="col-1">
-                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" min="0" required="required"/>
+                                                    <input type="number" id="txtAdults" class="form-control" value="" runat="server" min="0" required="required" />
                                                 </div>
-                                                <div class="col-3">
+                                                <div class="col-1">
                                                     <label for="inputStatus" style="text-align: left"><strong>No. of Kids: </strong></label>
                                                 </div>
                                                 <div class="col-1">
                                                     <input type="number" id="txtKids" class="form-control" value="" runat="server" min="0" required="required" />
                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <%--6th Row--%>
-                                        <div class="form-group" style="padding: 5px">
-                                            <div class="row">
                                                 <div class="col-2">
                                                     <label for="inputStatus" style="text-align: left"><strong>Total Amount:  ₱</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input type="text" id="txtTotal" class="form-control" value="" disabled="disabled" runat="server" required="required"/>
+                                                    <input type="text" id="txtTotal" class="form-control" value="" disabled="disabled" runat="server" required="required" />
                                                 </div>
 
                                                 <div class="col-2">
                                                     <label for="inputStatus" style="text-align: left"><strong>Reservation Fee:  ₱</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input type="text" id="txtReservation" class="form-control" value="" disabled="disabled" runat="server" required="required"/>
+                                                    <input type="text" id="txtReservation" class="form-control" value="" disabled="disabled" runat="server" required="required" />
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <%--6th Row--%>
+                                        <%--<div class="form-group" style="padding: 5px">
+                                            <div class="row">
+                                                
 
                                                 <div class="col-2">
                                                     <label for="inputStatus" style="text-align: left"><strong>Remaining Balance:  ₱</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input runat="server" type="text" id="txtBalance" class="form-control" value="" disabled="disabled" required="required"/>
+                                                    <input runat="server" type="text" id="txtBalance" class="form-control" value="" disabled="disabled" required="required" />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>--%>
 
                                         <%--7th Row--%>
-                                        <div class="form-group">
-                                            <textarea id="txtNotes" class="form-control" rows="4" placeholder="Notes" runat="server" ></textarea>
+                                        <div class="form-group" style="padding: 5px">
+                                            <textarea id="txtNotes" class="form-control" rows="4" placeholder="Notes" runat="server"></textarea>
                                         </div>
 
                                         <%--8th Row--%>
                                         <div class="form-group" style="padding: 5px">
                                             <div class="row">
                                                 <div class="col-8">
-                                                    <input runat="server" type="text" id="txtTransactionNo" class="form-control" value="" placeholder="Gcash Reference No" required="required"/>
+                                                    <input runat="server" type="text" id="txtTransactionNo" class="form-control" value="" placeholder="Gcash Reference No" required="required" />
                                                 </div>
                                                 <div class="col-4">
                                                     <asp:LinkButton ID="lblQR" runat="server" ForeColor="Black" OnClick="lblQR_Click" Font-Size="X-Large"><strong>CLICK HERE FOR PAYMENT</strong></asp:LinkButton>
@@ -230,13 +207,13 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" >SCAN THIS GCASH QR CODE FOR PAYMENT</h5>
+                            <h5 class="modal-title">SCAN THIS GCASH QR CODE FOR PAYMENT</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
 
-                        <div class="modal-body" style="align-content:center">
+                        <div class="modal-body" style="align-content: center">
                             <%--1st Row--%>
                             <div class="form-group">
                                 <img src="image/Reservation/QR.jpg" alt="" width="250" />
@@ -295,20 +272,20 @@
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
 
-<%--        <script type='text/javascript'>
+        <%--        <script type='text/javascript'>
             function openModal() {
                 $('[id*=modalQR]').modal('show');
             }
         </script>--%>
 
         <!-- jQuery UI 1.11.4 -->
-            <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-            <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-            <script>
-                $.widget.bridge('uibutton', $.ui.button)
-            </script>
-            <!-- Bootstrap 4 -->
-            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     </form>
 </body>
 </html>
