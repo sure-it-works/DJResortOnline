@@ -434,7 +434,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12">
-                                            <input type="text" id="txtNameEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="text" id="txtNameEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
                                     </div>
                                 </div>
@@ -443,11 +443,11 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-8">
-                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
                                         <div class="col-4">
 
-                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
                                     </div>
 
@@ -466,7 +466,7 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="input-group date" data-target-input="nearest">
-                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disable="disable"/>
+                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disabled="disabled"/>
                                                 <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
@@ -475,7 +475,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="input-group date" data-target-input="nearest">
-                                                <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disable="disable"/>
+                                                <input id="txtCheckOutEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disabled="disabled"/>
                                                 <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
@@ -488,20 +488,20 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control" Enabled="false"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlEditDeals" runat="server" class="form-control" Enabled="false" ></asp:DropDownList>
                                         </div>
 
                                         <div class="col-3">
                                             <label for="inputStatus">No. of Adults: </label>
                                         </div>
                                         <div class="col-1">
-                                            <input type="number" id="txtAdultsEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="number" id="txtAdultsEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
                                         <div class="col-3">
                                             <label for="inputStatus">No. of Kids: </label>
                                         </div>
                                         <div class="col-1">
-                                            <input type="number" id="txtKidsEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="number" id="txtKidsEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
                                     </div>
                                 </div>
@@ -513,21 +513,21 @@
                                             <label for="inputStatus">Total Amount:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input type="text" id="txtTotalEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="text" id="txtTotalEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
 
                                         <div class="col-2">
                                             <label for="inputStatus">Reservation Fee:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input type="text" id="txtReservationEdit" class="form-control" runat="server" disable="disable"/>
+                                            <input type="text" id="txtReservationEdit" class="form-control" runat="server" disabled="disabled"/>
                                         </div>
 
                                         <div class="col-2">
                                             <label for="inputStatus">Remaining Balance:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control" disable="disable"/>
+                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control" disabled="disabled"/>
                                         </div>
                                     </div>
                                 </div>
@@ -535,7 +535,7 @@
                                 <%--7th Row--%>
                                 <div class="form-group">
                                     <label>Note</label>
-                                    <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server" disable="disable"></textarea>
+                                    <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server" disabled="disabled"></textarea>
                                 </div>
 
                                 <%--8th Row--%>

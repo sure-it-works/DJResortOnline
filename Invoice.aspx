@@ -207,9 +207,11 @@
                                     
                                     <asp:TemplateField ItemStyle-Width="10%" ShowHeader="False">
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="Print" runat="server" CssClass="btn btn-info btn-sm" type="button"
+                                            <%--<asp:LinkButton ID="Print" runat="server" CssClass="btn btn-info btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Touch"><i class="fas fas fa-print"></i></asp:LinkButton>
+                                                CommandName="Touch"><i class="fas fas fa-print"></i></asp:LinkButton>--%>
+                                            <asp:HyperLink ID="lnkSelect" runat='server' CssClass="btn btn-info btn-sm" type="button"
+                                                NavigateUrl='<%# String.Format("~/PrintInvoice.aspx?ID={0}", Eval("ReservationID")) %>'><i class="fas fas fa-print"></i></asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

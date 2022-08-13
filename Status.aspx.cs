@@ -88,42 +88,42 @@ namespace DJResortOnline
         }
 
 
-        private void ddlStatus_Bind()
-        {
-            try
-            {
-                SqlConnection myConnection = new SqlConnection(GetConnectionString());
-                SqlCommand cmd = new SqlCommand("Get_Status", myConnection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                myConnection.Open();
+        //private void ddlStatus_Bind()
+        //{
+        //    try
+        //    {
+        //        SqlConnection myConnection = new SqlConnection(GetConnectionString());
+        //        SqlCommand cmd = new SqlCommand("Get_Status", myConnection);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        myConnection.Open();
 
-                using (SqlDataAdapter sda = new SqlDataAdapter())
-                {
-                    cmd.Connection = myConnection;
-                    sda.SelectCommand = cmd;
-                    using (DataSet ds = new DataSet())
-                    {
-                        sda.Fill(ds);
+        //        using (SqlDataAdapter sda = new SqlDataAdapter())
+        //        {
+        //            cmd.Connection = myConnection;
+        //            sda.SelectCommand = cmd;
+        //            using (DataSet ds = new DataSet())
+        //            {
+        //                sda.Fill(ds);
 
-                        ddlStatus.DataSource = ds.Tables[0];
-                        ddlStatus.DataTextField = "Status";
-                        //ddlStatus.DataValueField = "Status";
-                        ddlStatus.DataBind();
+        //                ddlStatus.DataSource = ds.Tables[0];
+        //                ddlStatus.DataTextField = "Status";
+        //                //ddlStatus.DataValueField = "Status";
+        //                ddlStatus.DataBind();
 
-                        ddlEditStatus.DataSource = ds.Tables[0];
-                        ddlEditStatus.DataTextField = "Status";
-                        //ddlEditStatus.DataValueField = "Status";
-                        ddlEditStatus.DataBind();
+        //                ddlEditStatus.DataSource = ds.Tables[0];
+        //                ddlEditStatus.DataTextField = "Status";
+        //                //ddlEditStatus.DataValueField = "Status";
+        //                ddlEditStatus.DataBind();
 
-                    }
-                }
+        //            }
+        //        }
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
 
 
@@ -259,18 +259,18 @@ namespace DJResortOnline
                 myConnection.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
-                cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
+                //cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
+                //cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
                 cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
-                cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
-                cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
-                cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdultsEdit.Value);
-                cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKidsEdit.Value);
-                cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
-                cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
-                cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = Convert.ToInt32(txtTotalEdit.Value);
-                cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = Convert.ToInt32(txtReservationEdit.Value);
-                cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotesEdit.Value;
+                //cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
+                //cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
+                //cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdultsEdit.Value);
+                //cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKidsEdit.Value);
+                //cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
+                //cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
+                //cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = Convert.ToInt32(txtTotalEdit.Value);
+                //cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = Convert.ToInt32(txtReservationEdit.Value);
+                //cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotesEdit.Value;
 
                 //int StatusValue = 0;
                 //if (ddlEditStatus.SelectedItem.Text=="Unpaid")
