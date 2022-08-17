@@ -302,6 +302,7 @@
     <Content Include="MasterPage.css" />
     <Content Include="PriceList.aspx" />
     <Content Include="PrintInvoice.aspx" />
+    <Content Include="PrintInvoice.css" />
     <Content Include="Reserved.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="Scripts\bootstrap.js" />
