@@ -172,30 +172,26 @@
                 <div class="container-fluid">
                     <div class="card-body">
                         <div class="form-group">
-                            <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                                was born and I will give you a complete account of the system, and expound the actual teachings
-                                of the great explorer of the truth, the master-builder of human happiness. No one rejects,
-                                dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
-                                how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
-                                is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                                but because occasionally circumstances occur in which toil and pain can procure him some great
-                                pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
-                                except to obtain some advantage from it? But who has any right to find fault with a man who
-                                chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
-                                produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
-                                dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
-                                blinded by desire, that they cannot foresee</p>
-                      
+                            <p>Fill in the title and the body of the announcement.</p>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Title"/>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="compose-textarea" class="form-control" style="height: 300px" rows="7" placeholder="Enter announcement body.">
                             </textarea>
                         </div>
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
+                        <div class="form-group">
+                            <p>Use below toggle to post or remove the announcement.</p>
+                        </div>
                         <div class="float-right">
-                            <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i>View</button>
+                            <%--<button type="button" class="btn btn-primary"><i class="fas fa-eye"></i>View</button>
                             <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i>Edit</button>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-thumbtack"></i>Post</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-thumbtack"></i>Post</button>--%>
+                            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success"/>
                         </div>
                     </div>
                     <!-- /.card-footer -->
@@ -255,6 +251,19 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+    <!-- Bootstrap Switch -->
+    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script>
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote()
+
+            //Bootsrap Switch
+            $("input[data-bootstrap-switch]").each(function () {
+                $(this).bootstrapSwitch('state', $(this).prop('checked'));
+            });
+        })
+    </script>
 
 </body>
 </html>
