@@ -35,7 +35,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
-        <div class="container">
+        <div class="container" style="padding-top: 50px">
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="card">
@@ -45,14 +45,15 @@
                                     <!-- Row start -->
                                     <div class="row gutters">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                            <a href="index.html" class="invoice-logo">Bootdey.com
+                                            <a class="invoice-logo"><img src="image/footer-logo.png" style="padding-right:15px; height:78px"/>DJ RES
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <address style="float: right">
-                                                Maxwell admin Inc, 45 NorthWest Street.<br />
-                                                Sunrise Blvd, San Francisco.<br />
-                                                00000 00000
+                                            <address style="float: right; vertical-align:middle">
+                                                Liwayway Subdivision<br />
+                                                Brgy. Llig Tiaong, Quezon<br />
+                                                09546286227<br />
+                                                dj.resort@gmai.com
                                             </address>
                                         </div>
                                     </div>
@@ -86,37 +87,37 @@
                                     </div>
                                     <!-- Row end -->
                                 </div>
-                                <div class="invoice-body">
+                                <div class="invoice-body" style="padding-bottom: 50px">
                                     <!-- Row start -->
                                     <div class="row gutters">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="">
-                                                <asp:GridView ID="gvInvoice" runat="server" class="table table-striped projects"
+                                                <asp:GridView ID="gvInvoice" runat="server" 
                                                     AutoGenerateColumns="false" AllowPaging="true"
                                                     PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle">
                                                     <Columns>
-                                                        <asp:BoundField ItemStyle-Width="32%" DataField="TransactionNo" HeaderText="Transaction No">
-                                                            <ItemStyle Width="32%"></ItemStyle>
+                                                        <asp:BoundField ItemStyle-Width="20%" DataField="TransactionNo" HeaderText="Transaction No">
+                                                           
                                                         </asp:BoundField>
                                                         <asp:BoundField ItemStyle-Width="20%" DataField="Deals" HeaderText="Deals">
-                                                            <ItemStyle Width="20%"></ItemStyle>
+                                                          
                                                         </asp:BoundField>
-                                                        <asp:BoundField ItemStyle-Width="12%" DataField="CheckIn" HeaderText="Check In">
-                                                            <ItemStyle Width="12%"></ItemStyle>
+                                                        <asp:BoundField ItemStyle-Width="15%" DataField="CheckIn" HeaderText="Check In">
+                                                         
                                                         </asp:BoundField>
-                                                        <asp:BoundField ItemStyle-Width="12%" DataField="CheckOut" HeaderText="Check Out">
-                                                            <ItemStyle Width="12%"></ItemStyle>
+                                                        <asp:BoundField ItemStyle-Width="15%" DataField="CheckOut" HeaderText="Check Out">
+                                                      
                                                         </asp:BoundField>
-                                                        <asp:BoundField ItemStyle-Width="12%" DataField="ReservationFee" HeaderText="Reservation Fee">
-                                                            <ItemStyle Width="12%"></ItemStyle>
+                                                        <asp:BoundField ItemStyle-Width="15%" DataField="ReservationFee" HeaderText="Reservation Fee">
+                                                        
                                                         </asp:BoundField>
-                                                        <asp:BoundField ItemStyle-Width="12%" DataField="TotalPayment" HeaderText="Total Payment">
-                                                            <ItemStyle Width="12%"></ItemStyle>
+                                                        <asp:BoundField ItemStyle-Width="15%" DataField="TotalPayment" HeaderText="Total Payment">
+                                                          
                                                         </asp:BoundField>
                                                     </Columns>
 
                                                     <EditRowStyle VerticalAlign="Middle"></EditRowStyle>
-                                                    <HeaderStyle BackColor="#007AE1" ForeColor="White" />
+                                                    <HeaderStyle BackColor="#007AE1" ForeColor="White"/>
                                                 </asp:GridView>
                                             </div>
                                         </div>

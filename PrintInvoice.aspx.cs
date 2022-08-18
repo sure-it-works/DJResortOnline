@@ -74,7 +74,7 @@ namespace DJResortOnline
                     lblName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
                     lblEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
                     DateTime dateTime = DateTime.UtcNow.Date;
-                    lblPrintDate.Text = dateTime.ToString("d");
+                    lblPrintDate.Text = dateTime.ToString("D");
                     lblInvoice.Text = "Invoice No. " + ds.Tables[0].Rows[0]["ReservationID"].ToString();
 
                 }

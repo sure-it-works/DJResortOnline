@@ -27,8 +27,10 @@ body {
 
     .invoice-container .invoice-header address {
         font-size: 0.8rem;
-        color: #9fa8b9;
+        color: black;
         margin: 0;
+        vertical-align:middle;
+        /*height:115px;*/
     }
 
     .invoice-container .invoice-details {

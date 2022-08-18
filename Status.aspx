@@ -216,7 +216,7 @@
 
                                             <asp:LinkButton ID="Edit" runat="server" CssClass="btn btn-info btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Touch"><i class="fas fa-eye"> Edit</i></asp:LinkButton>
+                                                CommandName="Touch"><i class="fas fa-pencil-alt"> Edit</i></asp:LinkButton>
                                             <%--<button id="Delete" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"> Delete</i></button>--%>
 
                                        <%--     <asp:LinkButton ID="Delete" runat="server" CssClass="btn btn-danger btn-sm" type="button"

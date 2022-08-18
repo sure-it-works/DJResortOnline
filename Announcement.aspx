@@ -52,8 +52,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Logout Menu -->
                 <li class="nav-item dropdown">
-                    <a  href="Login.aspx" class="breadcrumb-item">
-                        Log Out 
+                    <a href="Login.aspx" class="breadcrumb-item">Log Out 
                         <i class="fas fa-power-off"></i>
                     </a>
                 </li>
@@ -171,6 +170,35 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <textarea id="compose-textarea" class="form-control" style="height: 300px">
+                              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                                was born and I will give you a complete account of the system, and expound the actual teachings
+                                of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+                                dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
+                                how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
+                                is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
+                                but because occasionally circumstances occur in which toil and pain can procure him some great
+                                pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
+                                except to obtain some advantage from it? But who has any right to find fault with a man who
+                                chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+                                produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
+                                dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+                                blinded by desire, that they cannot foresee</p>
+                      
+                            </textarea>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i>View</button>
+                            <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i>Edit</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-thumbtack"></i>Post</button>
+                        </div>
+                    </div>
+                    <!-- /.card-footer -->
                 </div>
                 <!-- /.container-fluid -->
             </section>
