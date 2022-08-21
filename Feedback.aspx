@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Announcement.aspx.cs" Inherits="DJResortOnline.Announcement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="DJResortOnline.Feedback" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DJ Resort | Announcement</title>
+    <title>DJ Resort | Price List</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -32,8 +32,6 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
-
-    <%--    Templates/AdminLTE-3.1.0-rc/pages/mailbox/compose.html--%>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -52,7 +50,8 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Logout Menu -->
                 <li class="nav-item dropdown">
-                    <a href="Login.aspx" class="breadcrumb-item">Log Out 
+                    <a  href="Login.aspx" class="breadcrumb-item">
+                        Log Out 
                         <i class="fas fa-power-off"></i>
                     </a>
                 </li>
@@ -166,7 +165,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Announcement</h1>
+                            <h1 class="m-0">Feedbacks</h1>
                         </div>
                     </div>
                     <!-- /.row -->
@@ -178,31 +177,6 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <p>Fill in the title and the body of the announcement.</p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Title"/>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="compose-textarea" class="form-control" style="height: 300px" rows="7"  placeholder="Enter announcement body.">
-                            </textarea>
-                        </div>
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        <div class="form-group">
-                            <p>Use below toggle to post or remove the announcement.</p>
-                        </div>
-                        <div class="float-right">
-                            <%--<button type="button" class="btn btn-primary"><i class="fas fa-eye"></i>View</button>
-                            <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i>Edit</button>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-thumbtack"></i>Post</button>--%>
-                            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success"/>
-                        </div>
-                    </div>
-                    <!-- /.card-footer -->
                 </div>
                 <!-- /.container-fluid -->
             </section>
@@ -259,19 +233,6 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
-    <!-- Bootstrap Switch -->
-    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-    <script>
-        $(function () {
-            //Add text editor
-            $('#compose-textarea').summernote()
-
-            //Bootsrap Switch
-            $("input[data-bootstrap-switch]").each(function () {
-                $(this).bootstrapSwitch('state', $(this).prop('checked'));
-            });
-        })
-    </script>
 
 </body>
 </html>
