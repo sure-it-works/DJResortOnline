@@ -1,4 +1,4 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="DJResortOnline.Feedback" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="DJResortOnline.Feedback" %>
 
 <!DOCTYPE html>
 
@@ -50,8 +50,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Logout Menu -->
                 <li class="nav-item dropdown">
-                    <a  href="Login.aspx" class="breadcrumb-item">
-                        Log Out 
+                    <a href="Login.aspx" class="breadcrumb-item">Log Out 
                         <i class="fas fa-power-off"></i>
                     </a>
                 </li>
@@ -179,88 +178,127 @@
                 <div class="container-fluid">
 
                     <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p class="text-center">
-                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                    </p>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
 
-                    <div class="chart">
-                      <!-- Sales Chart Canvas -->
-                      <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
+                                            <!-- small box -->
+                                            <div class="small-box">
+                                                <div class="inner">
+                                                    <h1 id="aveRate" runat="server" style="font-size: 200px">4.4 %</h1>
+
+                                                    <p>
+                                                        <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                        <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                        <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                        <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                        <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                    </p>
+                                                </div>
+                                                <a class="small-box-footer">Based on <i id="TotalReviewNo">23</i> ratings</a>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-6">
+                                            <p class="text-center">
+                                                <strong>Goal Completion</strong>
+                                            </p>
+
+                                            <div class="progress-group">
+                                                5 Stars
+                      <span class="float-right">
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                      </span>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                                </div>
+                                            </div>
+                                            <!-- /.progress-group -->
+
+                                            <div class="progress-group">
+                                                4 Stars
+                      <span class="float-right">
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                      </span>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-danger" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- /.progress-group -->
+                                            <div class="progress-group">
+                                                <span class="progress-text">3 Stars
+                                                </span>
+                                                <span class="float-right">
+                                                    <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                    <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                    <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                    <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                    <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                </span>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-success" style="width: 60%"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- /.progress-group -->
+                                            <div class="progress-group">
+                                                2 STARS
+                      <span class="float-right">
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                      </span>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <!-- /.progress-group -->
+
+                                            <!-- /.progress-group -->
+                                            <div class="progress-group">
+                                                1 STAR
+                      <span class="float-right">
+                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                      </span>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-warning" style="width: 30%"></div>
+                                                </div>
+                                            </div>
+                                            <!-- /.progress-group -->
+
+
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- ./card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
                     </div>
-                    <!-- /.chart-responsive -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-md-6">
-                    <p class="text-center">
-                      <strong>Goal Completion</strong>
-                    </p>
-
-                    <div class="progress-group">
-                      5
-                      <span class="float-right"><i class="nav-icon fas fa fa-star"></i></span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-primary" style="width: 80%"></div>
-                      </div>
-                    </div>
-                    <!-- /.progress-group -->
-
-                    <div class="progress-group">
-                      4
-                      <span class="float-right"><b>310</b>/400</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-danger" style="width: 75%"></div>
-                      </div>
-                    </div>
-
-                    <!-- /.progress-group -->
-                    <div class="progress-group">
-                      <span class="progress-text">3</span>
-                      <span class="float-right"><b>480</b>/800</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-success" style="width: 60%"></div>
-                      </div>
-                    </div>
-
-                    <!-- /.progress-group -->
-                    <div class="progress-group">
-                      2
-                      <span class="float-right"><b>250</b>/500</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-warning" style="width: 50%"></div>
-                      </div>
-                    </div>
-                    <!-- /.progress-group -->
-
-                      <!-- /.progress-group -->
-                    <div class="progress-group">
-                      1
-                      <span class="float-right"><b>250</b>/500</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-warning" style="width: 30%"></div>
-                      </div>
-                    </div>
-                    <!-- /.progress-group -->
+                    <!-- /.row -->
 
 
-                  </div>
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- ./card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-
-                    
                 </div>
                 <!-- /.container-fluid -->
             </section>
