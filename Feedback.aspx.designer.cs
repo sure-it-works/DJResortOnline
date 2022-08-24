@@ -15,12 +15,30 @@ namespace DJResortOnline
     {
 
         /// <summary>
-        /// aveRate control.
+        /// FeedbackRatings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl aveRate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FeedbackRatings;
+
+        /// <summary>
+        /// TotalReviewNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TotalReviewNo;
+
+        /// <summary>
+        /// gvFeedbacks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvFeedbacks;
     }
 }

@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+    <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -185,10 +187,10 @@
                                         <div class="col-md-6">
 
                                             <!-- small box -->
-                                            <div class="small-box">
+                                            <div class="small-box" style="text-align: center">
                                                 <div class="inner">
-                                                    <h1 id="aveRate" runat="server" style="font-size: 200px">4.4 %</h1>
-
+                                                    <h1 id="FeedbackRatings" runat="server" style="font-size: 100px">4.4</h1>
+                                                    <p>out of 5</p>
                                                     <p>
                                                         <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
                                                         <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
@@ -197,25 +199,25 @@
                                                         <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
                                                     </p>
                                                 </div>
-                                                <a class="small-box-footer">Based on <i id="TotalReviewNo">23</i> ratings</a>
+                                                <a class="small-box-footer bg-success">Based on <i id="TotalReviewNo" runat="server">23</i> ratings</a>
                                             </div>
 
                                         </div>
                                         <!-- /.col -->
                                         <div class="col-md-6">
                                             <p class="text-center">
-                                                <strong>Goal Completion</strong>
+                                                <strong>Ratings & Reviews</strong>
                                             </p>
 
                                             <div class="progress-group">
                                                 5 Stars
-                      <span class="float-right">
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                      </span>
+                                                  <span class="float-right">
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                  </span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-primary" style="width: 80%"></div>
                                                 </div>
@@ -224,13 +226,13 @@
 
                                             <div class="progress-group">
                                                 4 Stars
-                      <span class="float-right">
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                      </span>
+                                                  <span class="float-right">
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                  </span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-danger" style="width: 75%"></div>
                                                 </div>
@@ -255,13 +257,13 @@
                                             <!-- /.progress-group -->
                                             <div class="progress-group">
                                                 2 STARS
-                      <span class="float-right">
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                      </span>
+                                                  <span class="float-right">
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                  </span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-warning" style="width: 50%"></div>
                                                 </div>
@@ -271,13 +273,13 @@
                                             <!-- /.progress-group -->
                                             <div class="progress-group">
                                                 1 STAR
-                      <span class="float-right">
-                          <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                          <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
-                      </span>
+                                                  <span class="float-right">
+                                                      <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                      <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
+                                                  </span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-warning" style="width: 30%"></div>
                                                 </div>
@@ -301,6 +303,47 @@
 
                 </div>
                 <!-- /.container-fluid -->
+            </section>
+
+            <section class="content">
+                <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <asp:GridView ID="gvFeedbacks" runat="server" class="table table-striped projects"
+                                AutoGenerateColumns="false" AllowPaging="true"
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblResID" runat="server" Text='<%# Eval("FeedbackID") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField ItemStyle-Width="10%" DataField="Name" HeaderText="Name" />
+                                     <asp:BoundField ItemStyle-Width="14%" DataField="Email" HeaderText="Email" />
+                                    <asp:BoundField ItemStyle-Width="10%" DataField="CreatedDate" HeaderText="Posted Date" />
+                                    <asp:BoundField ItemStyle-Width="30%" DataField="FeedbackDetails" HeaderText="Feedback" />
+
+                                    <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
+                                                CommandArgument="<%# Container.DataItemIndex %>"
+                                                CommandName="View"><i class="fas fa-eye"> View</i></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    
+                                    <asp:TemplateField ItemStyle-Width="8%" ShowHeader="False">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
+                                                CommandArgument="<%# Container.DataItemIndex %>"
+                                                CommandName="View"><i class="fas fa-eye"> View</i></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
             </section>
             <!-- /.content -->
         </div>
@@ -355,6 +398,6 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
-
+</form>
 </body>
 </html>
