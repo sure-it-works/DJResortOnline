@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DJ Resort | Feedbacks</title>
+    <!-- Favicons -->
+    <link href="image/logo.png" rel="icon"/>
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -32,6 +35,12 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+
+
+     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+    
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <form runat="server">
@@ -311,11 +320,11 @@
                         <div class="card-body p-0">
                             <asp:GridView ID="gvFeedbacks" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvFeedbacks_RowCommand">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblResID" runat="server" Text='<%# Eval("FeedbackID") %>'></asp:Label>
+                                            <asp:Label ID="lblFdbckID" runat="server" Text='<%# Eval("FeedbackID") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField ItemStyle-Width="10%" DataField="Name" HeaderText="Name" />
@@ -325,9 +334,10 @@
 
                                     <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
+                                            <%--<asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
                                                 CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="View"><i class="fas fa-eye"> View</i></asp:LinkButton>
+                                                CommandName="Stars"><i class="fas fa-star"></i><i class="fas fa-star"></i></asp:LinkButton>--%>
+                                            <label><i class="fas fa-star" style="color: #ffc107"></i><i class="fas fa-star" style="color: #ffc107"></i></label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     
@@ -348,6 +358,85 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+
+         <%--modal-edit--%>
+                <div class="modal fade" id="modalFeedback">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="width: 830px">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Feedback Details</strong></h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <%--1st Row--%>
+                                <div class="form-group">
+                                    <div class="row" style="padding-bottom: 0px;">
+                                        <div class="col-8">
+                                            <asp:Label ID="lblSpace" runat="server" Font-Bold="True" Font-Size="Large" Visible="false"></asp:Label>
+                                        </div>
+                                        <div class="col-4">
+                                            <asp:Label ID="lblStars" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--1st Row--%>
+                                <div class="form-group">
+                                    <div class="row" style="padding-bottom: 0px;">
+                                        <div class="col-8">
+                                            <asp:Label ID="lblSpace1" runat="server" Font-Bold="True" Font-Size="Large" Visible="false"></asp:Label>
+                                        </div>
+                                        <div class="col-4">
+                                            <asp:Label ID="lblDate" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--2nd Row--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="text" id="txtNameEdit" class="form-control" runat="server" disabled="disabled" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--3rdRow--%>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" disabled="disabled"  />
+                                        </div>
+                                        <div class="col-4">
+
+                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" disabled="disabled"  />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <%--4th Row--%>
+                                <div class="form-group">
+                                    <label>Note</label>
+                                    <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server" disabled="disabled"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Back</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+
         <footer class="main-footer">
             <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
             All rights reserved.
@@ -398,6 +487,12 @@
     <script src="dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+
+        <script type='text/javascript'>
+            function myModalFeedback() {
+                $('[id*=modalFeedback]').modal('show');
+            }
+        </script>
 </form>
 </body>
 </html>

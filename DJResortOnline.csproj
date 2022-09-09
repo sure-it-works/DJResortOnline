@@ -17,7 +17,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44378</IISExpressSSLPort>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -301,6 +302,7 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="MasterPage.css" />
     <Content Include="PriceList.aspx" />
+    <Content Include="PriceList.css" />
     <Content Include="PrintInvoice.aspx" />
     <Content Include="PrintInvoice.css" />
     <Content Include="Reserved.aspx" />

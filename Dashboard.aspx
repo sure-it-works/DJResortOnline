@@ -6,7 +6,7 @@
 <head runat="server">
     <title>DJ Resort | Dashboard</title>
      <!-- Favicons -->
-    <link href="image/logo.png" rel="icon">
+    <link href="image/logo.png" rel="icon"/>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
