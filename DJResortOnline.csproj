@@ -243,6 +243,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Feedback.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Gallery\assets\img\hero-bg1.jpg" />
+    <Content Include="Gallery\assets\img\hero-bg.jpg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -353,7 +355,6 @@
     <Content Include="Gallery\assets\img\gallery\gallery-6.jpg" />
     <Content Include="Gallery\assets\img\gallery\gallery-7.jpg" />
     <Content Include="Gallery\assets\img\gallery\gallery-8.jpg" />
-    <Content Include="Gallery\assets\img\hero-bg.jpg" />
     <Content Include="Gallery\assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="Gallery\assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="Gallery\assets\img\testimonials\testimonials-3.jpg" />
