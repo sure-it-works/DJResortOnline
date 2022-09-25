@@ -51,7 +51,7 @@
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
                         <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
                         <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                        <li><a class="nav-link scrollto" href="#pricing">Contact Us</a></li>
+                        <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -83,12 +83,10 @@
                             <div class="content">
                                 <h3>Why Choose DJ?</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                                    DJ Resort has a public pool and  private pool. So the clients have a choices to avail and enjoy the amenities of the resort. 
+                                    Fun and affordable ways to spend time with families and friends. It's the little things that you do that makes me always choose you. Here in DJ Resort From the moment you arrive to the moment you leave, we're devoted to providing the greatest level of service and hospitality. 
+                                    Count on us to pamper you and take care of you during your stay, like we always do.
                                 </p>
-                                <div class="text-center">
-                                    <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-8 d-flex align-items-stretch">
@@ -96,23 +94,26 @@
                                 <div class="row">
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
-                                            <i class="bx bx-receipt"></i>
+                                            <%--<i class="bx bx-receipt"></i>--%>
+                                            <img src="Gallery/assets/img/5Weddings.jpg" style="height: 150px"/>
                                             <h4>Wedding</h4>
-                                            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                            <p> This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
-                                            <i class="bx bx-cube-alt"></i>
+                                            <%--<i class="bx bx-cube-alt"></i>--%>
+                                            <img src="Gallery/assets/img/6FamilyGatherings.jpg"  style="height: 150px"/>
                                             <h4>Family Gathering</h4>
-                                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                            <p> This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
-                                            <i class="bx bx-images"></i>
+                                            <%--<i class="bx bx-images"></i>--%>
+                                            <img src="Gallery/assets/img/7Team Building.jpg"  style="height: 150px"/>
                                             <h4>Team Building</h4>
-                                            <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                            <p>You can enjoy your team-building activities here at DJ Resort, it has a wide and this place</p>
                                         </div>
                                     </div>
                                 </div>
@@ -131,29 +132,29 @@
 
                     <div class="row">
                         <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+                            <%--<a href="" class="glightbox play-btn mb-4"></a>--%>
                         </div>
 
                         <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                             <h3>Resort Background</h3>
-                            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+                            <p>Resort was established in 1993 and owned by Mrs. Lea Mendoza. It is located at Liwayway Subdivision, Brgy. Lalig, Tiaong, Quezon. It is a business that offers resort reservations for all occasions such as weddings, birthday parties, family gatherings, retreats, conferences, seminars, company outings, team building and other special out-of-town gathering events. The resort also has 24 hotel rooms for clients who want to stay longer. The resort operates 24 hours; the area has health protocols for the safety of the clients. DJ Resort is committed to delivering high quality service.</p>
 
                             <div class="icon-box">
-                                <div class="icon"><i class="bx bx-home-heart"></i></div>
-                                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                                <p class="description">Prior to your arrival</p>
+                                <div class="icon"><i class="bx bx-hotel"></i></div>
+                                <h4 class="title"><a></a></h4>
+                                <p class="description">Prior to your arrival, your room was unoccupied for at least 3 days and has undergone a thorough 24 hour cleaning and disinfection process.</p>
                             </div>
 
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-spray-can"></i></div>
-                                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                                <p class="description">Clean room, housekeeping</p>
+                                <h4 class="title"><a></a></h4>
+                                <p class="description">To clean your room, our Housekeeping Warriors wear personal protective equipment and use hospital grade disinfectatnts, anti-bacterial and anti-viral gels and soaps, and UV-LED lighting equipment and air purifiers.</p>
                             </div>
 
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-bus-school"></i></div>
-                                <h4 class="title"><a href="">Dine Pad</a></h4>
-                                <p class="description">Clean pickup vehicle/ no of guests</p>
+                                <h4 class="title"><a></a></h4>
+                                <p class="description">We clean your pick-up vehicle bfore and after use. We reduced number of guests allowed in each pick-up vehicle.</p>
                             </div>
 
                         </div>
@@ -166,38 +167,37 @@
             <!-- ======= Counts Section ======= -->
             <section id="counts" class="counts">
                 <div class="container">
+                    <div class="text-center" style="padding-bottom: 40px;">
+                        <h3><strong>WARM AND SAFE WELCOME</strong></h3>
+                    </div>
 
                     <div class="row">
 
                         <div class="col-lg-3 col-md-6">
                             <div class="count-box">
                                 <i class="bx bx-home-heart"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Doctors</p>
+                                <p>Sanitation station are set-up at the arrival areas</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                             <div class="count-box">
                                 <i class="bx bx-spray-can"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Departments</p>
+                                <p>Your luggage will undergo spray sanitation and cleaning before bringing to your room</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div class="count-box">
-                                <i class="bx bx-shield-x"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Research Labs</p>
+                                <i class="bx bx-heart-circle"></i>
+                                <p>Your temperature will be checked upon each entry</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div class="count-box">
-                                <i class="bx bx-taxi"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Awards</p>
+                                <i class="bx bx-file"></i>
+                                <p>Upon check-in, you will be requested to accomplish a Health related questionnaire as by the Department of Heath.</p>
                             </div>
                         </div>
 
@@ -212,32 +212,32 @@
                 <div class="container">
 
                     <div class="section-title">
-                        <h2>Services</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <h2>"Come for the fun, stay for the memories"</h2>
+                        <p></p>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="icon-box">
-                                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                                <div class="icon"><i class="bx bx-swim"></i></div>
                                 <h4><a href="Deals.aspx">Deals</a></h4>
-                                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                                <p>View the Resort's Deals and have one of a kind experience</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                             <div class="icon-box">
-                                <div class="icon"><i class="fas fa-pills"></i></div>
+                                <div class="icon"><i class="bx bx-building-house"></i></div>
                                 <h4><a href="">Facilities</a></h4>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Need a place for your big events? We got you!</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                             <div class="icon-box">
-                                <div class="icon"><i class="fas fa-star"></i></div>
+                                <div class="icon"><i class="bx bx-comment-dots"></i></div>
                                 <h4><a href="">Costumer Feedbacks</a></h4>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                                <p>View testimonies from our customers</p>
                             </div>
                         </div>
 
@@ -253,13 +253,13 @@
 
                     <div class="section-title">
                         <h2>Announcement</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <p></p>
                     </div>
 
                     <form role="form" class="php-email-form">
-
+                        
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="7" placeholder="Announcement" disabled="disabled"></textarea>
+                            <textarea class="form-control" name="message" rows="7" placeholder="No  Announcement for today! :)" disabled="disabled"></textarea>
                             <div class="validate"></div>
                         </div>
 
@@ -275,7 +275,7 @@
 
                     <div class="section-title">
                         <h2>Contact Us</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <p></p>
                     </div>
                 </div>
 
@@ -291,19 +291,19 @@
                                 <div class="address">
                                     <i class="bi bi-geo-alt"></i>
                                     <h4>Location:</h4>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <p>Liwayway Subdivision, Brgy. Lalig Tiaong, Quezon</p>
                                 </div>
 
                                 <div class="email">
                                     <i class="bi bi-envelope"></i>
                                     <h4>Email:</h4>
-                                    <p>info@example.com</p>
+                                    <p>djresort@gmail.com</p>
                                 </div>
 
                                 <div class="phone">
                                     <i class="bi bi-phone"></i>
                                     <h4>Call:</h4>
-                                    <p>+1 5589 55488 55s</p>
+                                    <p>09456286227</p>
                                 </div>
 
                             </div>

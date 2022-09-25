@@ -17,8 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>
-    </IISExpressSSLPort>
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -243,8 +242,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Feedback.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Gallery\assets\img\hero-bg1.jpg" />
+    <Content Include="Gallery\assets\img\5Weddings.jpg" />
+    <Content Include="Gallery\assets\img\6FamilyGatherings.jpg" />
+    <Content Include="Gallery\assets\img\7Team Building.jpg" />
     <Content Include="Gallery\assets\img\hero-bg.jpg" />
+    <Content Include="Gallery\assets\img\about.jpg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -335,7 +337,6 @@
     <Content Include="Gallery\forms\Readme.txt" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Gallery\assets\css\style.css" />
-    <Content Include="Gallery\assets\img\about.jpg" />
     <Content Include="Gallery\assets\img\apple-touch-icon.png" />
     <Content Include="Gallery\assets\img\departments-1.jpg" />
     <Content Include="Gallery\assets\img\departments-2.jpg" />

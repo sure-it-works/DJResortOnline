@@ -555,8 +555,8 @@ h6 {
 
     .navbar .getstarted,
     .navbar .getstarted:focus {
-        /*background: #3498db;*/
-        background: #28a745 !important;
+        background: #1977cc;
+        /*background: #28a745 !important;*/
         padding: 8px 25px;
         margin-left: 30px;
         border-radius: 50px;
@@ -767,13 +767,15 @@ h6 {
         font-weight: 700;
         line-height: 56px;
         text-transform: uppercase;
-        color: #145222;
+        color: #2c4964;
+        text-shadow: 1px 1px #fff;
     }
 
     #hero h2 {
-        color: #145222;
+        color: #2c4964;
         margin: 10px 0 0 0;
         font-size: 24px;
+        text-shadow: 2px 2px #fff;
     }
 
     #hero .btn-get-started {
@@ -788,8 +790,8 @@ h6 {
         border-radius: 50px;
         transition: 0.5s;
         color: #fff;
-        /*background: #1977cc;*/
-        background: #28a745 !important;
+        background: #1977cc;
+        /*background: #28a745 !important;*/
     }
 
 #hero .btn-get-started:hover {
@@ -949,8 +951,8 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
     padding: 30px;
-    /*background: #1977cc;*/
-    background: #28a745 !important;
+    background: #1977cc;
+    /*background: #28a745 !important;*/
     border-radius: 4px;
     color: #fff;
 }
@@ -979,8 +981,8 @@ section {
 }
 
 .why-us .content .more-btn:hover {
-    /*color: #1977cc;*/
-    color: #28a745 !important;
+    color: #1977cc;
+    /*color: #28a745 !important;*/
     background: #fff;
 }
 
@@ -995,9 +997,18 @@ section {
 
 .why-us .icon-boxes .icon-box i {
     font-size: 40px;
-    /*color: #1977cc;*/
-    color: #28a745 !important;
+    color: #1977cc;
+    /*color: #28a745 !important;*/
     margin-bottom: 30px;
+}
+
+.why-us .icon-boxes .icon-box img {
+    background: center center no-repeat;
+    background-size: cover;
+    max-height: 150px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    margin: 0px;
 }
 
 .why-us .icon-boxes .icon-box h4 {
@@ -1080,9 +1091,10 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.jpg") center center no-repeat;
-  background-size: cover;
-  min-height: 500px;
+    background: center center no-repeat;
+    background-image: url('../img/about.jpg');
+    background-size: cover;
+    min-height: 500px;
 }
 
 .about .play-btn {
