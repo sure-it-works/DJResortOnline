@@ -33,560 +33,375 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 
-    <link rel="stylesheet" href="PriceList.css" />
+    <%--<link rel="stylesheet" href="PriceList.css" />--%>
 
-    
-     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
 
-    <script type="text/javascript" language="javascript">
-        $(".imgAdd").click(function () {
-            $(this)
-                .closest(".row")
-                .find(".imgAdd")
-                .before(
-                    '<div class="imgUp">< div class= "imagePreview" ></div ><label class="btn btn-upload">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px; height: 0px; overflow: hidden;" /></label><i class="fa fa-times del"></i></div>'
-                );
-        });
-        $(document).on("click", "i.del", function () {
-            $(this).parent().remove();
-        });
-        $(function () {
-            $(document).on("change", ".uploadFile", function () {
-                var uploadFile = $(this);
-                var files = !!this.files ? this.files : [];
-                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
 
-                if (/^image/.test(files[0].type)) {
-                    // only image file
-                    var reader = new FileReader(); // instance of the FileReader
-                    reader.readAsDataURL(files[0]); // read the local file
-
-                    reader.onloadend = function () {
-                        // set image data as background of div
-                        //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
-                        uploadFile
-                            .closest(".imgUp")
-                            .find(".imagePreview")
-                            .css("background-image", "url(" + this.result + ")");
-                    };
-                }
-            });
-        });
-
-    </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
+    <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <div class="wrapper">
 
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">DJ Resort</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <!-- Logout Menu -->
-                <li class="nav-item dropdown">
-                    <a href="Login.aspx" class="breadcrumb-item">Log Out 
-                        <i class="fas fa-power-off"></i>
-                    </a>
-                </li>
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="index3.html" class="nav-link">DJ Resort</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Logout Menu -->
+                    <li class="nav-item dropdown">
+                        <a href="Login.aspx" class="breadcrumb-item">Log Out
+                                        <i class="fas fa-power-off"></i>
+                        </a>
+                    </li>
 
-            </ul>
+                </ul>
 
-        </nav>
-        <!-- /.navbar -->
+            </nav>
+            <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="~/" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
-                <span class="brand-text font-weight-light">DJ Resort</span>
-            </a>
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a href="~/" class="brand-link">
+                    <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
+                    <span class="brand-text font-weight-light">DJ Resort</span>
+                </a>
 
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">Admin User</a>
+                        </div>
                     </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Admin User</a>
-                    </div>
-                </div>
 
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
-                    <!-- Add icons to the links using the .nav-icon class
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                        <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                    <li class="nav-item">
-                        <a href="Dashboard.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Reserved.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Reservation
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Status.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-shopping-cart"></i>
-                            <p>
-                                Status
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="PriceList.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-umbrella-beach"></i>
-                            <p>
-                                Deals
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-paper-plane"></i>
-                            <p>
-                                Send Emails
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Invoice.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-file-alt"></i>
-                            <p>
-                                Invoice
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Announcement.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-thumbtack"></i>
-                            <p>
-                                Announcement
-                            </p>
-                        </a>
-                    </li>
-                </nav>
-                <!-- /.sidebar-menu -->
+                        <li class="nav-item">
+                            <a href="Dashboard.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Reserved.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Reservation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Status.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    Status
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="PriceList.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-umbrella-beach"></i>
+                                <p>
+                                    Deals
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Emails.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-paper-plane"></i>
+                                <p>
+                                    Send Emails
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Invoice.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    Invoice
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Announcement.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-thumbtack"></i>
+                                <p>
+                                    Announcement
+                                </p>
+                            </a>
+                        </li>
+                    </nav>
+                    <!-- /.sidebar-menu -->
 
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+                </div>
+                <!-- /.sidebar -->
+            </aside>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Price List</h1>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <%-- <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0">Price List</h1>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>--%>
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>Price List</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item">
+                                        <asp:Button ID="btnAddDeal" CssClass="btn btn-primary" runat="server" Text="Add Deal" /></li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.row -->
+                    <!-- /.container-fluid -->
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.content-header -->
+
+                <!-- Main content -->
+                <section class="content">
+
+                    <!-- Default box -->
+                    <div class="card">
+
+                        <div class="card-body p-0">
+
+                            <asp:GridView ID="gvDeals" runat="server" class="table table-striped projects"
+                                AutoGenerateColumns="false" AllowPaging="true"
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvDeals_RowCommand">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblDealsID" runat="server" Text='<%# Eval("DealsID") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField ItemStyle-Width="20%" DataField="DealsName" HeaderText="Deals Name" />
+                                    <asp:BoundField ItemStyle-Width="34%" DataField="DealsDescription" HeaderText="Deals Description" />
+                                    <asp:BoundField ItemStyle-Width="15%" DataField="Capacity" HeaderText="Capacity" />
+                                    <asp:BoundField ItemStyle-Width="15%" DataField="Price" HeaderText="Price" />
+                                    <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
+                                        <ItemTemplate>
+
+                                            <asp:LinkButton ID="Edit" runat="server" CssClass="btn btn-info btn-sm" type="button"
+                                                CommandArgument="<%# Container.DataItemIndex %>"
+                                                CommandName="Touch"><i class="fas fa-eye"></i></asp:LinkButton>
+
+                                            <asp:LinkButton ID="Delete" runat="server" CssClass="btn btn-danger btn-sm" type="button"
+                                                CommandArgument="<%# Container.DataItemIndex %>"
+                                                CommandName="Remove"><i class="fas fas fa-trash"></i></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                </section>
+                <!-- /.content -->
+
             </div>
-            <!-- /.content-header -->
+            <!-- /.content-wrapper -->
 
+            <%--modal-edit--%>
+            <div class="modal fade" id="modalEdit">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width: 830px">
+                        <div class="modal-header">
+                            <h4 class="modal-title"><strong>Deals Details</strong></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
 
-            <!-- Main content -->
-            <section class="content">
+                        <div class="modal-body">
 
-                <!-- Default box -->
-                <div class="card card-solid">
-                    <div class="card-body pb-0">
-                        <div class="row d-flex align-items-stretch">
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header">
-                                        <%--<img src="image/Deals/CoupleRoom.jpg" height="150" />--%>
-                                        
-                                            <div class="imgUp">
-                                                <div class="imagePreview"></div>
-                                                <label class="btn btn-upload">
-                                                    Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px; height: 0px; overflow: hidden;" />
-                                                </label>
-                                            </div>
-                                            <i class="fa fa-plus imgAdd"></i>
+                            <%--1st Row--%>
+                            <div class="form-group">
+                                <div class="row" style="padding-bottom: 0px;">
+                                    <div class="col-6">
+                                        <input type="text" id="Text1" class="form-control" runat="server" placeholder="Deals Name" Visible="false"/>
+                                    </div>
+                                    <div class="col-5">
+                                        <img src="image/thumbnail.png" runat="server" id="imgThumbnail" style="float:right; height: 180px;" />
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="text" id="Text3" class="form-control" runat="server" placeholder="Deals Name" Visible="false"/>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <%--https://codepen.io/MR_RooT/pen/RwPErrB--%>
+                             <%--1st Row--%>
+                            <div class="form-group">
+                                <div class="row" style="padding-bottom: 0px;">
+                                    <div class="col-6">
+                                        <input type="text" id="Text2" class="form-control" runat="server" placeholder="Deals Name" Visible="false"/>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input placeholder="Deals Name" class="form-control" />
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea id="txtNotesEdit" class="form-control" rows="4" placeholder="Description" runat="server"></textarea>
-                                        </div>
+                                    <div class="col-5">
+                                        <asp:Label ID="imageLink" runat="server" Font-Bold="True" Font-Size="Large" style="float:right;"></asp:Label>
                                     </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-eye"></i>View
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-pen"></i>Edit
-                                            </a>
-                                        </div>
+                                    <div class="col-1">
+                                        <input type="text" id="Text4" class="form-control" runat="server" placeholder="Deals Name" Visible="false"/>
                                     </div>
                                 </div>
                             </div>
-                            <%-- <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+
+                            <%--1st Row--%>
+                            <div class="form-group">
+                                <div class="row" style="padding-bottom: 0px;">
+                                    <div class="col-6">
+                                        <input type="text" id="DealsName" class="form-control" runat="server" placeholder="Deals Name" />
                                     </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user2-160x160.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
+                                    <div class="col-6">
+                                        <input type="file" id="imageUploader" runat="server" required="required" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+
+                            <%--2nd Row--%>
+                            <div class="form-group">
+                                <label>Deals Description</label>
+                                <textarea id="DealsDescription" class="form-control" rows="4" runat="server"></textarea>
+                            </div>
+
+                            <%--3rdRow--%>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="inputStatus">No. of Adults</label>
                                     </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <label for="inputStatus">No. Of Kids</label>
                                     </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
+                                    <div class="col-4">
+                                        <label for="inputStatus">Price:  ₱</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+
+                            <%--4th Row--%>
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-4">
+                                        <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
                                     </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user2-160x160.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
+
+                                    <div class="col-4">
+                                        <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
                                     </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
+
+                                    <div class="col-4">
+                                        <input type="number" id="txtPrice" class="form-control" runat="server" />
                                     </div>
+
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                <div class="card bg-light">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b>Web Designer / UX / Graphic Artist / Coffee Lover </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span>Phone #: + 800 - 12 12 23 52</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="../../dist/img/user2-160x160.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i>View Profile
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>--%>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Save" />
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
                         </div>
                     </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        <nav aria-label="Contacts Page Navigation">
-                            <ul class="pagination justify-content-center m-0">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                <li class="page-item"><a class="page-link" href="#">8</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- /.card-footer -->
+                    <!-- /.modal-content -->
                 </div>
-                <!-- /.card -->
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
 
-            </section>
-            <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1
+            </div>
+        </footer>
 
-
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
-        All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1
-    </div>
-    </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-    </div>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+        </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+        <!-- jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- ChartJS -->
+        <script src="plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="plugins/moment/moment.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="dist/js/pages/dashboard.js"></script>
 
-
-
+        <script type='text/javascript'>
+            function myModalEdit() {
+                $('[id*=modalEdit]').modal('show');
+            }
+        </script>
+    </form>
 </body>
 </html>

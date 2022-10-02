@@ -436,6 +436,7 @@
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
     <Content Include="image\Reservation\QR.jpg" />
+    <Content Include="image\thumbnail.png" />
     <Content Include="Invoice.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
