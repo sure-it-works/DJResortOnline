@@ -33,13 +33,13 @@ namespace DJResortOnline
         protected global::System.Web.UI.WebControls.GridView gvDeals;
 
         /// <summary>
-        /// Text1 control.
+        /// txtDealsID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDealsID;
 
         /// <summary>
         /// imgThumbnail control.
@@ -102,7 +102,7 @@ namespace DJResortOnline
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile imageUploader;
+        protected global::System.Web.UI.WebControls.FileUpload imageUploader;
 
         /// <summary>
         /// DealsDescription control.

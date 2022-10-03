@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PriceList.aspx.cs" Inherits="DJResortOnline.PriceList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddDeal.aspx.cs" Inherits="DJResortOnline.AddDeal" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DJ Resort | Price List</title>
+    <title>DJ Resort | Add Deal</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -33,21 +33,14 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 
-    <%--<link rel="stylesheet" href="PriceList.css" />--%>
-
-
-    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
-
-
+    <%--    Templates/AdminLTE-3.1.0-rc/pages/mailbox/compose.html--%>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
-        <div class="wrapper">
+    <div class="wrapper">
 
-          <!-- Navbar -->
+        <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
@@ -167,108 +160,37 @@
             <!-- /.sidebar -->
         </aside>
 
-
-            <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
-                <!-- Content Header (Page header) -->
-                <div class="content-header">
-                    <%-- <div class="container-fluid">
-                        <div class="row mb-2">
-                            <div class="col-sm-6">
-                                <h1 class="m-0">Price List</h1>
-                            </div>
-                        </div>
-                        <!-- /.row -->
-                    </div>--%>
-                    <div class="container-fluid">
-                        <div class="row mb-2">
-                            <div class="col-sm-6">
-                                <h1>Price List</h1>
-                            </div>
-                            <div class="col-sm-6">
-                                <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item">
-                                        <asp:Button ID="btnAddDeal" CssClass="btn btn-primary" runat="server" Text="Add Deal" OnClick="btnAddDeal_Click" />
-                                    </li>
-                                </ol>
-                            </div>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Add Deals</h1>
                         </div>
                     </div>
-                    <!-- /.container-fluid -->
+                    <!-- /.row -->
                 </div>
-                <!-- /.content-header -->
-
-                <!-- Main content -->
-                <section class="content">
-
-                    <!-- Default box -->
-                    <div class="card">
-
-                        <div class="card-body p-0">
-
-                            <asp:GridView ID="gvDeals" runat="server" class="table table-striped projects"
-                                AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvDeals_RowCommand">
-                                <Columns>
-                                    <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
-                                        <ItemTemplate>
-                                            <asp:Label ID="lblDealsID" runat="server" Text='<%# Eval("DealsID") %>'></asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                    <asp:BoundField ItemStyle-Width="20%" DataField="DealsName" HeaderText="Deals Name" />
-                                    <asp:BoundField ItemStyle-Width="34%" DataField="DealsDescription" HeaderText="Deals Description" />
-                                    <asp:BoundField ItemStyle-Width="15%" DataField="Capacity" HeaderText="Capacity" />
-                                    <asp:BoundField ItemStyle-Width="15%" DataField="Price" HeaderText="Price" />
-                                    <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
-                                        <ItemTemplate>
-
-                                            <asp:LinkButton ID="Edit" runat="server" CssClass="btn btn-info btn-sm" type="button"
-                                                CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Touch"><i class="fas fa-eye"></i></asp:LinkButton>
-
-                                            <asp:LinkButton ID="Delete" runat="server" CssClass="btn btn-danger btn-sm" type="button"
-                                                CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Remove"><i class="fas fas fa-trash"></i></asp:LinkButton>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                </Columns>
-                            </asp:GridView>
-
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-
-                </section>
-                <!-- /.content -->
-
+                <!-- /.container-fluid -->
             </div>
-            <!-- /.content-wrapper -->
+            <!-- /.content-header -->
 
-            <%--modal-edit--%>
-            <div class="modal fade" id="modalEdit">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="width: 830px">
-                        <div class="modal-header">
-                            <h4 class="modal-title"><strong>Deals Details</strong></h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="card-body">
 
-                        <div class="modal-body">
-
-                            <%--1st Row--%>
-                            <div class="form-group">
+                        <div class="form-group">
                                 <div class="row" style="padding-bottom: 0px;">
                                     <div class="col-6">
-                                        <input type="text" id="txtDealsID" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
+                                        <input type="text" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
                                     </div>
                                     <div class="col-5">
-                                        <img src="~/image/thumbnail.png" runat="server" id="imgThumbnail" style="float: right; height: 180px;" />
+                                        <img src="~/image/thumbnail.png" runat="server" id="AddImgThumbnail" style="float: right; height: 180px;" />
                                     </div>
                                     <div class="col-1">
-                                        <input type="text" id="Text3" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
+                                        <input type="text" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
                                     </div>
                                 </div>
                             </div>
@@ -277,13 +199,13 @@
                             <div class="form-group">
                                 <div class="row" style="padding-bottom: 0px;">
                                     <div class="col-6">
-                                        <input type="text" id="Text2" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
+                                        <input type="text" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
                                     </div>
                                     <div class="col-5">
-                                        <asp:Label ID="imageLink" runat="server" Font-Bold="True" Font-Size="Large" Style="float: right;"></asp:Label>
+                                        <asp:Label ID="addImgLink" runat="server" Font-Bold="True" Font-Size="Large" Style="float: right;"></asp:Label>
                                     </div>
                                     <div class="col-1">
-                                        <input type="text" id="Text4" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
+                                        <input type="text" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
                                     </div>
                                 </div>
                             </div>
@@ -292,13 +214,13 @@
                             <div class="form-group">
                                 <div class="row" style="padding-bottom: 0px;">
                                     <div class="col-6">
-                                        <input type="text" id="DealsName" class="form-control" runat="server" placeholder="Deals Name" />
+                                        <input type="text" id="addDealsName" class="form-control" runat="server" placeholder="Deals Name" />
                                     </div>
                                     <div class="col-6">
                                         <%--<input type="file" id="imageUploader" runat="server" required="required" />--%>
-                                        <asp:FileUpload ID="imageUploader" runat="server" accept=".png,.jpg,.jpeg,.gif" />
-                                        <%--<asp:RequiredFieldValidator runat="server" Display="Dynamic" ErrorMessage="* Required Field" ControlToValidate="imageUploader">
-                                        </asp:RequiredFieldValidator>--%>
+                                        <asp:FileUpload ID="Addimage" runat="server" accept=".png,.jpg,.jpeg,.gif" />
+                                        <asp:RequiredFieldValidator runat="server" Display="Dynamic" ErrorMessage="* Required Field" ControlToValidate="Addimage">
+                                        </asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +228,7 @@
                             <%--2nd Row--%>
                             <div class="form-group">
                                 <label>Deals Description</label>
-                                <textarea id="DealsDescription" class="form-control" rows="4" runat="server"></textarea>
+                                <textarea id="AddTxtDescription" class="form-control" rows="4" runat="server"></textarea>
                             </div>
 
                             <%--3rdRow--%>
@@ -329,45 +251,40 @@
                                 <div class="row">
 
                                     <div class="col-4">
-                                        <input type="number" id="txtAdultsEdit" class="form-control" runat="server" />
+                                        <input type="number" id="AddAdultsNo" class="form-control" runat="server" />
                                     </div>
 
                                     <div class="col-4">
-                                        <input type="number" id="txtKidsEdit" class="form-control" runat="server" />
+                                        <input type="number" id="AddKidsNo" class="form-control" runat="server" />
                                     </div>
 
                                     <div class="col-4">
-                                        <input type="number" id="txtPrice" class="form-control" runat="server" />
+                                        <input type="number" id="AddPrice" class="form-control" runat="server" />
                                     </div>
 
                                 </div>
                             </div>
 
                         </div>
-
-                        <div class="modal-footer">
-                            <asp:Button ID="btnSave" CssClass="btn btn-primary" runat="server" Text="Update" OnClick="btnSave_Click" />
-                            <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
-                        </div>
                     </div>
-                    <!-- /.modal-content -->
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                       <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Save"  />
+                       <button type="button" class="btn btn-default" style="float: right">Back to Deals</button>
+                    </div>
+                    <!-- /.card-footer -->
                 </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- /.modal -->
-
-             
-
-           
-
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
             All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1
-            </div>
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1
+    </div>
         </footer>
 
         <!-- Control Sidebar -->
@@ -375,55 +292,46 @@
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
-        </div>
+    </div>
     <!-- ./wrapper -->
 
-        <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script>
-            $.widget.bridge('uibutton', $.ui.button)
-        </script>
-        <!-- Bootstrap 4 -->
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- ChartJS -->
-        <script src="plugins/chart.js/Chart.min.js"></script>
-        <!-- Sparkline -->
-        <script src="plugins/sparklines/sparkline.js"></script>
-        <!-- JQVMap -->
-        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-        <!-- jQuery Knob Chart -->
-        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-        <!-- daterangepicker -->
-        <script src="plugins/moment/moment.min.js"></script>
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>
-        <!-- Tempusdominus Bootstrap 4 -->
-        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-        <!-- Summernote -->
-        <script src="plugins/summernote/summernote-bs4.min.js"></script>
-        <!-- overlayScrollbars -->
-        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="dist/js/adminlte.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="dist/js/demo.js"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="dist/js/pages/dashboard.js"></script>
-
-        <script type='text/javascript'>
-            function myModalEdit() {
-                $('[id*=modalEdit]').modal('show');
-            }
-        </script>
-
-       <%-- <script type='text/javascript'>
-            function myAddModal() {
-                $('[id*=modalAdd]').modal('show');
-            }
-        </script>--%>
-    </form>
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js"></script>
+    <!-- Bootstrap Switch -->
+    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    
+</form>
 </body>
 </html>

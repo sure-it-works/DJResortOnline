@@ -47,7 +47,7 @@
         <asp:ScriptManager runat="server"></asp:ScriptManager>
     <div class="wrapper">
 
-        <!-- Navbar -->
+       <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
@@ -55,14 +55,13 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">DJ Resort</a>
+                    <a href="Front.aspx" class="nav-link">DJ Resort</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Logout Menu -->
                 <li class="nav-item dropdown">
-                    <a href="Login.aspx" class="breadcrumb-item">Log Out 
-                        <i class="fas fa-power-off"></i>
+                    <a href="Login.aspx" class="btn btn-danger" type="button">Log Out &nbsp;<i class="fas fa-power-off"></i>
                     </a>
                 </li>
 
@@ -74,8 +73,8 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="~/" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
+            <a href="Front.aspx" class="brand-link">
+                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
                 <span class="brand-text font-weight-light">DJ Resort</span>
             </a>
 
@@ -131,9 +130,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-envelope"></i>
+                            <i class="nav-icon fas fa-paper-plane"></i>
                             <p>
-                                Email
+                                Send Emails
                             </p>
                         </a>
                     </li>
