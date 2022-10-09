@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -236,6 +240,7 @@
     <Content Include="Content\jquery-3.6.0.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="AddFeedback.aspx" />
     <Content Include="Front.aspx" />
     <Content Include="Deals.aspx" />
     <Content Include="Default.aspx" />
@@ -433,6 +438,8 @@
     <Content Include="image\Deals\CoupleRoom.jpg" />
     <Content Include="image\Deals\FamilyRoom.jpg" />
     <Content Include="image\Deals\VillaCottage.jpg" />
+    <Content Include="image\EmptyStar.JPG" />
+    <Content Include="image\filledStar.JPG" />
     <Content Include="image\footer-logo.png" />
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
@@ -530,6 +537,13 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFeedback.aspx.cs">
+      <DependentUpon>AddFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFeedback.aspx.designer.cs">
+      <DependentUpon>AddFeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="Front.aspx.cs">
       <DependentUpon>Front.aspx</DependentUpon>

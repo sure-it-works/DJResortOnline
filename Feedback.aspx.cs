@@ -101,7 +101,7 @@ namespace DJResortOnline
                             lblDate.Text = "Posted Date: " + dt.Rows[0]["CreatedDate"].ToString();
                             txtNameEdit.Value = dt.Rows[0]["Name"].ToString();
                             txtEmailEdit.Value = dt.Rows[0]["Email"].ToString();
-                            txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
+                            //txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
                             txtNotesEdit.Value = dt.Rows[0]["FeedbackDetails"].ToString();
 
                             ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModalFeedback", "$('#modalFeedback').modal('show');", true);

@@ -215,9 +215,6 @@ namespace DJResortOnline
         {
             ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myAddModal", "$('#modalAdd').modal('show');", true);
         }
-
-
-
         private void addDeal()
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
