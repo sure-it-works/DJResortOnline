@@ -17,7 +17,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44378</IISExpressSSLPort>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -241,6 +242,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="AddFeedback.aspx" />
+    <Content Include="HealthDec.aspx" />
     <Content Include="Front.aspx" />
     <Content Include="Deals.aspx" />
     <Content Include="Default.aspx" />
@@ -544,6 +546,13 @@
     </Compile>
     <Compile Include="AddFeedback.aspx.designer.cs">
       <DependentUpon>AddFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthDec.aspx.cs">
+      <DependentUpon>HealthDec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthDec.aspx.designer.cs">
+      <DependentUpon>HealthDec.aspx</DependentUpon>
     </Compile>
     <Compile Include="Front.aspx.cs">
       <DependentUpon>Front.aspx</DependentUpon>

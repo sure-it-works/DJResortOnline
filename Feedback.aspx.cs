@@ -68,6 +68,34 @@ namespace DJResortOnline
             }
         }
 
+        private void progressBar()
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Get_FeedbackDetailsDisplay", myConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            myConnection.Open();
+
+            using (SqlDataAdapter sda = new SqlDataAdapter())
+            {
+                cmd.Connection = myConnection;
+                sda.SelectCommand = cmd;
+                using (DataTable dt = new DataTable())
+                {
+                    sda.Fill(dt);
+
+                    FeedbackRatings.InnerText = dt.Rows[0]["FeedbackRatings"].ToString();
+                    TotalReviewNo.InnerText = dt.Rows[0]["NoofReviewers"].ToString();
+
+                   
+                    //select COUNT(*) as NoofReviewers,
+                    //(SUM(FeedbackStars) / COUNT(*)) as FeedbackRatings
+                    //FROM FeedbackDetails with(nolock)
+                }
+            }
+
+            
+        }
+
         protected void gvFeedbacks_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             try

@@ -40,6 +40,12 @@
      <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript"> 
+        function updateProgress(percentage) {
+            document.getElementById('ProgressBar').style.width = percentage + "%";
+        }
+    </script>
     
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -227,7 +233,7 @@
                                                       <i class="nav-icon fas fa fa-star" style="color: #ffc107"></i>
                                                   </span>
                                                 <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                                    <div  class="progress-bar bg-primary" style="width: 80%"></div>
                                                 </div>
                                             </div>
                                             <!-- /.progress-group -->
@@ -242,7 +248,7 @@
                                                       <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
                                                   </span>
                                                 <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-danger" style="width: 75%"></div>
+                                                    <div  class="progress-bar bg-danger" style="width: 75%"></div>
                                                 </div>
                                             </div>
 
@@ -258,7 +264,7 @@
                                                     <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
                                                 </span>
                                                 <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success" style="width: 60%"></div>
+                                                    <div  class="progress-bar bg-success" style="width: 60%"></div>
                                                 </div>
                                             </div>
 
@@ -273,7 +279,7 @@
                                                       <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
                                                   </span>
                                                 <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                                    <div  class="progress-bar bg-warning" style="width: 50%"></div>
                                                 </div>
                                             </div>
                                             <!-- /.progress-group -->
@@ -289,7 +295,7 @@
                                                       <i class="nav-icon fas fa fa-star" style="color: moccasin"></i>
                                                   </span>
                                                 <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-warning" style="width: 30%"></div>
+                                                    <div  class="progress-bar bg-warning" style="width: 30%"></div>
                                                 </div>
                                             </div>
                                             <!-- /.progress-group -->
