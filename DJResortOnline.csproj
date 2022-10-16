@@ -241,6 +241,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="AddFeedback.aspx" />
+    <Content Include="Facilities.aspx" />
     <Content Include="Front.aspx" />
     <Content Include="Deals.aspx" />
     <Content Include="Default.aspx" />
@@ -432,6 +433,7 @@
     <Content Include="Gallery\assets\vendor\remixicon\remixicon.symbol.svg" />
     <Content Include="Gallery\assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="Gallery\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="HealthDec.aspx" />
     <Content Include="image\admin.png" />
     <Content Include="image\dashboard.png" />
     <Content Include="image\Deals\BarkadaRoom.jpg" />
@@ -439,7 +441,14 @@
     <Content Include="image\Deals\FamilyRoom.jpg" />
     <Content Include="image\Deals\VillaCottage.jpg" />
     <Content Include="image\EmptyStar.JPG" />
+    <Content Include="image\EmptyStar.png" />
+    <Content Include="image\Facilities\0Unofficial Video.mp4" />
+    <Content Include="image\Facilities\1Canteen.bmp" />
+    <Content Include="image\Facilities\2Standee.JPG" />
+    <Content Include="image\Facilities\3Garden.JPG" />
+    <Content Include="image\Facilities\5Comfort Room.jpg" />
     <Content Include="image\filledStar.JPG" />
+    <Content Include="image\filledStar.png" />
     <Content Include="image\footer-logo.png" />
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
@@ -545,6 +554,13 @@
     <Compile Include="AddFeedback.aspx.designer.cs">
       <DependentUpon>AddFeedback.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Facilities.aspx.cs">
+      <DependentUpon>Facilities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facilities.aspx.designer.cs">
+      <DependentUpon>Facilities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Front.aspx.cs">
       <DependentUpon>Front.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -582,6 +598,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HealthDec.aspx.cs">
+      <DependentUpon>HealthDec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthDec.aspx.designer.cs">
+      <DependentUpon>HealthDec.aspx</DependentUpon>
     </Compile>
     <Compile Include="Invoice.aspx.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>

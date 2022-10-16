@@ -33,28 +33,31 @@
 
     <style>
         .Star {
-            background-image: url(image/EmptyStar.JPG);
+            background-image: url(image/EmptyStar.png);
             margin-top: 0px;
-            height: 70px;
-            width: 74px;
+            height: 40px;
+            width: 40px;
+            margin: 5px;
         }
 
 
 
         .WaitingStar {
-            background-image: url(image/EmptyStar.JPG);
+            background-image: url(image/EmptyStar.png);
              margin-top: 0px;
-            height: 70px;
-            width: 74px;
+            height: 40px;
+            width: 40px;
+            margin: 5px;
         }
 
 
 
         .FilledStar {
-            background-image: url(image/filledStar.JPG);
+            background-image: url(image/filledStar.png);
              margin-top: 0px;
-            height: 70px;
-            width: 74px;
+             height: 44px;
+            width: 44px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -209,6 +212,14 @@
                         <div class="col-lg-12 mt-5 mt-lg-0">
 
                             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                
+                                <div class="form-group mt-3" >
+                                    <ajaxToolkit:Rating ID="Rating1" runat="server" AutoPostBack="true"
+                                        StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star"
+                                        FilledStarCssClass="FilledStar" HorizontalAlign="Right">
+                                    </ajaxToolkit:Rating>
+                                    
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <input type="text" name="name" class="form-control" id="txtName" placeholder="Your Name" required="required" runat="server"/>
@@ -218,19 +229,11 @@
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <ajaxToolkit:Rating ID="Rating1" runat="server" AutoPostBack="true"
-                                        StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star"
-                                        FilledStarCssClass="FilledStar">
-                                    </ajaxToolkit:Rating>
-                                    
-                                </div>
-                                <div class="form-group mt-3">
                                     <textarea class="form-control" name="message" rows="5" placeholder="Enter your Feedback" required="required" runat="server" id="txtDetails"></textarea>
                                 </div>
                                 
-                                <div class="text-center">
-                                    <%--<button type="submit" >Send Message</button>--%>
-                                    <asp:Button runat="server" Text="Submit Review" ID="btnsubmit" OnClick="btnsubmit_Click" class="getstarted scrollto"/>
+                                <div class="text-center" style="padding: 10px;">
+                                    <asp:Button runat="server" Text="Submit Review" ID="btnsubmit" OnClick="btnsubmit_Click" class="btn btn-primary"/>
                                 </div>
                             </form>
 

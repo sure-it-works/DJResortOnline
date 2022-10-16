@@ -62,7 +62,9 @@ namespace DJResortOnline
                 var result = cmd.ExecuteNonQuery();
                 myConnection.Close();
 
-
+                txtName.Value = string.Empty;
+                txtEmail.Value = string.Empty;
+                txtDetails.Value = string.Empty;
             }
 
             Response.Write("<script language=javascript>alert('Feedback Submitted!');</script>");
