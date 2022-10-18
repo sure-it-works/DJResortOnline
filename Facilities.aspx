@@ -28,7 +28,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="Facilities.css" rel="stylesheet"/>
 </head>
 <body>
      <form runat="server">
@@ -44,29 +44,42 @@
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Deals</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Contact Us</a></li>
-                    <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
+           <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+                        <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
             <!-- .navbar -->
 
         </div>
     </header>
     <!-- End Header -->
 
+           <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container">
+                <div class="video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="image/Facilities/0Unofficial Video.mp4" class="glightbox play-btn mb-4"></a>
+          </div>
+            </div>
+        </section>
+        <!-- End Hero -->
+
         <main id="main">
 
             <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio" style="padding: 20px;">
             <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+          <h2>Ameneties and Facilities</h2>
+        </div>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
 
@@ -77,7 +90,7 @@
                                 <h4>Canteen</h4>
                                 <p>Canteen Description</p>
                                 <div class="portfolio-links">
-                                    <a href="image/Facilities/1Canteen.bmp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Villa Cottage Description"><i class="bx bx-plus"></i></a>
+                                    <a href="image/Facilities/1Canteen.bmp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
                                     <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
@@ -91,7 +104,7 @@
                                 <h4>Standee</h4>
                                 <p>Standee Description</p>
                                 <div class="portfolio-links">
-                                    <a href="image/Facilities/2Standee.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Family Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="image/Facilities/2Standee.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
                                     <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
@@ -105,7 +118,7 @@
                                 <h4>Garden</h4>
                                 <p>Garden Description</p>
                                 <div class="portfolio-links">
-                                    <a href="image/Facilities/3Garden.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Barkada Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="image/Facilities/3Garden.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
                                     <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
@@ -119,7 +132,7 @@
                                 <h4>Comfort Room</h4>
                                 <p>Comfort Room Description</p>
                                 <div class="portfolio-links">
-                                    <a href="image/Facilities/5Comfort Room.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Couple Room Description"><i class="bx bx-plus"></i></a>
+                                    <a href="image/Facilities/5Comfort Room.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
                                     <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
