@@ -152,6 +152,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="HealthDeclaration.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-notes-medical"></i>
+                            <p>
+                                Health Declaration
+                            </p>
+                        </a>
+                    </li>
                 </nav>
                 <!-- /.sidebar-menu -->
 
@@ -180,26 +188,28 @@
                 <div class="container-fluid">
                     <div class="card-body">
                         <div class="form-group">
-                            <p>Fill in the title and the body of the announcement.</p>
+                            <p>Add your announcement here.</p>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Title"/>
+                            <input class="form-control" placeholder="Status" id="Status" disabled="disabled" runat="server" style="font-weight: bold" />
                         </div>
                         <div class="form-group">
-                            <textarea id="compose-textarea" class="form-control" style="height: 300px" rows="7"  placeholder="Enter announcement body.">
-                            </textarea>
+                           <%-- <textarea id="compose-textarea" class="form-control" style="height: 300px" rows="7" placeholder="Enter announcement body.">
+                            </textarea>--%>
+
+                            <textarea class="form-control" name="message" rows="7" placeholder="Enter announcement" id="announcementDetails" runat="server" ></textarea>
                         </div>
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <div class="form-group">
+                        <%--<div class="form-group">
                             <p>Use below toggle to post or remove the announcement.</p>
-                        </div>
+                        </div>--%>
                         <div class="float-right">
-                            <%--<button type="button" class="btn btn-primary"><i class="fas fa-eye"></i>View</button>
-                            <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i>Edit</button>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-thumbtack"></i>Post</button>--%>
-                            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success"/>
+                            <button type="button" class="btn btn-success" runat="server"><i class="fas fa-eye"></i>View</button>
+                            <button type="button" class="btn btn-danger" runat="server" id="btnDelete" onserverclick="btnDelete_Click"><i class="fas fa-trash"></i>Delete</button>
+                            <button type="button" class="btn btn-primary" runat="server" id="btnPost" onserverclick="btnPost_Click"><i class="fas fa-thumbtack"></i>Post</button>
+                            <%--<input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success" />--%>
                         </div>
                     </div>
                     <!-- /.card-footer -->

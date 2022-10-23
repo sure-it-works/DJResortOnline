@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DJ Resort | Invoice</title>
-     <!-- Favicons -->
+    <!-- Favicons -->
     <link href="image/logo.png" rel="icon">
 
     <!-- Google Font: Source Sans Pro -->
@@ -51,124 +51,132 @@
         <div class="wrapper">
 
             <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="Front.aspx" class="nav-link">DJ Resort</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <!-- Logout Menu -->
-                <li class="nav-item dropdown">
-                    <a href="Login.aspx" class="btn btn-danger" type="button">Log Out &nbsp;<i class="fas fa-power-off"></i>
-                    </a>
-                </li>
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="Front.aspx" class="nav-link">DJ Resort</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Logout Menu -->
+                    <li class="nav-item dropdown">
+                        <a href="Login.aspx" class="btn btn-danger" type="button">Log Out &nbsp;<i class="fas fa-power-off"></i>
+                        </a>
+                    </li>
 
-            </ul>
+                </ul>
 
-        </nav>
-        <!-- /.navbar -->
+            </nav>
+            <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="Front.aspx" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
-                <span class="brand-text font-weight-light">DJ Resort</span>
-            </a>
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a href="Front.aspx" class="brand-link">
+                    <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
+                    <span class="brand-text font-weight-light">DJ Resort</span>
+                </a>
 
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">Admin User</a>
+                        </div>
                     </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Admin User</a>
-                    </div>
-                </div>
 
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
-                    <!-- Add icons to the links using the .nav-icon class
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                        <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                    <li class="nav-item">
-                        <a href="Dashboard.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Reserved.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Reservation
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Status.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-shopping-cart"></i>
-                            <p>
-                                Status
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="PriceList.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-umbrella-beach"></i>
-                            <p>
-                                Deals
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-paper-plane"></i>
-                            <p>
-                                Send Emails
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Feedback.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-star"></i>
-                            <p>
-                                Feedbacks
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Invoice.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-file-alt"></i>
-                            <p>
-                                Invoice
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Announcement.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-thumbtack"></i>
-                            <p>
-                                Announcement
-                            </p>
-                        </a>
-                    </li>
-                </nav>
-                <!-- /.sidebar-menu -->
+                        <li class="nav-item">
+                            <a href="Dashboard.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Reserved.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Reservation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Status.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    Status
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="PriceList.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-umbrella-beach"></i>
+                                <p>
+                                    Deals
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Emails.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-paper-plane"></i>
+                                <p>
+                                    Send Emails
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Feedback.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-star"></i>
+                                <p>
+                                    Feedbacks
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Invoice.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    Invoice
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Announcement.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-thumbtack"></i>
+                                <p>
+                                    Announcement
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="HealthDeclaration.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-notes-medical"></i>
+                                <p>
+                                    Health Declaration
+                                </p>
+                            </a>
+                        </li>
+                    </nav>
+                    <!-- /.sidebar-menu -->
 
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+                </div>
+                <!-- /.sidebar -->
+            </aside>
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -178,6 +186,23 @@
                         <div class="row mb-2">
                             <div class="col-sm-6">
                                 <h1 class="m-0">Invoice</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item">
+                                        <div class="input-group mb-3">  
+                                            <input type="text" class="form-control rounded-40" id="txtSearch" runat="server"/>
+                                            <span class="input-group-append">
+                                                <button type="button" class="btn btn-primary" runat="server" id="btnSearch" onserverclick="btnSearch_Click">Search</button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <div class="input-group mb-3">
+                                                <button type="button" class="btn btn-primary" runat="server" id="btnGVprint" onserverclick="ExportToPDF"><i class="fas fas fa-print"></i></button>
+                                        </div>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                         <!-- /.row -->
@@ -196,7 +221,7 @@
 
                             <asp:GridView ID="gvInvoice" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvInvoice_RowCommand">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvInvoice_RowCommand" OnPageIndexChanging="gvInvoice_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>
@@ -205,11 +230,11 @@
                                     </asp:TemplateField>
                                     <asp:BoundField ItemStyle-Width="25%" DataField="TransactionNo" HeaderText="Transaction No" />
                                     <asp:BoundField ItemStyle-Width="20%" DataField="Name" HeaderText="Name" />
-                                     <asp:BoundField ItemStyle-Width="14%" DataField="Email" HeaderText="Email" />
+                                    <asp:BoundField ItemStyle-Width="14%" DataField="Email" HeaderText="Email" />
                                     <asp:BoundField ItemStyle-Width="10%" DataField="CheckIn" HeaderText="Check In" />
                                     <asp:BoundField ItemStyle-Width="10%" DataField="CheckOut" HeaderText="Check Out" />
                                     <asp:BoundField ItemStyle-Width="10%" DataField="TotalPayment" HeaderText="Total Payment" />
-                                    
+
                                     <asp:TemplateField ItemStyle-Width="10%" ShowHeader="False">
                                         <ItemTemplate>
                                             <%--<asp:LinkButton ID="Print" runat="server" CssClass="btn btn-info btn-sm" type="button"
@@ -233,7 +258,7 @@
                 <%--</div>--%>
                 <!-- /.content-wrapper -->
 
-               
+
 
 
                 <%--modal-edit--%>
@@ -273,11 +298,11 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-8">
-                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" disabled="disabled"  />
+                                            <input type="email" id="txtEmailEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
                                         <div class="col-4">
 
-                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" disabled="disabled"  />
+                                            <input type="text" id="txtContactEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
                                     </div>
 
@@ -296,7 +321,7 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="input-group date" data-target-input="nearest">
-                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disabled="disabled"/>
+                                                <input id="txtCheckInEdit" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" runat="server" disabled="disabled" />
                                                 <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                 </div>
@@ -325,13 +350,13 @@
                                             <label for="inputStatus">No. of Adults: </label>
                                         </div>
                                         <div class="col-1">
-                                            <input type="number" id="txtAdultsEdit" class="form-control" runat="server" disabled="disabled"  />
+                                            <input type="number" id="txtAdultsEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
                                         <div class="col-3">
                                             <label for="inputStatus">No. of Kids: </label>
                                         </div>
                                         <div class="col-1">
-                                            <input type="number" id="txtKidsEdit" class="form-control" runat="server" disabled="disabled"  />
+                                            <input type="number" id="txtKidsEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
                                     </div>
                                 </div>
@@ -343,21 +368,21 @@
                                             <label for="inputStatus">Total Amount:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input type="text" id="txtTotalEdit" class="form-control" runat="server"  disabled="disabled" />
+                                            <input type="text" id="txtTotalEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
 
                                         <div class="col-2">
                                             <label for="inputStatus">Reservation Fee:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input type="text" id="txtReservationEdit" class="form-control" runat="server" disabled="disabled"  />
+                                            <input type="text" id="txtReservationEdit" class="form-control" runat="server" disabled="disabled" />
                                         </div>
 
                                         <div class="col-2">
                                             <label for="inputStatus">Remaining Balance:  ₱</label>
                                         </div>
                                         <div class="col-2">
-                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control" disabled="disabled"  />
+                                            <input runat="server" type="text" id="txtBalanceEdit" class="form-control" disabled="disabled" />
                                         </div>
                                     </div>
                                 </div>
@@ -383,66 +408,66 @@
                 <!-- /.modal -->
 
 
-                </div>
+            </div>
 
 
-                <footer class="main-footer">
-                    <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
-                    All rights reserved.
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
+                All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 1
     </div>
-                </footer>
+            </footer>
 
-              <%--  <!-- Control Sidebar -->
+            <%--  <!-- Control Sidebar -->
                 <aside class="control-sidebar control-sidebar-dark">
                     <!-- Control sidebar content goes here -->
                 </aside>
                 <!-- /.control-sidebar -->--%>
-            </div>
-            <!-- ./wrapper -->
+        </div>
+        <!-- ./wrapper -->
 
-            <!-- jQuery -->
-            <%--<script src="plugins/jquery/jquery.min.js"></script>--%>
-            <!-- jQuery UI 1.11.4 -->
-            <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-            <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-            <script>
-                $.widget.bridge('uibutton', $.ui.button)
-            </script>
-            <!-- Bootstrap 4 -->
-            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <!-- ChartJS -->
-            <script src="plugins/chart.js/Chart.min.js"></script>
-            <!-- Sparkline -->
-            <script src="plugins/sparklines/sparkline.js"></script>
-            <!-- JQVMap -->
-            <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-            <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-            <!-- jQuery Knob Chart -->
-            <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-            <!-- daterangepicker -->
-            <%--<script src="plugins/moment/moment.min.js"></script>
+        <!-- jQuery -->
+        <%--<script src="plugins/jquery/jquery.min.js"></script>--%>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- ChartJS -->
+        <script src="plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <%--<script src="plugins/moment/moment.min.js"></script>
         <script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
-            <!-- Tempusdominus Bootstrap 4 -->
-            <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-            <!-- Summernote -->
-            <script src="plugins/summernote/summernote-bs4.min.js"></script>
-            <!-- overlayScrollbars -->
-            <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-            <!-- AdminLTE App -->
-            <script src="dist/js/adminlte.js"></script>
-            <!-- AdminLTE for demo purposes -->
-            <script src="dist/js/demo.js"></script>
-            <%--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <%--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="dist/js/pages/dashboard.js"></script>--%>
 
 
 
-            <!-- date-range-picker -->
-            <%--<script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
+        <!-- date-range-picker -->
+        <%--<script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
 
-            <%--<script>
+        <%--<script>
             $(function () {
                 //Date range picker
                 $('#reservationdate').datetimepicker({
@@ -463,33 +488,33 @@
             })
         </script>--%>
 
-          
 
-            <script type='text/javascript'>
-                function myModalEdit() {
-                    $('[id*=modalEdit]').modal('show');
-                }
-            </script>
 
-            <script type='text/javascript'>
-                jQuery(document).ready(function () {
-                    var myChart;
-                    var a;
-                    var checkin = $("#txtCheckIn");
-                    var checkout = $("#txtCheckOut");
+        <script type='text/javascript'>
+            function myModalEdit() {
+                $('[id*=modalEdit]').modal('show');
+            }
+        </script>
 
-                    //Makes txtDateFrom a datepicker
-                    checkin.flatpickr({
-                        dateFormat: "m-d-Y",
-                        theme: "dark"
-                    });
-                    //Makes txtDateTo a datepicker
-                    checkout.flatpickr({
-                        dateFormat: "m-d-Y",
-                        theme: "dark"
-                    });
-                }
-            </script>
+        <script type='text/javascript'>
+            jQuery(document).ready(function () {
+                var myChart;
+                var a;
+                var checkin = $("#txtCheckIn");
+                var checkout = $("#txtCheckOut");
+
+                //Makes txtDateFrom a datepicker
+                checkin.flatpickr({
+                    dateFormat: "m-d-Y",
+                    theme: "dark"
+                });
+                //Makes txtDateTo a datepicker
+                checkout.flatpickr({
+                    dateFormat: "m-d-Y",
+                    theme: "dark"
+                });
+            }
+        </script>
     </form>
 
 </body>

@@ -213,7 +213,7 @@ namespace DJResortOnline
 
         protected void btnAddDeal_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myAddModal", "$('#modalAdd').modal('show');", true);
+            Response.Redirect("AddDeal.aspx");
         }
         private void addDeal()
         {
@@ -243,5 +243,6 @@ namespace DJResortOnline
 
             BindGrid();
         }
+
     }
 }

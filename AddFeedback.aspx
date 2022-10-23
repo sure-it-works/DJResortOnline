@@ -29,7 +29,9 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="Gallery/assets/css/style.css" rel="stylesheet">
+    <link href="AddFeedback.css" rel="stylesheet" />
+
+
 
     <style>
         .Star {
@@ -44,7 +46,7 @@
 
         .WaitingStar {
             background-image: url(image/EmptyStar.png);
-             margin-top: 0px;
+            margin-top: 0px;
             height: 40px;
             width: 40px;
             margin: 5px;
@@ -54,12 +56,15 @@
 
         .FilledStar {
             background-image: url(image/filledStar.png);
-             margin-top: 0px;
-             height: 44px;
+            margin-top: 0px;
+            height: 44px;
             width: 44px;
             margin: 5px;
         }
     </style>
+
+  
+
 </head>
 
 <body>
@@ -72,18 +77,18 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deals.aspx">DJ</a></h1>
+                    <h1><a href="Deal.aspx">DJ RESORT</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
-                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx">Home</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="Deal.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="Facilities.aspx">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -102,98 +107,31 @@
             <!-- ======= Testimonials Section ======= -->
             <section id="testimonials" class="testimonials">
                 <div class="container">
-
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrap">
-                                    <div class="testimonial-item">
-                                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                        <h3>Saul Goodman</h3>
-                                        <h4>Ceo &amp; Founder</h4>
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
+                            <asp:Repeater ID="Repeater1" runat="server">
+                                <ItemTemplate>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-wrap">
+                                            <div class="testimonial-item">
+                                                <h3><%#Eval("Name")%></h3>
+                                                <h3><%#Eval("Star")%><img src="~/image/filledStar.png" runat="server" id="imgThumbnail" /></h3>
+                                                <p>
+                                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                    <%#Eval("Detail")%>
+                                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- End testimonial item -->
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrap">
-                                    <div class="testimonial-item">
-                                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                        <h3>Sara Wilsson</h3>
-                                        <h4>Designer</h4>
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End testimonial item -->
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrap">
-                                    <div class="testimonial-item">
-                                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                        <h3>Jena Karlis</h3>
-                                        <h4>Store Owner</h4>
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End testimonial item -->
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrap">
-                                    <div class="testimonial-item">
-                                        <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                        <h3>Matt Brandon</h3>
-                                        <h4>Freelancer</h4>
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End testimonial item -->
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrap">
-                                    <div class="testimonial-item">
-                                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                        <h3>John Larson</h3>
-                                        <h4>Entrepreneur</h4>
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End testimonial item -->
-
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
-                        <div class="swiper-pagination"></div>
                     </div>
-
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
             <!-- End Testimonials Section -->
-            <!-- End Announcement Section -->
 
             <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact">
@@ -205,38 +143,32 @@
                     </div>
                 </div>
 
-
-
                 <div class="container">
                     <div class="row mt-5">
                         <div class="col-lg-12 mt-5 mt-lg-0">
 
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                
-                                <div class="form-group mt-3" >
-                                    <ajaxToolkit:Rating ID="Rating1" runat="server" AutoPostBack="true"
-                                        StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star"
-                                        FilledStarCssClass="FilledStar" HorizontalAlign="Right">
-                                    </ajaxToolkit:Rating>
-                                    
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" name="name" class="form-control" id="txtName" placeholder="Your Name" required="required" runat="server"/>
-                                    </div>
-                                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                                        <input type="email" class="form-control" name="email" id="txtEmail" placeholder="Your Email" required="required" runat="server"/>
-                                    </div>
-                                </div>
-                                <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Enter your Feedback" required="required" runat="server" id="txtDetails"></textarea>
-                                </div>
-                                
-                                <div class="text-center" style="padding: 10px;">
-                                    <asp:Button runat="server" Text="Submit Review" ID="btnsubmit" OnClick="btnsubmit_Click" class="btn btn-primary"/>
-                                </div>
-                            </form>
+                            <div class="form-group mt-3">
+                                <ajaxToolkit:Rating ID="Rating1" runat="server" AutoPostBack="true"
+                                    StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star"
+                                    FilledStarCssClass="FilledStar" HorizontalAlign="Right">
+                                </ajaxToolkit:Rating>
 
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="txtName" placeholder="Your Name" required="required" runat="server" />
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="txtEmail" placeholder="Your Email" required="required" runat="server" />
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Enter your Feedback" required="required" runat="server" id="txtDetails"></textarea>
+                            </div>
+
+                            <div class="text-center" style="padding: 10px;">
+                                <asp:Button runat="server" Text="Submit Review" ID="btnsubmit" OnClick="btnsubmit_Click" class="btn btn-primary" />
+                            </div>
                         </div>
 
                     </div>
@@ -348,6 +280,7 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+        
     </form>
 </body>
 </html>

@@ -204,7 +204,7 @@ namespace DJResortOnline
             else
             {
                 SqlConnection myConnection = new SqlConnection(GetConnectionString());
-                SqlCommand cmd = new SqlCommand("Add_Reservation", myConnection);
+                SqlCommand cmd = new SqlCommand("AddReservation", myConnection);
                 {
                     myConnection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;

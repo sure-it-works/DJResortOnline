@@ -40,7 +40,7 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deals.aspx">DJ</a></h1>
+                    <h1><a href="Deal.aspx">DJ</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
@@ -49,8 +49,8 @@
                     <ul>
                         <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
-                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="Deal.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="Facilities.aspx">Facilities</a></li>
                         <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                     </ul>
@@ -220,7 +220,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-swim"></i></div>
-                                <h4><a href="Deals.aspx">Deals</a></h4>
+                                <h4><a href="Deal.aspx">Deals</a></h4>
                                 <p>View the Resort's Deals and have one of a kind experience</p>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-building-house"></i></div>
-                                <h4><a href="">Facilities</a></h4>
+                                <h4><a href="Facilities.aspx">Facilities</a></h4>
                                 <p>Need a place for your big events? We got you!</p>
                             </div>
                         </div>
@@ -236,7 +236,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-comment-dots"></i></div>
-                                <h4><a href="">Costumer Feedbacks</a></h4>
+                                <h4><a href="AddFeedback.aspx">Costumer Feedbacks</a></h4>
                                 <p>View testimonies from our customers</p>
                             </div>
                         </div>

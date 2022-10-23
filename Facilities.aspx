@@ -39,18 +39,18 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="Deals.aspx">DJ RESORT</a></h1>
+                <h1><a href="Deal.aspx">DJ RESORT</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
            <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
-                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx">Home</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="Deal.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto active" href="Facilities.aspx">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -91,7 +91,7 @@
                                 <p>Canteen Description</p>
                                 <div class="portfolio-links">
                                     <a href="image/Facilities/1Canteen.bmp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                 <p>Standee Description</p>
                                 <div class="portfolio-links">
                                     <a href="image/Facilities/2Standee.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                                 <p>Garden Description</p>
                                 <div class="portfolio-links">
                                     <a href="image/Facilities/3Garden.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                 <p>Comfort Room Description</p>
                                 <div class="portfolio-links">
                                     <a href="image/Facilities/5Comfort Room.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                    <a href="~/" title="More Details"><i class="bx bx-link"></i></a>
+                                  
                                 </div>
                             </div>
                         </div>

@@ -16,37 +16,70 @@ namespace DJResortOnline
     public partial class Deal : System.Web.UI.Page
     {
 
-        //List<Data> datas;
-        //List<DB_Data> from_DB;
+        List<Data> datas;
 
-        //public Deal()
-        //{
-        //    from_DB = new List<DB_Data>()
-        //    {
-        //        new DB_Data{ Name= "Ludwig", Image = "Image1" },
-        //        new DB_Data{ Name = "Ivan", Image = "Image2"}
-        //    };
 
-        //    datas = new List<Data>();
+        public Deal()
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Get_Deals", myConnection);
+            {
+                myConnection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
 
-        //    from_DB.ForEach(data =>
-        //    {
-        //        DirectoryInfo dir = new DirectoryInfo(@"image\Deals");
-        //        FileInfo[] imageFiles = dir.GetFiles("*.jpg");
 
-        //        datas.Add(new Data
-        //        {
-        //            Name = data.Name,
-        //            Image = $"images/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(data.Image)).FirstOrDefault().ToString()}"
-        //        });
-        //    });
-        //}
+                var result = cmd.ExecuteNonQuery();
+                //myConnection.Close();
 
+
+                DataTable dtList = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dtList);
+
+                string names = "";
+                string img = "";
+                int price = 0;
+                string description = "";
+                string path = "~\\image\\Deals\\";
+                string folderPath = HttpContext.Current.Server.MapPath(path);
+                List<Object> listObj = new List<Object>();
+                datas = new List<Data>();
+                foreach (DataRow row in dtList.Rows)
+                {
+
+                    names = row["DealsName"].ToString();
+                    img = row["ImageLink"].ToString();
+                    price = Convert.ToInt32(row["Price"]);
+                    description = row["DealsDescription"].ToString();
+
+
+
+                    
+
+
+                    DirectoryInfo dir = new DirectoryInfo(folderPath);
+                    FileInfo[] imageFiles = dir.GetFiles("*.jpg");
+                    datas.Add(new Data
+                    {
+                        Name = row["DealsName"].ToString(),
+
+                        Image = $"image/Deals/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(row["ImageLink"].ToString())).FirstOrDefault().ToString()}",
+
+                        Price = Convert.ToInt32(row["Price"]),
+
+                        Description = row["DealsDescription"].ToString()
+                    });
+                }
+
+               
+            }
+
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadDeals();
-            //Repeater1.DataSource = datas;
-            //Repeater1.DataBind();
+            Repeater1.DataSource = datas;
+            Repeater1.DataBind();
         }
 
         private static string GetConnectionString()
@@ -64,7 +97,7 @@ namespace DJResortOnline
 
 
                 var result = cmd.ExecuteNonQuery();
-                myConnection.Close();
+                //myConnection.Close();
 
 
                 DataTable dtList = new DataTable();
@@ -77,31 +110,31 @@ namespace DJResortOnline
                 string path = "~\\image\\Deals\\";
                 string folderPath = HttpContext.Current.Server.MapPath(path);
                 List<Object> listObj = new List<Object>();
-                 foreach(DataRow row in dtList.Rows)
+                foreach (DataRow row in dtList.Rows)
                 {
-                    
+
                     names = row["DealsName"].ToString();
                     img = row["ImageLink"].ToString();
-
+                }
                     List<Data> datas = new List<Data>();
 
-                    DirectoryInfo dir = new DirectoryInfo(@"image\Deals");
-                    FileInfo[] imageFiles = dir.GetFiles("*.jpg");
+               
+                DirectoryInfo dir = new DirectoryInfo(folderPath);
+                FileInfo[] imageFiles = dir.GetFiles("*.jpg");
                     datas.Add(new Data
                     {
-                    //    Name = names;
-                    ////Image = Convert.ToString(Directory.GetFiles(path, "*.xml", SearchOption.AllDirectories));
-                    ////Name = data.Name,
-                    //Image = $"image/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(img)).FirstOrDefault().ToString()}"
-                });
-                }
-               
-               
-            }
+                        Name = names,
 
-            Response.Write("<script language=javascript>alert('Feedback Submitted!');</script>");
+                        Image = $"image/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(img)).FirstOrDefault().ToString()}"
+                    });
+                }
+
+           
+        }
 
         }
+
+
     }
 
     class Data
@@ -109,12 +142,11 @@ namespace DJResortOnline
         public string Name { get; set; }
 
         public string Image { get; set; }
-    }
 
-    class DB_Data
-    {
-        public string Name { get; set; }
-
-        public string Image { get; set; }
-    }
+        public int Price { get; set; }
+        public string Description { get; set; }
 }
+
+
+
+

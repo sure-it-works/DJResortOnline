@@ -8,10 +8,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Text;
+using System.Drawing;
 
 namespace DJResortOnline
 {
-    public partial class Reserved : System.Web.UI.Page
+    public partial class HealthDeclaration : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,7 +31,7 @@ namespace DJResortOnline
         private void BindGrid()
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
-            SqlCommand cmd = new SqlCommand("Get_NewReservation", myConnection);
+            SqlCommand cmd = new SqlCommand("Get_HealthDec", myConnection);
             cmd.CommandType = CommandType.StoredProcedure;
             myConnection.Open();
 
@@ -41,8 +42,8 @@ namespace DJResortOnline
                 using (DataTable dt = new DataTable())
                 {
                     sda.Fill(dt);
-                    gvNewReservation.DataSource = dt;
-                    gvNewReservation.DataBind();
+                    gvHealthDec.DataSource = dt;
+                    gvHealthDec.DataBind();
                 }
             }
         }
@@ -84,13 +85,13 @@ namespace DJResortOnline
             try
             {
 
-                int rowIndex = int.Parse(e.CommandArgument.ToString()) % gvNewReservation.PageSize;
+                int rowIndex = int.Parse(e.CommandArgument.ToString()) % gvHealthDec.PageSize;
 
                 if (e.CommandName == "Touch")
                 {
 
                     //int rowIndex = Convert.ToInt32(((sender as Button).NamingContainer as GridViewRow).RowIndex);
-                    GridViewRow row = gvNewReservation.Rows[rowIndex];
+                    GridViewRow row = gvHealthDec.Rows[rowIndex];
 
                     SqlConnection myConnection = new SqlConnection(GetConnectionString());
                     SqlCommand cmd = new SqlCommand("Get_ReservationDetails_Modal", myConnection);
@@ -136,7 +137,7 @@ namespace DJResortOnline
                 {
 
                     //int rowIndex = Convert.ToInt32(((sender as Button).NamingContainer as GridViewRow).RowIndex);
-                    GridViewRow row = gvNewReservation.Rows[rowIndex];
+                    GridViewRow row = gvHealthDec.Rows[rowIndex];
 
                     SqlConnection myConnection = new SqlConnection(GetConnectionString());
                     SqlCommand cmd = new SqlCommand("Delete_ReservationDetails", myConnection);
@@ -180,10 +181,22 @@ namespace DJResortOnline
             BindGrid();
         }
 
+        protected void gvHealthDec_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            for (int i=4; i < gvHealthDec.Rows.Count; i++)
+            {
+                if (e.Row.Cells[i].Text == "True")
+                {
+                    e.Row.Cells[i].ForeColor = Color.Red;
+                }
+            }
+            
+        }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
-            SqlCommand cmd = new SqlCommand("SearchNewReservation", myConnection);
+            SqlCommand cmd = new SqlCommand("SearchHealthDec", myConnection);
             cmd.CommandType = CommandType.StoredProcedure;
             myConnection.Open();
 
@@ -197,11 +210,10 @@ namespace DJResortOnline
                 using (DataTable dt = new DataTable())
                 {
                     sda.Fill(dt);
-                    gvNewReservation.DataSource = dt;
-                    gvNewReservation.DataBind();
+                    gvHealthDec.DataSource = dt;
+                    gvHealthDec.DataBind();
                 }
             }
         }
-
     }
 }

@@ -24,9 +24,6 @@ namespace DJResortOnline
 
         private void BindGrid()
         {
-            //Populating a DataTable from database.
-            //DataTable dt = this.GetData();
-
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
             SqlCommand cmd = new SqlCommand("Get_ReservationDetails", myConnection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -65,16 +62,13 @@ namespace DJResortOnline
                     using (DataSet ds = new DataSet())
                     {
                         sda.Fill(ds);
-                        //return dt;
 
                         ddlDeals.DataSource = ds.Tables[0];
                         ddlDeals.DataTextField = "DealsName";
-                        //ddlDeals.DataValueField = "DealsName";
                         ddlDeals.DataBind();
 
                         ddlEditDeals.DataSource = ds.Tables[0];
                         ddlEditDeals.DataTextField = "DealsName";
-                        //ddlEditDeals.DataValueField = "DealsName";
                         ddlEditDeals.DataBind();
 
                     }
@@ -86,46 +80,6 @@ namespace DJResortOnline
                 throw ex;
             }
         }
-
-
-        //private void ddlStatus_Bind()
-        //{
-        //    try
-        //    {
-        //        SqlConnection myConnection = new SqlConnection(GetConnectionString());
-        //        SqlCommand cmd = new SqlCommand("Get_Status", myConnection);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        myConnection.Open();
-
-        //        using (SqlDataAdapter sda = new SqlDataAdapter())
-        //        {
-        //            cmd.Connection = myConnection;
-        //            sda.SelectCommand = cmd;
-        //            using (DataSet ds = new DataSet())
-        //            {
-        //                sda.Fill(ds);
-
-        //                ddlStatus.DataSource = ds.Tables[0];
-        //                ddlStatus.DataTextField = "Status";
-        //                //ddlStatus.DataValueField = "Status";
-        //                ddlStatus.DataBind();
-
-        //                ddlEditStatus.DataSource = ds.Tables[0];
-        //                ddlEditStatus.DataTextField = "Status";
-        //                //ddlEditStatus.DataValueField = "Status";
-        //                ddlEditStatus.DataBind();
-
-        //            }
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-
 
         protected void gvReservation_OnRowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -160,20 +114,18 @@ namespace DJResortOnline
                         lblReservation.Text = "Reservation Date: " + dt.Rows[0]["CreatedDate"].ToString();
                         txtName.Value = dt.Rows[0]["Name"].ToString();
                         txtEmail.Value = dt.Rows[0]["Email"].ToString();
-                            txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
-                            //txtContact.Value = dt.Rows[0]["ContactNo"].ToString();
+                        txtContact.Value = dt.Rows[0]["ContactNumber"].ToString();
                         ddlDeals.SelectedItem.Text = dt.Rows[0]["Deals"].ToString();
                         txtCheckIn.Value = dt.Rows[0]["CheckIn"].ToString();
                         txtCheckOut.Value = dt.Rows[0]["CheckOut"].ToString();
-                            txtAdults.Value = dt.Rows[0]["NoOfAdults"].ToString();
-                            txtKids.Value = dt.Rows[0]["NoOfChildren"].ToString();
-                            txtTotal.Value = dt.Rows[0]["TotalPayment"].ToString();
+                        txtAdults.Value = dt.Rows[0]["NoOfAdults"].ToString();
+                        txtKids.Value = dt.Rows[0]["NoOfChildren"].ToString();
+                        txtTotal.Value = dt.Rows[0]["TotalPayment"].ToString();
                         txtReservation.Value = dt.Rows[0]["ReservationFee"].ToString();
                         txtNotes.Value = dt.Rows[0]["Notes"].ToString();
-                            ddlStatus.SelectedItem.Text = dt.Rows[0]["Status"].ToString();
+                        ddlStatus.SelectedItem.Text = dt.Rows[0]["Status"].ToString();
 
-
-                            int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
+                        int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
                         txtBalance.Value = Convert.ToString(balance);
 
                        
@@ -207,7 +159,6 @@ namespace DJResortOnline
                         txtNameEdit.Value = dt.Rows[0]["Name"].ToString();
                         txtEmailEdit.Value = dt.Rows[0]["Email"].ToString();
                         txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
-                        //txtContactEdit.Value = dt.Rows[0]["ContactNo"].ToString();
                         ddlEditDeals.SelectedItem.Text = dt.Rows[0]["Deals"].ToString();
                         txtCheckInEdit.Value = dt.Rows[0]["CheckIn"].ToString();
                         txtCheckOutEdit.Value = dt.Rows[0]["CheckOut"].ToString();
@@ -229,7 +180,7 @@ namespace DJResortOnline
             }else if (e.CommandName == "Remove")
             {
 
-                //int rowIndex = Convert.ToInt32(((sender as Button).NamingContainer as GridViewRow).RowIndex);
+                
                 GridViewRow row = gvReservation.Rows[rowIndex];
 
                 SqlConnection myConnection = new SqlConnection(GetConnectionString());
@@ -259,29 +210,7 @@ namespace DJResortOnline
                 myConnection.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                //cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50).Value = txtNameEdit.Value;
-                //cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = txtEmailEdit.Value;
                 cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
-                //cmd.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 50).Value = txtContactEdit.Value;
-                //cmd.Parameters.Add("@Deals", SqlDbType.NVarChar, 50).Value = ddlEditDeals.SelectedItem.Text;
-                //cmd.Parameters.Add("@NoOfAdults", SqlDbType.Int).Value = Convert.ToInt32(txtAdultsEdit.Value);
-                //cmd.Parameters.Add("@NoOfChildren", SqlDbType.Int).Value = Convert.ToInt32(txtKidsEdit.Value);
-                //cmd.Parameters.Add("@CheckIn", SqlDbType.DateTime).Value = txtCheckInEdit.Value;
-                //cmd.Parameters.Add("@CheckOut", SqlDbType.DateTime).Value = txtCheckOutEdit.Value;
-                //cmd.Parameters.Add("@TotalPayment", SqlDbType.Int).Value = Convert.ToInt32(txtTotalEdit.Value);
-                //cmd.Parameters.Add("@ReservationFee", SqlDbType.Int).Value = Convert.ToInt32(txtReservationEdit.Value);
-                //cmd.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotesEdit.Value;
-
-                //int StatusValue = 0;
-                //if (ddlEditStatus.SelectedItem.Text=="Unpaid")
-                //{
-                //    StatusValue = 0;
-
-                //}else if (ddlEditStatus.SelectedItem.Text == "Paid")
-                //{
-                //    StatusValue = 1;
-                //}
-
                 cmd.Parameters.Add("@Status", SqlDbType.Int).Value = ddlEditStatus.SelectedValue;
 
                 // open connection, call stored procedure, close connection
@@ -296,6 +225,29 @@ namespace DJResortOnline
 
             BindGrid();
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("SearchReservationDetails", myConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            myConnection.Open();
+            
+            cmd.Parameters.AddWithValue("@Name", "%" + txtSearch.Value + "%");
+
+            using (SqlDataAdapter sda = new SqlDataAdapter())
+            {
+                cmd.Connection = myConnection;
+                sda.SelectCommand = cmd;
+                using (DataTable dt = new DataTable())
+                {
+                    sda.Fill(dt);
+                    gvReservation.DataSource = dt;
+                    gvReservation.DataBind();
+                }
+            }
+        }
+
 
     }
 

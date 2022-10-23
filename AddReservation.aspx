@@ -52,12 +52,11 @@
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
-                        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                        <li><a class="nav-link scrollto" href="#pricing">Contact Us</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx">Home</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="Deal.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="Facilities.aspx">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" disabled="disabled">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>

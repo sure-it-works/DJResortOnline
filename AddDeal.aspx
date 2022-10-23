@@ -38,150 +38,158 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="Front.aspx" class="nav-link">DJ Resort</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <!-- Logout Menu -->
-                <li class="nav-item dropdown">
-                    <a href="Login.aspx" class="btn btn-danger" type="button">Log Out &nbsp;<i class="fas fa-power-off"></i>
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-        <!-- /.navbar -->
-
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="Front.aspx" class="brand-link">
-                <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3"/>
-                <span class="brand-text font-weight-light">DJ Resort</span>
-            </a>
-
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Admin User</a>
-                    </div>
-                </div>
-
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
-                    <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="Dashboard.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="Front.aspx" class="nav-link">DJ Resort</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Logout Menu -->
+                    <li class="nav-item dropdown">
+                        <a href="Login.aspx" class="btn btn-danger" type="button">Log Out &nbsp;<i class="fas fa-power-off"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="Reserved.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Reservation
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Status.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-shopping-cart"></i>
-                            <p>
-                                Status
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="PriceList.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-umbrella-beach"></i>
-                            <p>
-                                Deals
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-paper-plane"></i>
-                            <p>
-                                Send Emails
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Feedback.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-star"></i>
-                            <p>
-                                Feedbacks
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Invoice.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-file-alt"></i>
-                            <p>
-                                Invoice
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Announcement.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-thumbtack"></i>
-                            <p>
-                                Announcement
-                            </p>
-                        </a>
-                    </li>
-                </nav>
-                <!-- /.sidebar-menu -->
 
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+                </ul>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Add Deals</h1>
+            </nav>
+            <!-- /.navbar -->
+
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a href="Front.aspx" class="brand-link">
+                    <img src="image/dashboard.png" alt="DJ Resort Logo" class="brand-image img-circle elevation-3" />
+                    <span class="brand-text font-weight-light">DJ Resort</span>
+                </a>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">Admin User</a>
                         </div>
                     </div>
-                    <!-- /.row -->
+
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" />
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+                        <li class="nav-item">
+                            <a href="Dashboard.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Reserved.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Reservation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Status.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    Status
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="PriceList.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-umbrella-beach"></i>
+                                <p>
+                                    Deals
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Emails.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-paper-plane"></i>
+                                <p>
+                                    Send Emails
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Feedback.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-star"></i>
+                                <p>
+                                    Feedbacks
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Invoice.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    Invoice
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Announcement.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-thumbtack"></i>
+                                <p>
+                                    Announcement
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="HealthDeclaration.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-notes-medical"></i>
+                                <p>
+                                    Health Declaration
+                                </p>
+                            </a>
+                        </li>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+
                 </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
+                <!-- /.sidebar -->
+            </aside>
 
-            <!-- Main content -->
-            <section class="content">
-                <div class="container-fluid">
-                    <div class="card-body">
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0">Add Deals</h1>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- /.content-header -->
 
-                        <div class="form-group">
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="card-body">
+
+                            <div class="form-group">
                                 <div class="row" style="padding-bottom: 0px;">
                                     <div class="col-6">
                                         <input type="text" class="form-control" runat="server" placeholder="Deals Name" visible="false" />
@@ -219,7 +227,7 @@
                                     <div class="col-6">
                                         <%--<input type="file" id="imageUploader" runat="server" required="required" />--%>
                                         <asp:FileUpload ID="Addimage" runat="server" accept=".png,.jpg,.jpeg,.gif" />
-                                        <asp:RequiredFieldValidator runat="server" Display="Dynamic" ErrorMessage="* Required Field" ControlToValidate="Addimage">
+                                        <asp:RequiredFieldValidator runat="server" Display="Dynamic" ErrorMessage="* Required Field" ControlToValidate="Addimage" ForeColor="Red">
                                         </asp:RequiredFieldValidator>
                                     </div>
                                 </div>
@@ -269,12 +277,12 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                       <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Save"  />
-                       <button type="button" class="btn btn-default" style="float: right">Back to Deals</button>
+                        <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Save" />
+                        <button type="button" class="btn btn-default" style="float: right">Back to Deals</button>
                     </div>
                     <!-- /.card-footer -->
-                </div>
-                <!-- /.container-fluid -->
+            </div>
+            <!-- /.container-fluid -->
             </section>
             <!-- /.content -->
         </div>
@@ -292,46 +300,46 @@
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
-    </div>
+        </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
-    <!-- Bootstrap Switch -->
-    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-    
-</form>
+        <!-- jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- ChartJS -->
+        <script src="plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="plugins/moment/moment.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="dist/js/pages/dashboard.js"></script>
+        <!-- Bootstrap Switch -->
+        <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+    </form>
 </body>
 </html>

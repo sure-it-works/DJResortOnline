@@ -16,25 +16,60 @@ namespace DJResortOnline
     public partial class AddFeedback : System.Web.UI.Page
     {
 
-        //DataTable dt = new DataTable();
-        //string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+        List<Feedback> feedbacks;
+
+        public AddFeedback()
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Get_FeedbackDetails", myConnection);
+            {
+                myConnection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                var result = cmd.ExecuteNonQuery();
+
+                DataTable dtList = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dtList);
+
+                feedbacks = new List<Feedback>();
+               
+
+                foreach (DataRow row in dtList.Rows)
+                {
+                   
+
+                    feedbacks.Add(new Feedback
+                    {
+                        Name = row["Name"].ToString(),
+
+                        Star = Convert.ToInt32(row["FeedbackStars"]),
+
+                        Detail = row["FeedbackDetails"].ToString()
+                    });
+
+                }
+
+                myConnection.Close();
+            }
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
             {
-                //DataTable dt = this.GetData("SELECT ISNULL(AVG(Rating), 0) AverageRating, COUNT(Rating) RatingCount FROM tblrating");
-                //Rating1.CurrentRating = Convert.ToInt32(dt.Rows[0]["AverageRating"]);
-                //lbresult.Text = string.Format("{0} Users have rated. Average Rating {1}", dt.Rows[0]["RatingCount"], dt.Rows[0]["AverageRating"]);
+                //displayFeedback();
+                Repeater1.DataSource = feedbacks;
+                Repeater1.DataBind();
             }
         }
         private static string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
-
-
-
-
 
         public void btnsubmit_Click(object sender, EventArgs e)
         {
@@ -68,9 +103,26 @@ namespace DJResortOnline
             }
 
             Response.Write("<script language=javascript>alert('Feedback Submitted!');</script>");
-
+            Repeater1.DataSource = feedbacks;
+            Repeater1.DataBind();
         }
+
+       
 
 
     }
+
+    partial class Feedback
+    {
+        public string Name { get; set; }
+        public int Star { get; set; }
+        public string Detail { get; set; }
+
+    }
+
 }
+
+
+
+
+

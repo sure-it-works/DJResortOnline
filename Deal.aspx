@@ -50,18 +50,18 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deals.aspx">DJ</a></h1>
+                    <h1><a href="Deal.aspx">DJ</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="Front.aspx">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="Deals.aspx">Deals</a></li>
-                        <li><a class="nav-link scrollto" href="#team">Facilities</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx">Home</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#about">About</a></li>
+                        <li><a class="nav-link scrollto active" href="Deal.aspx">Deals</a></li>
+                        <li><a class="nav-link scrollto" href="Facilities.aspx">Facilities</a></li>
+                        <li><a class="nav-link scrollto" href="Front.aspx#contact">Contact Us</a></li>
                         <li><a class="getstarted scrollto" href="AddReservation.aspx">Reserve Now</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -90,11 +90,12 @@
             <asp:Repeater ID="Repeater1" runat="server">
                 <ItemTemplate>
                     <div class="card" style="width: 18rem;">
-                        <img src="<%#Eval("Image")%>" class="card-img-top" alt="...">
+                        <img src="<%#Eval("Image")%>" class="card-img-top" >
                         <div class="card-body">
-                            <h5 class="card-title"><%#Eval("Name")%></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h4 class="card-title"><%#Eval("Name")%></h4>
+                            <strong><h5 class="card-title"><%#Eval("Price")%></h5></strong>
+                            <p class="card-text"><%#Eval("Description")%></p>
+                            <a href="#" class="btn btn-primary">Reserve Now</a>
                         </div>
                     </div>
                 </ItemTemplate>
