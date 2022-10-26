@@ -11,7 +11,7 @@ namespace DJResortOnline
 {
 
 
-    public partial class Emails
+    public partial class Email
     {
 
         /// <summary>

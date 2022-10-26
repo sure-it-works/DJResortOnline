@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Emails.aspx.cs" Inherits="DJResortOnline.Emails" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Email.aspx.cs" Inherits="DJResortOnline.Emails" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <!DOCTYPE html>
@@ -36,7 +35,6 @@
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 
     <%-- Templates/AdminLTE-3.1.0-rc/pages/examples/project-add.html--%>
-
     <style>
         .modalBackground {
             background-color: Gray;
@@ -74,8 +72,9 @@
     </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-    <form runat="server" defaultbutton="btnSearch">
 
+    <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
         <div class="wrapper">
 
             <!-- Navbar -->
@@ -128,77 +127,77 @@
                with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                        <a href="Dashboard.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Reserved.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Reservation
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Status.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-shopping-cart"></i>
-                            <p>
-                                Status
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="PriceList.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-umbrella-beach"></i>
-                            <p>
-                                Deals
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Emails.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-paper-plane"></i>
-                            <p>
-                                Send Emails
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Feedback.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-star"></i>
-                            <p>
-                                Feedbacks
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Invoice.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-file-alt"></i>
-                            <p>
-                                Invoice
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Announcement.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-thumbtack"></i>
-                            <p>
-                                Announcement
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="HealthDeclaration.aspx" class="nav-link">
-                            <i class="nav-icon fas fa-notes-medical"></i>
-                            <p>
-                                Health Declaration
-                            </p>
-                        </a>
-                    </li>
+                            <a href="Dashboard.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Reserved.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Reservation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Status.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    Status
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="PriceList.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-umbrella-beach"></i>
+                                <p>
+                                    Deals
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Emails.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-paper-plane"></i>
+                                <p>
+                                    Send Emails
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Feedback.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-star"></i>
+                                <p>
+                                    Feedbacks
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Invoice.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    Invoice
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Announcement.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-thumbtack"></i>
+                                <p>
+                                    Announcement
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="HealthDeclaration.aspx" class="nav-link">
+                                <i class="nav-icon fas fa-notes-medical"></i>
+                                <p>
+                                    Health Declaration
+                                </p>
+                            </a>
+                        </li>
                     </nav>
                     <!-- /.sidebar-menu -->
 
@@ -223,6 +222,7 @@
                 <!-- /.content-header -->
 
                 <!-- Main content -->
+                <!-- Main content -->
                 <section class="content">
                     <div class="row">
                         <div class="col-md-3">
@@ -243,7 +243,7 @@
                                         <li class="nav-item active">
                                             <a href="#" class="nav-link">
                                                 <i class="fas fa-inbox"></i>Inbox
-                    <span class="badge bg-primary float-right"><%= _mailCount %></span>
+                    <%--<span class="badge bg-primary float-right"><%= _mailCount %></span>--%>
                                             </a>
                                         </li>
                                         <%-- <li class="nav-item">
@@ -348,8 +348,8 @@
                                         </Columns>
                                     </asp:GridView>
                                     <asp:HiddenField ID="HiddenField1" runat="server" />
-                                    <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" TargetControlID="HiddenField1" PopupControlID="Panel1" BackgroundCssClass="modalBackground">
-                                    </ajaxToolkit:ModalPopupExtender>
+                                    <ajaxtoolkit:modalpopupextender id="ModalPopupExtender1" runat="server" targetcontrolid="HiddenField1" popupcontrolid="Panel1" backgroundcssclass="modalBackground">
+                                    </ajaxtoolkit:modalpopupextender>
                                     <asp:Panel ID="Panel1" CssClass="modalPopup" runat="server">
                                         <div class="modal-body">
                                             <div style="margin-block: 10px">
@@ -370,8 +370,8 @@
                                         </div>
                                     </asp:Panel>
                                     <asp:HiddenField ID="HiddenField2" runat="server" />
-                                    <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server" TargetControlID="HiddenField2" PopupControlID="Panel2" BackgroundCssClass="modalBackground">
-                                    </ajaxToolkit:ModalPopupExtender>
+                                    <ajaxtoolkit:modalpopupextender id="ModalPopupExtender2" runat="server" targetcontrolid="HiddenField2" popupcontrolid="Panel2" backgroundcssclass="modalBackground">
+                                    </ajaxtoolkit:modalpopupextender>
                                     <asp:Panel ID="Panel2" CssClass="modalPopup" runat="server">
                                         <div class="modal-body">
                                             <div style="margin-block: 10px">
@@ -466,61 +466,62 @@
                     <!-- /.row -->
                 </section>
                 <!-- /.content -->
+
+
+
+
             </div>
             <!-- /.content-wrapper -->
-    </form>
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
-        All rights reserved.
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2022 <a href="~/">DJ Resort</a>.</strong>
+                All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 1
     </div>
-    </footer>
+            </footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-    </div>
-    <!-- ./wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+        <!-- ./wrapper -->
 
-
-
-    <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
-
+        <!-- jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- ChartJS -->
+        <script src="plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="plugins/moment/moment.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="dist/js/pages/dashboard.js"></script>
+    </form>
 </body>
 </html>

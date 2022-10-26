@@ -92,7 +92,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                    <li class="nav-item">
+                   <li class="nav-item">
                         <a href="Dashboard.aspx" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
@@ -153,6 +153,14 @@
                             <i class="nav-icon fas fa-thumbtack"></i>
                             <p>
                                 Announcement
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="HealthDeclaration.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-notes-medical"></i>
+                            <p>
+                                Health Declaration
                             </p>
                         </a>
                     </li>

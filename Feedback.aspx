@@ -160,6 +160,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="HealthDeclaration.aspx" class="nav-link">
+                            <i class="nav-icon fas fa-notes-medical"></i>
+                            <p>
+                                Health Declaration
+                            </p>
+                        </a>
+                    </li>
                 </nav>
                 <!-- /.sidebar-menu -->
 
@@ -330,15 +338,13 @@
                                      <asp:BoundField ItemStyle-Width="14%" DataField="Email" HeaderText="Email" />
                                     <asp:BoundField ItemStyle-Width="10%" DataField="CreatedDate" HeaderText="Posted Date" />
                                     <asp:BoundField ItemStyle-Width="30%" DataField="FeedbackDetails" HeaderText="Feedback" />
+                                    <asp:BoundField ItemStyle-Width="15%" DataField="FeedbackStars" HeaderText="Feedback Stars" />
 
-                                    <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
+<%--                                    <asp:TemplateField ItemStyle-Width="15%" HeaderText="Feedback Stars">
                                         <ItemTemplate>
-                                            <%--<asp:LinkButton ID="View" runat="server" CssClass="btn btn-primary btn-sm" type="button"
-                                                CommandArgument="<%# Container.DataItemIndex %>"
-                                                CommandName="Stars"><i class="fas fa-star"></i><i class="fas fa-star"></i></asp:LinkButton>--%>
-                                            <label><i class="fas fa-star" style="color: #ffc107"></i><i class="fas fa-star" style="color: #ffc107"></i></label>
+                                            <label runat="server" id="StarRating">Stars<i class="fas fa-star" style="color: #ffc107"></i></label>
                                         </ItemTemplate>
-                                    </asp:TemplateField>
+                                    </asp:TemplateField>--%>
                                     
                                     <asp:TemplateField ItemStyle-Width="8%" ShowHeader="False">
                                         <ItemTemplate>
@@ -373,11 +379,14 @@
                                 <%--1st Row--%>
                                 <div class="form-group">
                                     <div class="row" style="padding-bottom: 0px;">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <asp:Label ID="lblSpace" runat="server" Font-Bold="True" Font-Size="Large" Visible="false"></asp:Label>
                                         </div>
+                                        <div class="col-1">
+                                            <asp:Label ID="lblStars" runat="server" Font-Bold="True" Font-Size="Large">&nbsp;Stars<i class="fas fa-star" style="color: #ffc107"></i></asp:Label>
+                                        </div>
                                         <div class="col-4">
-                                            <asp:Label ID="lblStars" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                            <label style="font-weight: bold; font-size: large">&nbsp;Stars<i class="fas fa-star" style="color: #ffc107"></i></label>
                                         </div>
                                     </div>
                                 </div>
@@ -385,10 +394,10 @@
                                 <%--1st Row--%>
                                 <div class="form-group">
                                     <div class="row" style="padding-bottom: 0px;">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <asp:Label ID="lblSpace1" runat="server" Font-Bold="True" Font-Size="Large" Visible="false"></asp:Label>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-5">
                                             <asp:Label ID="lblDate" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
                                         </div>
                                     </div>
@@ -406,10 +415,10 @@
                                 <%--3rdRow--%>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <input type="email" id="txtEmailEdit" class="form-control" runat="server" disabled="disabled"  />
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-5">
 
                                             <input type="text" id="txtContactEdit" class="form-control" runat="server" disabled="disabled"  />
                                         </div>

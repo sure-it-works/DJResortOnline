@@ -45,7 +45,7 @@
                                     <!-- Row start -->
                                     <div class="row gutters">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                            <a class="invoice-logo"><img src="image/footer-logo.png" style="padding-right:15px; height:78px"/>DJ RES
+                                            <a class="invoice-logo"><img src="image/footer-logo.png" style="padding-right:15px; height:78px"/>DJ RESORT
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6">

@@ -33,9 +33,15 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
 
-    <%--    Templates/AdminLTE-3.1.0-rc/pages/mailbox/compose.html--%>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+        <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -206,9 +212,10 @@
                             <p>Use below toggle to post or remove the announcement.</p>
                         </div>--%>
                         <div class="float-right">
-                            <button type="button" class="btn btn-success" runat="server"><i class="fas fa-eye"></i>View</button>
+                            <button type="button" class="btn btn-success" runat="server" onserverclick="btnView_Click"><i class="fas fa-eye"></i>View</button>
                             <button type="button" class="btn btn-danger" runat="server" id="btnDelete" onserverclick="btnDelete_Click"><i class="fas fa-trash"></i>Delete</button>
                             <button type="button" class="btn btn-primary" runat="server" id="btnPost" onserverclick="btnPost_Click"><i class="fas fa-thumbtack"></i>Post</button>
+                            <%--<asp:Button ID="btnPost" runat="server" Text="Post" class="btn btn-primary" OnClick="btnPost_Click"/>--%>
                             <%--<input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success" />--%>
                         </div>
                     </div>
@@ -282,6 +289,6 @@
             });
         })
     </script>
-
+</form>
 </body>
 </html>

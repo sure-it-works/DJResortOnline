@@ -27,6 +27,11 @@ namespace DJResortOnline
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
 
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Front.aspx");
+        }
+
         protected void btnPost_Click(object sender, EventArgs e)
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
