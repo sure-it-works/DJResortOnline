@@ -357,7 +357,7 @@
                                                 <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
                                             </div>
                                             <div style="margin-block: 10px">
-                                                <span><strong>TITLE: </strong></span>
+                                                <span><strong>SUBJECT: </strong></span>
                                                 <asp:Label ID="lblSubject" runat="server" Text="Label"></asp:Label>
                                             </div>
                                             <div class="email-body">
@@ -379,7 +379,7 @@
                                                 <asp:Label ID="lblTo" runat="server" Text="Label"></asp:Label>
                                             </div>
                                             <div style="margin-block: 10px">
-                                                <span><strong>TITLE: </strong></span>
+                                                <span><strong>SUBJECT: </strong></span>
                                                 <asp:TextBox ID="txtSubject" runat="server" Width="77em" placeholder="Enter title . . ."></asp:TextBox>
                                             </div>
                                             <div class="email-body">

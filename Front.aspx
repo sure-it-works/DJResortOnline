@@ -95,23 +95,23 @@
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
                                             <%--<i class="bx bx-receipt"></i>--%>
-                                            <img src="Gallery/assets/img/5Weddings.jpg" style="height: 150px"/>
+                                            <img src="Gallery/assets/img/5Weddings.jpg" style="height: 150px" />
                                             <h4>Wedding</h4>
-                                            <p> This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
+                                            <p>This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
                                             <%--<i class="bx bx-cube-alt"></i>--%>
-                                            <img src="Gallery/assets/img/6FamilyGatherings.jpg"  style="height: 150px"/>
+                                            <img src="Gallery/assets/img/6FamilyGatherings.jpg" style="height: 150px" />
                                             <h4>Family Gathering</h4>
-                                            <p> This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
+                                            <p>This is the place that good for wedding events. It has a big hall and function halls for the big event.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
                                         <div class="icon-box mt-4 mt-xl-0">
                                             <%--<i class="bx bx-images"></i>--%>
-                                            <img src="Gallery/assets/img/7Team Building.jpg"  style="height: 150px"/>
+                                            <img src="Gallery/assets/img/7Team Building.jpg" style="height: 150px" />
                                             <h4>Team Building</h4>
                                             <p>You can enjoy your team-building activities here at DJ Resort, it has a wide and this place</p>
                                         </div>
@@ -207,6 +207,25 @@
             </section>
             <!-- End Counts Section -->
 
+            <!-- ======= HealthDec Section ======= -->
+            <section id="healthdec" class="appointment section-bg">
+                <div class="container">
+
+                    <div class="section-title">
+                        <h2>Health Declaration Form</h2>
+                        <p></p>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="7" disabled="disabled">To ensure health and safety of our staff in DJ Resort monitoring of the declaration of health is necessary. We kindly ask everyone to complete the form completely and honestly. Make certain that the data is correct and comprehensive. If you have any of the COVID-19 symptoms, please seek emergency medical assistance. Health declaration form is given after your reservation and make sure  to fiill up the form that we provided before going to the Resort.</textarea>
+                    </div>
+                    <br />
+                    <div class="text-center">
+                        <asp:Button runat="server" Text="Add Health Declaration" ID="btnAddHealthDec" class="btn btn-primary" OnClick="btnAddHealthDec_Click" />
+                    </div>
+                </div>
+            </section>
+            <!-- End HealthDec Section -->
+
             <!-- ======= Services Section ======= -->
             <section id="services" class="services">
                 <div class="container">
@@ -247,6 +266,8 @@
             </section>
             <!-- End Services Section -->
 
+            
+
             <!-- ======= Announcement Section ======= -->
             <section id="appointment" class="appointment section-bg">
                 <div class="container">
@@ -257,10 +278,9 @@
                     </div>
 
                     <form role="form" class="php-email-form">
-                        
+
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="7" placeholder="No  Announcement for today! :)" disabled="disabled"></textarea>
-                            <div class="validate"></div>
+                            <textarea class="form-control" name="message" rows="7" placeholder="No  Announcement for today! :)" disabled="disabled" runat="server" id="txtAnnouncement"></textarea>
                         </div>
 
                     </form>
@@ -280,7 +300,7 @@
                 </div>
 
                 <div>
-                    <iframe style="border: 0; width: 100%; height: 350px;" 
+                    <iframe style="border: 0; width: 100%; height: 350px;"
                         src="https://www.google.com/maps/embed/v1/place?q=X88F%2BC97%2C%20Barangay%20Lalig%2C%20Tiaong%2C%20Quezon%20Province%2C%20Tiaong&key=AIzaSyDadSQcLbdpAxvw2n9IVfZ_y2rVJHhWYwY" frameborder="0" allowfullscreen></iframe>
                 </div>
 
@@ -313,29 +333,26 @@
 
                         <div class="col-lg-8 mt-5 mt-lg-0">
 
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                                    </div>
-                                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                                    </div>
+
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control"  placeholder="Your Name" required="required" runat="server" id="txtName">
                                 </div>
-                                <div class="form-group mt-3">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control"  placeholder="Your Email" required="required" runat="server" id="txtEmail">
                                 </div>
-                                <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                                </div>
-                                <div class="my-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit">Send Message</button></div>
-                            </form>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control"   placeholder="Subject" required="required" runat="server" id="txtEmailSubject">
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required="required" runat="server" id="txtEmailBody"></textarea>
+                            </div>
+                            <br />
+                            <div class="text-center">
+                                <asp:Button runat="server" Text="Send Message" ID="btnSendMessage" class="btn btn-primary" OnClick="btnSendMessage_Click" />
+                            </div>
+
 
                         </div>
 
