@@ -200,7 +200,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-lg-12">
 
                                             <!-- small box -->
                                             <div class="small-box" style="text-align: center">
@@ -220,7 +220,7 @@
 
                                         </div>
                                         <!-- /.col -->
-                                        <div class="col-md-6">
+                                       <%-- <div class="col-md-6">
                                             <p class="text-center">
                                                 <strong>Ratings & Reviews</strong>
                                             </p>
@@ -238,7 +238,6 @@
                                                     <div class="progress-bar bg-primary" style="width: 80%"></div>
                                                 </div>
                                             </div>
-                                            <!-- /.progress-group -->
 
                                             <div class="progress-group">
                                                 4 Stars
@@ -254,7 +253,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- /.progress-group -->
                                             <div class="progress-group">
                                                 <span class="progress-text">3 Stars
                                                 </span>
@@ -270,7 +268,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- /.progress-group -->
                                             <div class="progress-group">
                                                 2 STARS
                                                   <span class="float-right">
@@ -284,9 +281,7 @@
                                                     <div class="progress-bar bg-warning" style="width: 50%"></div>
                                                 </div>
                                             </div>
-                                            <!-- /.progress-group -->
 
-                                            <!-- /.progress-group -->
                                             <div class="progress-group">
                                                 1 STAR
                                                   <span class="float-right">
@@ -300,10 +295,9 @@
                                                     <div class="progress-bar bg-warning" style="width: 30%"></div>
                                                 </div>
                                             </div>
-                                            <!-- /.progress-group -->
 
 
-                                        </div>
+                                        </div>--%>
                                         <!-- /.col -->
                                     </div>
                                     <!-- /.row -->

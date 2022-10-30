@@ -86,7 +86,7 @@
                             <img src="image/admin.png" class="img-circle elevation-2" alt="User Image" />
                         </div>
                         <div class="info">
-                            <a href="#" class="d-block">Admin User</a>
+                            <a class="d-block">Admin User</a>
                         </div>
                     </div>
 
@@ -180,14 +180,6 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <div class="content-header">
-                    <%-- <div class="container-fluid">
-                        <div class="row mb-2">
-                            <div class="col-sm-6">
-                                <h1 class="m-0">Price List</h1>
-                            </div>
-                        </div>
-                        <!-- /.row -->
-                    </div>--%>
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
@@ -196,7 +188,7 @@
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item">
-                                        <asp:Button ID="btnAddDeal" CssClass="btn btn-primary" runat="server" Text="Add Deal" OnClick="btnAddDeal_Click" />
+                                        <asp:Button ID="btnAddDeal" CssClass="btn btn-primary" runat="server" Text="Add New Deal" OnClick="btnAddDeal_Click" />
                                     </li>
                                 </ol>
                             </div>
@@ -225,7 +217,7 @@
                                     </asp:TemplateField>
                                     <asp:BoundField ItemStyle-Width="20%" DataField="DealsName" HeaderText="Deals Name" />
                                     <asp:BoundField ItemStyle-Width="34%" DataField="DealsDescription" HeaderText="Deals Description" />
-                                    <asp:BoundField ItemStyle-Width="15%" DataField="Capacity" HeaderText="Capacity" />
+                                    <asp:BoundField ItemStyle-Width="15%" DataField="NoOfAdults" HeaderText="Capacity" />
                                     <asp:BoundField ItemStyle-Width="15%" DataField="Price" HeaderText="Price" />
                                     <asp:TemplateField ItemStyle-Width="15%" ShowHeader="False">
                                         <ItemTemplate>

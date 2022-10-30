@@ -69,9 +69,17 @@ namespace DJResortOnline
                     Directory.CreateDirectory(folderPath);
                     if (imageUploader.HasFile)
                     {
+                        if (File.Exists(@Path.Combine(folderPath, imageUploader.FileName)))
+                        {
+                            Response.Write("<script>alert('Filename Already Exists! Please change your filename!');</script>");
+                            valid = false;
+                        }
+                        else
+                        {
+                            imageUploader.SaveAs(Path.Combine(folderPath, imageUploader.FileName));
+                            valid = true;
+                        }
                         
-                        imageUploader.SaveAs(Path.Combine(folderPath, imageUploader.FileName));
-                        valid = true;
 
                     }
                     else
@@ -85,6 +93,28 @@ namespace DJResortOnline
                 }
                 else
                 {
+                    if (imageUploader.HasFile)
+                    {
+                        if (File.Exists(@Path.Combine(folderPath, imageUploader.FileName)))
+                        {
+                            Response.Write("<script>alert('Filename Already Exists! Please change your filename!');</script>");
+                            valid = false;
+                        }
+                        else
+                        {
+                            imageUploader.SaveAs(Path.Combine(folderPath, imageUploader.FileName));
+                            valid = true;
+                        }
+
+
+                    }
+                    else
+                    {
+
+                        Response.Write("<script>alert('Add some attachment/s!');</script>");
+                        Response.Write("<script>alert('Deals not saved!');</script>");
+                        valid = false;
+                    }
                 }
 
 
@@ -180,22 +210,22 @@ namespace DJResortOnline
                         }
                     }
                 }
-                //else if (e.CommandName == "Remove")
-                //{
+                else if (e.CommandName == "Remove")
+                {
 
-                //    //int rowIndex = Convert.ToInt32(((sender as Button).NamingContainer as GridViewRow).RowIndex);
-                //    GridViewRow row = gvDeals.Rows[rowIndex];
+                    //int rowIndex = Convert.ToInt32(((sender as Button).NamingContainer as GridViewRow).RowIndex);
+                    GridViewRow row = gvDeals.Rows[rowIndex];
 
-                //    SqlConnection myConnection = new SqlConnection(GetConnectionString());
-                //    SqlCommand cmd = new SqlCommand("Delete_ReservationDetails", myConnection);
-                //    cmd.CommandType = CommandType.StoredProcedure;
-                //    var reservationId = (row.FindControl("lblDealsID") as Label).Text;
-                //    cmd.Parameters.AddWithValue("@ReservationID", reservationId);
-                //    myConnection.Open();
-                //    var result = cmd.ExecuteNonQuery();
-                //    myConnection.Close();
-                //    BindGrid();
-                //}
+                    SqlConnection myConnection = new SqlConnection(GetConnectionString());
+                    SqlCommand cmd = new SqlCommand("Delete_Deals", myConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    var dealsId = (row.FindControl("lblDealsID") as Label).Text;
+                    cmd.Parameters.AddWithValue("@DealsID", dealsId);
+                    myConnection.Open();
+                    var result = cmd.ExecuteNonQuery();
+                    myConnection.Close();
+                    BindGrid();
+                }
             }
             catch (Exception ex)
             {

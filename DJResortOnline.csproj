@@ -271,11 +271,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="AddFeedback.aspx" />
+    <Content Include="Deal.css" />
     <Content Include="Emails.aspx" />
     <Content Include="Facilities.aspx" />
     <Content Include="Deal.aspx" />
     <Content Include="Front.aspx" />
-    <Content Include="Deals.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Email.aspx" />
     <Content Include="favicon.ico" />
@@ -468,6 +468,7 @@
     <Content Include="HealthDec.aspx" />
     <Content Include="image\admin.png" />
     <Content Include="image\dashboard.png" />
+    <Content Include="image\Deals-bg.jpg" />
     <Content Include="image\Deals\BarkadaRoom.jpg" />
     <Content Include="image\Deals\CoupleRoom.jpg" />
     <Content Include="image\Deals\FamilyRoom.jpg" />
@@ -483,6 +484,7 @@
     <Content Include="image\filledStar.JPG" />
     <Content Include="image\filledStar.png" />
     <Content Include="image\footer-logo.png" />
+    <Content Include="image\glassesDeals.jpg" />
     <Content Include="image\Login.JPG" />
     <Content Include="image\logo.png" />
     <Content Include="image\Reservation\QR.jpg" />
@@ -490,7 +492,6 @@
     <Content Include="Invoice.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
-    <Content Include="LoginPage.aspx" />
     <Content Include="MasterPage.css" />
     <Content Include="PriceList.aspx" />
     <Content Include="PriceList.css" />
@@ -617,13 +618,6 @@
     <Compile Include="Front.aspx.designer.cs">
       <DependentUpon>Front.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Deals.aspx.cs">
-      <DependentUpon>Deals.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Deals.aspx.designer.cs">
-      <DependentUpon>Deals.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -668,13 +662,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="PriceList.aspx.cs">
       <DependentUpon>PriceList.aspx</DependentUpon>

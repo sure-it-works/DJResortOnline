@@ -37,7 +37,7 @@
             <div class="card" style="border-radius: 10%">
                 <div class="card-body login-card-body" style="border-radius: 10%">
                     <div class="login-logo">
-                        <a href="~/"><b>DJ</b>Resort</a>
+                        <a href="Front.aspx"><b>DJ</b>Resort</a>
                     </div>
                     <form action="~/" method="post">
                         <div class="input-group mb-3">

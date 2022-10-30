@@ -35,6 +35,8 @@
     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+      
+
 </head>
 
 <body>
@@ -45,7 +47,7 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deals.aspx">DJ RESORT</a></h1>
+                    <h1><a href="Deal.aspx">DJ RESORT</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
@@ -112,16 +114,16 @@
                                                     <asp:DropDownList ID="ddlDeals" runat="server" class="form-control custom-select" OnSelectedIndexChanged="ddlDeals_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                 </div>
                                                 <div class="col-2">
-                                                    <label  style="text-align:left"><strong>Check-In</strong></label>
+                                                    <label style="text-align: left"><strong>Check-In</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                        <input id="txtCheckIn" type="date" class="form-control" runat="server"/>
+                                                    <input id="txtCheckIn" type="date" class="form-control" runat="server" />
                                                 </div>
                                                 <div class="col-2">
-                                                    <label  style="text-align:left"><strong>Check-Out</strong></label>
+                                                    <label style="text-align: left"><strong>Check-Out</strong></label>
                                                 </div>
                                                 <div class="col-2">
-                                                        <input id="txtCheckOut" type="date" class="form-control" runat="server"/>
+                                                    <input id="txtCheckOut" type="date" class="form-control" runat="server" />
                                                 </div>
                                             </div>
                                         </div>
@@ -285,6 +287,34 @@
         </script>
         <!-- Bootstrap 4 -->
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+           <%-- Disable Check in Past Dates--%>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript">
+             
+        </script>
+        <script type="text/javascript">
+            var maxDate = year + '-' + month + '-' + day;
+            alert(maxDate);
+            $('#txtCheckIn').attr('min', maxDate);
+
+
+            $(function () {
+                var dtToday = new Date();
+
+                var month = dtToday.getMonth() + 1;
+                var day = dtToday.getDate();
+                var year = dtToday.getFullYear();
+                if (month < 10)
+                    month = '0' + month.toString();
+                if (day < 10)
+                    day = '0' + day.toString();
+
+                var maxDate = year + '-' + month + '-' + day;
+
+                alert(maxDate);
+                $('#txtCheckIn').attr('min', maxDate);
+            });
+        </script>
     </form>
 </body>
 </html>

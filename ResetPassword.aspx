@@ -18,52 +18,55 @@
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
-    <style>
-        .login-page {
-            background-image: url("image/Login.jpg");
-            background-size: 100%;
-        }
-    </style>
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="~/"><b>DJ</b>Resort</a>
-        </div>
-        <!-- /.login-logo -->
-        <div class="card" style="border-radius: 10%">
-            <div class="card-body login-card-body" style="border-radius: 10%">
-                <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+    <form runat="server">
+        <style>
+            .login-page {
+                background-image: url("image/Login.jpg");
+                background-size: 100%;
+            }
+        </style>
+        <div class="login-box">
+            <div class="login-logo">
+                <a><b>DJ</b>Resort</a>
+            </div>
+            <!-- /.login-logo -->
+            <div class="card" style="border-radius: 10%">
+                <div class="card-body login-card-body" style="border-radius: 10%">
+                    <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
 
-                <form action="recover-password.html" method="post">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                    <form action="recover-password.html" method="post">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-success btn-block">Request new password</button>
+                        <div class="row">
+                            <div class="col-12">
+                                <asp:Button ID="btnForgot" runat="server" Text="Request password" class="btn btn-success btn-block" OnClick="btnForgot_Click" />
+                                <%--<button type="submit" class="btn btn-success btn-block">Request new password</button>--%>
+                            </div>
+                            <!-- /.col -->
                         </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
+                    </form>
 
-                <p class="mt-3 mb-1">
-                    <a href="Login.aspx">Login</a>
-                </p>
+                    <p class="mt-3 mb-1">
+                        <a href="Login.aspx">Login</a>
+                    </p>
+                </div>
+                <!-- /.login-card-body -->
             </div>
-            <!-- /.login-card-body -->
         </div>
-    </div>
-    <!-- /.login-box -->
+        <!-- /.login-box -->
 
-    <!-- jQuery -->
-    <script src="../../plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../../dist/js/adminlte.min.js"></script>
+        <!-- jQuery -->
+        <script src="../../plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../dist/js/adminlte.min.js"></script>
+    </form>
 </body>
 </html>

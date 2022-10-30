@@ -33,6 +33,11 @@ namespace DJResortOnline.Service
                 if (i == infos.Length - 10) break;
                 MailInfo info = infos[i];
                 Mail oMail = oClient.GetMail(info);
+
+                if (oMail.From.ToString() == "<djresort.quezon@gmail.com>")
+                {
+                    oMail.From.Name = "Customer Inquiry";
+                }
                 mailsVM.Add(new MailVM 
                 { 
                     Id = i, 

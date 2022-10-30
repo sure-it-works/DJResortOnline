@@ -28,7 +28,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="Gallery/assets/css/style.css" rel="stylesheet">
+    <link href="Deal.css" rel="stylesheet">
 
     <style>
         .container{
@@ -50,9 +50,7 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deal.aspx">DJ</a></h1>
-                    <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                    <h1><a href="Deal.aspx">DJ RESORT</a></h1>
                 </div>
 
                 <nav id="navbar" class="navbar">
@@ -93,9 +91,9 @@
                         <img src="<%#Eval("Image")%>" class="card-img-top" >
                         <div class="card-body">
                             <h4 class="card-title"><%#Eval("Name")%></h4>
-                            <strong><h5 class="card-title"><%#Eval("Price")%></h5></strong>
+                            <strong><h5 class="card-title">PHP&nbsp;<%#Eval("Price")%></h5></strong>
                             <p class="card-text"><%#Eval("Description")%></p>
-                            <a href="#" class="btn btn-primary">Reserve Now</a>
+                            <%--<a href="#" class="btn btn-primary">View More</a>--%>
                         </div>
                     </div>
                 </ItemTemplate>

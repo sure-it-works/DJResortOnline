@@ -61,11 +61,18 @@ namespace DJResortOnline
 
         protected void btnSendMessage_Click(object sender, EventArgs e)
         {
-            string Subject = "Customer Inquiry - " + txtName.Value;
+            //string Subject = "Customer Inquiry - " + txtName.Value;
+            //string receiver = "djresort.quezon@gmail.com";
+
+            string Subject = txtEmail.Value;
             string receiver = "djresort.quezon@gmail.com";
-            _service.SendEmail(Subject, txtEmailBody.Value, receiver);
+            string Name = "Name: " + txtName.Value;
+            string newLine = Environment.NewLine;
+            string Emailbody = Name + newLine + txtEmailBody.Value;
+            _service.SendEmail(Subject, Emailbody, receiver);
+
         }
 
-        
+
     }
 }

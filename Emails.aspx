@@ -213,7 +213,14 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Email & Feedbacks</h1>
+                                <h1 class="m-0">Emails</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item">
+                                        <asp:Button ID="btnRefresh" CssClass="btn btn-primary" runat="server" Text="Refresh Emails" OnClick="btnRefresh_Click" />
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                         <!-- /.row -->
@@ -226,17 +233,18 @@
                 <section class="content">
                     <div class="row">
                         <div class="col-md-3">
-                            <a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+                            <%--<a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>--%>
+                             <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" class="btn btn-primary btn-block mb-3">Go to Gmail</a>
 
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title">Folders</h3>
 
-                                    <div class="card-tools">
+                                    <%--<div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                    </div>
+                                    </div>--%>
                                 </div>
                                 <div class="card-body p-0">
                                     <ul class="nav nav-pills flex-column">
@@ -292,38 +300,11 @@
                                     </button>--%>
                                         <asp:CheckBox ID="CheckBox2" runat="server" CssClass="check-all" OnCheckedChanged="CheckAll" AutoPostBack="true" />
                                         <div class="btn-group">
-                                            <%--                                            <asp:LinkButton ID="Button1" runat="server" Text="Button" CssClass="btn btn-default btn-sm">
-                                                <i class="far fa-trash-alt"></i>
-                                            </asp:LinkButton>--%>
-                                            <%--                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="far fa-trash-alt"></i>
-                                            </button>--%>
-                                            <%--                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-reply"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-share"></i>
-                                            </button>--%>
                                         </div>
-                                        <!-- /.btn-group -->
-                                        <%-- <button type="button" class="btn btn-default btn-sm">
-                                        <i class="fas fa-sync-alt"></i>
-                                    </button>
-                                    <div class="float-right">
-                                        1-50/200
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm">
-                          <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                          <i class="fas fa-chevron-right"></i>
-                      </button>
-                  </div>--%>
-                                        <!-- /.btn-group -->
                                     </div>
                                     <!-- /.float-right -->
                                 </div>
-                                <div class="table-responsive mailbox-messages">
+                                <div class="table-responsive mailbox-messages" style= "overflow:scroll; max-height: 400px; width: 800px">
                                     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                                     <%--    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                         <ContentTemplate>--%>
@@ -331,7 +312,7 @@
                                         BorderStyle="None"
                                         OnRowDataBound="gridView1_RowDataBound"
                                         AutoGenerateColumns="False"
-                                        ShowHeader="False">
+                                        ShowHeader="False" >
                                         <Columns>
                                             <asp:TemplateField ItemStyle-CssClass="form-check-label">
                                                 <ItemTemplate>

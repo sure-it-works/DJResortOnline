@@ -54,10 +54,6 @@ namespace DJResortOnline
                     description = row["DealsDescription"].ToString();
 
 
-
-                    
-
-
                     DirectoryInfo dir = new DirectoryInfo(folderPath);
                     FileInfo[] imageFiles = dir.GetFiles("*.jpg");
                     datas.Add(new Data
@@ -87,50 +83,6 @@ namespace DJResortOnline
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
 
-        private void LoadDeals()
-        {
-            SqlConnection myConnection = new SqlConnection(GetConnectionString());
-            SqlCommand cmd = new SqlCommand("Get_Deals", myConnection);
-            {
-                myConnection.Open();
-                cmd.CommandType = CommandType.StoredProcedure;
-
-
-                var result = cmd.ExecuteNonQuery();
-                //myConnection.Close();
-
-
-                DataTable dtList = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(dtList);
-
-                string names = "";
-                string img = "";
-                string path = "~\\image\\Deals\\";
-                string folderPath = HttpContext.Current.Server.MapPath(path);
-                List<Object> listObj = new List<Object>();
-                foreach (DataRow row in dtList.Rows)
-                {
-
-                    names = row["DealsName"].ToString();
-                    img = row["ImageLink"].ToString();
-                }
-                    List<Data> datas = new List<Data>();
-
-               
-                DirectoryInfo dir = new DirectoryInfo(folderPath);
-                FileInfo[] imageFiles = dir.GetFiles("*.jpg");
-                    datas.Add(new Data
-                    {
-                        Name = names,
-
-                        Image = $"image/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(img)).FirstOrDefault().ToString()}"
-                    });
-                }
-
-           
-        }
 
         }
 

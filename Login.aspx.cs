@@ -63,22 +63,6 @@ namespace DJResortOnline
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //using (SqlConnection conn = new SqlConnection(strcon))
-            //{
-            //    SqlCommand command = new SqlCommand("Select id from [table1] where name=@zip", con);
-            //    command.Parameters.AddWithValue("@zip", "india");
-            //    // int result = command.ExecuteNonQuery();
-            //    using (SqlDataReader reader = command.ExecuteReader())
-            //    {
-            //        if (reader.Read())
-            //        {
-            //            Console.WriteLine(String.Format("{0}", reader["id"]));
-            //        }
-            //    }
-
-            //    conn.Close();
-            //}
-
             AuthorizeLogin();
         }
     }

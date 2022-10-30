@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>DJ Resort | Homepage</title>
+    <title>DJ Resort | Add Healt Declaration</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <h1><a href="Deals.aspx">DJ</a></h1>
+                    <h1><a href="Deal.aspx">DJ RESORT</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>

@@ -82,7 +82,14 @@ namespace DJResortOnline
 
         protected void ReplyButtonClicked(object sender, EventArgs e)
         {
-            lblTo.Text = lblEmail.Text;
+            if(lblEmail.Text == "djresort.quezon@gmail.com")
+            {
+                lblTo.Text = lblSubject.Text;
+            }
+            else
+            {
+                lblTo.Text = lblEmail.Text;
+            }
 
             ModalPopupExtender1.Hide();
             ModalPopupExtender2.Show();
@@ -115,6 +122,12 @@ namespace DJResortOnline
 
             BindMailsToGrid(filteredMails);
 
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+            var mails = GetMails();
+            BindMailsToGrid(mails);
         }
     }
 }

@@ -277,8 +277,8 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Save" />
-                        <button type="button" class="btn btn-default" style="float: right">Back to Deals</button>
+                        <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Save" OnClick="btnAdd_Click"/>
+                        <asp:Button ID="btnBack" CssClass="btn btn-success" runat="server" Text="Back to Deals" OnClick="btnBack_Click"/>
                     </div>
                     <!-- /.card-footer -->
             </div>

@@ -24,6 +24,91 @@ namespace DJResortOnline
             return ConfigurationManager.ConnectionStrings["DJConnections"].ConnectionString;
         }
 
+        public bool saveReport(bool success)
+        {
+
+            try
+            {
+
+                DataSet ds = new DataSet();
+                bool valid = true;
+
+
+                string path = "~\\image\\Deals\\";
+                string folderPath = HttpContext.Current.Server.MapPath(path);
+
+
+                //Check whether Directory (Folder) exists.
+                if (!Directory.Exists(folderPath))
+                {
+                    //If Directory (Folder) does not exists. Create it.
+
+                    Directory.CreateDirectory(folderPath);
+                    if (Addimage.HasFile)
+                    {
+                        if(File.Exists(@Path.Combine(folderPath, Addimage.FileName)))
+                        {
+                            Response.Write("<script>alert('Filename Already Exists! Please change your filename!');</script>");
+                            valid = false;
+                        }
+                        else
+                        {
+                            Addimage.SaveAs(Path.Combine(folderPath, Addimage.FileName));
+                            valid = true;
+                        }
+                    }
+                    else
+                    {
+
+                        Response.Write("<script>alert('Add some attachment/s!');</script>");
+                        Response.Write("<script>alert('Deals not saved!');</script>");
+                        valid = false;
+                    }
+
+                }
+                else
+                {
+                    if (Addimage.HasFile)
+                    {
+                        if (File.Exists(@Path.Combine(folderPath, Addimage.FileName)))
+                        {
+                            Response.Write("<script>alert('Filename Already Exists! Please change your filename!');</script>");
+                            valid = false;
+                        }
+                        else
+                        {
+                            Addimage.SaveAs(Path.Combine(folderPath, Addimage.FileName));
+                            valid = true;
+                        }
+                    }
+                    else
+                    {
+
+                        Response.Write("<script>alert('Add some attachment/s!');</script>");
+                        Response.Write("<script>alert('Deals not saved!');</script>");
+                        valid = false;
+                    }
+                }
+
+
+
+                if (valid)
+                {
+                    addDeal();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Deal not updated!');</script>");
+                    success = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return success;
+        }
+
         private void addDeal()
         {
             SqlConnection myConnection = new SqlConnection(GetConnectionString());
@@ -49,7 +134,32 @@ namespace DJResortOnline
             }
 
             Response.Write("<script language=javascript>alert('Done Adding Deals!');</script>");
-            
+
+        }
+        
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (saveReport(true))
+            {
+                clearFrom();
+                Response.Redirect("PriceList.aspx");
+            }
+        }
+
+        private void clearFrom()
+        {
+            addDealsName.Value = "";
+            AddTxtDescription.Value = "";
+            AddPrice.Value = "";
+            AddAdultsNo.Value = "";
+            AddKidsNo.Value = "";
+            addImgLink.Text = "";
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PriceList.aspx");
         }
     }
 }

@@ -19,7 +19,8 @@ namespace DJResortOnline
             {
 
                 ddlDeals_Bind();
-                
+                txtCheckIn.Value = DateTime.Now.ToString("yyyy-MM-dd");
+                txtCheckOut.Value = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 
