@@ -113,7 +113,6 @@ namespace DJResortOnline
                             txtNameEdit.Value = dt.Rows[0]["Name"].ToString();
                             txtEmailEdit.Value = dt.Rows[0]["Email"].ToString();
                             txtContactEdit.Value = dt.Rows[0]["ContactNumber"].ToString();
-                            //txtContactEdit.Value = dt.Rows[0]["ContactNo"].ToString();
                             ddlEditDeals.SelectedItem.Text = dt.Rows[0]["Deals"].ToString();
                             txtCheckInEdit.Value = dt.Rows[0]["CheckIn"].ToString();
                             txtCheckOutEdit.Value = dt.Rows[0]["CheckOut"].ToString();
@@ -122,6 +121,7 @@ namespace DJResortOnline
                             txtTotalEdit.Value = dt.Rows[0]["TotalPayment"].ToString();
                             txtReservationEdit.Value = dt.Rows[0]["ReservationFee"].ToString();
                             txtNotesEdit.Value = dt.Rows[0]["Notes"].ToString();
+                            txtID.Value = dt.Rows[0]["ReservationID"].ToString();
 
 
                             int balance = Convert.ToInt32(dt.Rows[0]["TotalPayment"].ToString()) - Convert.ToInt32(dt.Rows[0]["ReservationFee"].ToString());
@@ -165,7 +165,8 @@ namespace DJResortOnline
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 
-                cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
+                //cmd.Parameters.Add("@TransactionNo", SqlDbType.NVarChar, 50).Value = lblTransactionNoEdit.Text;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(txtID.Value);
 
                 // open connection, call stored procedure, close connection
 
@@ -203,5 +204,11 @@ namespace DJResortOnline
             }
         }
 
+        protected void gvNewReservation_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            BindGrid();
+            gvNewReservation.PageIndex = e.NewPageIndex;
+            gvNewReservation.DataBind();
+        }
     }
 }

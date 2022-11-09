@@ -216,7 +216,7 @@
 
                             <asp:GridView ID="gvNewReservation" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvNewReservation_RowCommand">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvNewReservation_RowCommand" OnPageIndexChanging="gvNewReservation_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>
@@ -382,6 +382,10 @@
                                 <div class="form-group">
                                     <label>Note</label>
                                     <textarea id="txtNotesEdit" class="form-control" rows="4" runat="server" disabled="disabled"></textarea>
+                                </div>
+
+                                 <div class="form-group">
+                                   <input runat="server" type="text" id="txtID" class="form-control" disabled="disabled" visble="false"/>
                                 </div>
 
                             </div>

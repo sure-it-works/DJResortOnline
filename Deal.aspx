@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Deal.aspx.cs" Inherits="DJResortOnline.Deal" %>
+﻿<%@ Page Language="C#" Debug="true" AutoEventWireup="true" CodeBehind="Deal.aspx.cs" Inherits="DJResortOnline.Deal" %>
 
 <!DOCTYPE html>
 
@@ -30,13 +30,27 @@
     <!-- Template Main CSS File -->
     <link href="Deal.css" rel="stylesheet">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR5BJJ2ZBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PR5BJJ2ZBN');
+    </script>
+
     <style>
-        .container{
-            display: flex
+        /* .container{
+            display:flow
         }
 
         .card{
-            margin: 5px
+            margin: 10px
+        }*/
+
+        .card-hover {
+            box-shadow: -1px 9px 40px -12px #808080;
         }
     </style>
 </head>
@@ -72,33 +86,36 @@
 
         <!-- ======= Hero Section ======= -->
         <section id="hero" class="d-flex align-items-center">
-             <div class="container">
-            <div class="row">
-                <div class="col-lg-12 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content">
-                    <h1 data-aos="fade-up">Spend your time with your family and friends in fun and  affordable way!</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content">
+                        <h1 data-aos="fade-up">Spend your time with your family and friends in fun and  affordable way!</h1>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
         <!-- End Hero -->
 
         <main id="main">
 
-            <div class="container">
-            <asp:Repeater ID="Repeater1" runat="server">
-                <ItemTemplate>
-                    <div class="card" style="width: 18rem;">
-                        <img src="<%#Eval("Image")%>" class="card-img-top" >
-                        <div class="card-body">
-                            <h4 class="card-title"><%#Eval("Name")%></h4>
-                            <strong><h5 class="card-title">PHP&nbsp;<%#Eval("Price")%></h5></strong>
-                            <p class="card-text"><%#Eval("Description")%></p>
-                            <%--<a href="#" class="btn btn-primary">View More</a>--%>
+            <div class="row">
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                         <%--<div class="card" style="width: 20rem;">--%>
+                        <div class="card" style="width: 20em; margin: 10px;">
+                            <img src="<%#Eval("Image")%>" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title"><%#Eval("Name")%></h4>
+                                <strong>
+                                    <h5 class="card-title">PHP&nbsp;<%#Eval("Price")%></h5>
+                                </strong>
+                                <p class="card-text"><%#Eval("Description")%></p>
+                                <%--<a href="#" class="btn btn-primary">View More</a>--%>
+                            </div>
                         </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
 
         </main>
         <!-- End #main -->
@@ -137,6 +154,24 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+        <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+            $('.card').hover(
+                function () {
+                    $(this).animate({
+                        marginTop: "-=1%",
+                        marginBottom: "+=1%"
+                    }, 200)
+                },
+                function () {
+                    $(this).animate({
+                        marginTop: "+=1%",
+                        marginBottom: "-=1%"
+                    })
+                }
+            )
+        </script>
     </form>
 </body>
 </html>

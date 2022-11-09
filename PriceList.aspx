@@ -208,7 +208,7 @@
 
                             <asp:GridView ID="gvDeals" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvDeals_RowCommand">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvDeals_RowCommand" OnPageIndexChanging="gvDeals_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>

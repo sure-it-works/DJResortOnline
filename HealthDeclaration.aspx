@@ -216,7 +216,7 @@
 
                             <asp:GridView ID="gvHealthDec" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvNewReservation_RowCommand" OnRowDataBound="gvHealthDec_RowDataBound">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvNewReservation_RowCommand" OnRowDataBound="gvHealthDec_RowDataBound" OnPageIndexChanging="gvHealthDec_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>

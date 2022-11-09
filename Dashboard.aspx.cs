@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Globalization;
+
+
 
 namespace DJResortOnline
 {
@@ -18,6 +21,7 @@ namespace DJResortOnline
             {
                 ShowClientsCount();
                 ShowAvailableRooms();
+                GetClientsCountWk();
             }
         }
 
@@ -46,6 +50,27 @@ namespace DJResortOnline
                 }
             }
 
+        }
+
+        private void GetClientsCountWk()
+
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Get_ClientsCountWeek", myConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            myConnection.Open();
+
+            using (SqlDataAdapter sda = new SqlDataAdapter())
+            {
+                cmd.Connection = myConnection;
+                sda.SelectCommand = cmd;
+
+                using (DataSet dt = new DataSet())
+                {
+                    sda.Fill(dt);
+                    Chart1.DataSource = dt;
+                }
+            }
         }
 
         private void ShowAvailableRooms()

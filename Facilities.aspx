@@ -28,23 +28,34 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="Facilities.css" rel="stylesheet"/>
+    <link href="Facilities.css" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR5BJJ2ZBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PR5BJJ2ZBN');
+    </script>
+
 </head>
 <body>
-     <form runat="server">
+    <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
 
-         <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
 
-            <div class="logo">
-                <h1><a href="Deal.aspx">DJ RESORT</a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-            </div>
+                <div class="logo">
+                    <h1><a href="Deal.aspx">DJ RESORT</a></h1>
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                </div>
 
-           <nav id="navbar" class="navbar">
+                <nav id="navbar" class="navbar">
                     <ul>
                         <li><a class="nav-link scrollto" href="Front.aspx">Home</a></li>
                         <li><a class="nav-link scrollto" href="Front.aspx#about">About</a></li>
@@ -55,18 +66,18 @@
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
-            <!-- .navbar -->
+                <!-- .navbar -->
 
-        </div>
-    </header>
-    <!-- End Header -->
+            </div>
+        </header>
+        <!-- End Header -->
 
-           <!-- ======= Hero Section ======= -->
+        <!-- ======= Hero Section ======= -->
         <section id="hero" class="d-flex align-items-center">
             <div class="container">
                 <div class="video-box d-flex justify-content-center align-items-stretch position-relative">
-            <a href="image/Facilities/0Unofficial Video.mp4" class="glightbox play-btn mb-4"></a>
-          </div>
+                    <a href="image/Facilities/0Unofficial Video.mp4" class="glightbox play-btn mb-4"></a>
+                </div>
             </div>
         </section>
         <!-- End Hero -->
@@ -74,76 +85,76 @@
         <main id="main">
 
             <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio" style="padding: 20px;">
-            <div class="container">
+            <section id="portfolio" class="portfolio" style="padding: 20px;">
+                <div class="container">
 
-                <div class="section-title" data-aos="fade-up">
-          <h2>Ameneties and Facilities</h2>
-        </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-
-                    <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="image/Facilities/1Canteen.bmp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Canteen</h4>
-                                <p>Canteen Description</p>
-                                <div class="portfolio-links">
-                                    <a href="image/Facilities/1Canteen.bmp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                  
-                                </div>
-                            </div>
-                        </div>
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Ameneties and Facilities</h2>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="image/Facilities/2Standee.JPG" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Standee</h4>
-                                <p>Standee Description</p>
-                                <div class="portfolio-links">
-                                    <a href="image/Facilities/2Standee.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
 
-                    <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="image/Facilities/3Garden.JPG" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Garden</h4>
-                                <p>Garden Description</p>
-                                <div class="portfolio-links">
-                                    <a href="image/Facilities/3Garden.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="image/Facilities/1Canteen.bmp" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>Canteen</h4>
+                                    <p>Canteen Description</p>
+                                    <div class="portfolio-links">
+                                        <a href="image/Facilities/1Canteen.bmp" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
 
-                    <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="image/Facilities/5Comfort Room.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Comfort Room</h4>
-                                <p>Comfort Room Description</p>
-                                <div class="portfolio-links">
-                                    <a href="image/Facilities/5Comfort Room.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
-                                  
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="image/Facilities/2Standee.JPG" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>Standee</h4>
+                                    <p>Standee Description</p>
+                                    <div class="portfolio-links">
+                                        <a href="image/Facilities/2Standee.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="image/Facilities/3Garden.JPG" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>Garden</h4>
+                                    <p>Garden Description</p>
+                                    <div class="portfolio-links">
+                                        <a href="image/Facilities/3Garden.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="image/Facilities/5Comfort Room.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>Comfort Room</h4>
+                                    <p>Comfort Room Description</p>
+                                    <div class="portfolio-links">
+                                        <a href="image/Facilities/5Comfort Room.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
-
-            </div>
-        </section>
-        <!-- End Portfolio Section -->
+            </section>
+            <!-- End Portfolio Section -->
 
         </main>
         <!-- End #main -->

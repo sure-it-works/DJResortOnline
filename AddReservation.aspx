@@ -34,8 +34,16 @@
 
     <script type="text/javascript" src="Content/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-      
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR5BJJ2ZBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PR5BJJ2ZBN');
+    </script>
 
 </head>
 
@@ -209,9 +217,6 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">SCAN THIS GCASH QR CODE FOR PAYMENT</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
 
                         <div class="modal-body" style="align-content: center">
@@ -225,6 +230,9 @@
                                 <label>We only accept payment through GCASH!</label>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right">Close</button>
+                            </div>
                     </div>
                     <!-- /.modal-content -->
                 </div>
@@ -273,11 +281,11 @@
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
 
-        <%--        <script type='text/javascript'>
+                <script type='text/javascript'>
             function openModal() {
                 $('[id*=modalQR]').modal('show');
             }
-        </script>--%>
+        </script>
 
         <!-- jQuery UI 1.11.4 -->
         <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -288,33 +296,7 @@
         <!-- Bootstrap 4 -->
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-           <%-- Disable Check in Past Dates--%>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript">
-             
-        </script>
-        <script type="text/javascript">
-            var maxDate = year + '-' + month + '-' + day;
-            alert(maxDate);
-            $('#txtCheckIn').attr('min', maxDate);
-
-
-            $(function () {
-                var dtToday = new Date();
-
-                var month = dtToday.getMonth() + 1;
-                var day = dtToday.getDate();
-                var year = dtToday.getFullYear();
-                if (month < 10)
-                    month = '0' + month.toString();
-                if (day < 10)
-                    day = '0' + day.toString();
-
-                var maxDate = year + '-' + month + '-' + day;
-
-                alert(maxDate);
-                $('#txtCheckIn').attr('min', maxDate);
-            });
-        </script>
+       
     </form>
 </body>
 </html>

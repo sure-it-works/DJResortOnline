@@ -189,6 +189,11 @@
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
+                                     <li class="breadcrumb-item">
+                                        <div class="input-group mb-3">  
+                                            <asp:DropDownList ID="ddlCheckIn" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddlCheckIn_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                        </div>
+                                    </li>
                                     <li class="breadcrumb-item">
                                         <div class="input-group mb-3">  
                                             <input type="text" class="form-control rounded-40" id="txtSearch" runat="server"/>
@@ -436,7 +441,7 @@
             $.widget.bridge('uibutton', $.ui.button)
         </script>
         <!-- Bootstrap 4 -->
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- ChartJS -->
         <script src="plugins/chart.js/Chart.min.js"></script>
         <!-- Sparkline -->
@@ -446,11 +451,8 @@
         <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
         <!-- jQuery Knob Chart -->
         <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-        <!-- daterangepicker -->
-        <%--<script src="plugins/moment/moment.min.js"></script>
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
-        <!-- Tempusdominus Bootstrap 4 -->
-        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+       
+        <script src="assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
         <!-- Summernote -->
         <script src="plugins/summernote/summernote-bs4.min.js"></script>
         <!-- overlayScrollbars -->
@@ -459,34 +461,7 @@
         <script src="dist/js/adminlte.js"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="dist/js/demo.js"></script>
-        <%--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="dist/js/pages/dashboard.js"></script>--%>
-
-
-
-        <!-- date-range-picker -->
-        <%--<script src="plugins/daterangepicker/daterangepicker.js"></script>--%>
-
-        <%--<script>
-            $(function () {
-                //Date range picker
-                $('#reservationdate').datetimepicker({
-                    format: 'L'
-                });
-
-                //Date range picker
-                $('#reservation').daterangepicker()
-                //Date range picker with time picker
-                $('#reservationtime').daterangepicker({
-                    timePicker: true,
-                    timePickerIncrement: 30,
-                    locale: {
-                        format: 'MM/DD/YYYY hh:mm A'
-                    }
-                })
-
-            })
-        </script>--%>
+ 
 
 
 
@@ -496,25 +471,7 @@
             }
         </script>
 
-        <script type='text/javascript'>
-            jQuery(document).ready(function () {
-                var myChart;
-                var a;
-                var checkin = $("#txtCheckIn");
-                var checkout = $("#txtCheckOut");
-
-                //Makes txtDateFrom a datepicker
-                checkin.flatpickr({
-                    dateFormat: "m-d-Y",
-                    theme: "dark"
-                });
-                //Makes txtDateTo a datepicker
-                checkout.flatpickr({
-                    dateFormat: "m-d-Y",
-                    theme: "dark"
-                });
-            }
-        </script>
+       
     </form>
 
 </body>

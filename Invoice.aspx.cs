@@ -9,6 +9,7 @@ using iTextSharp.text;
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
 using System.Web;
+using ListItem = System.Web.UI.WebControls.ListItem;
 
 namespace DJResortOnline
 {
@@ -19,6 +20,9 @@ namespace DJResortOnline
             if (!this.IsPostBack)
             {
                 BindGrid();
+                checkInDrpDwn();
+
+
             }
         }
 
@@ -122,14 +126,99 @@ namespace DJResortOnline
 
         protected void gvInvoice_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            BindGrid();
             gvInvoice.PageIndex = e.NewPageIndex;
-            this.BindGrid();
+            gvInvoice.DataBind();
         }
 
         public override void VerifyRenderingInServerForm(Control control)
         {
             //required to avoid the runtime error "  
             //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."  
+        }
+
+       
+
+        private void checkInDrpDwn()
+        {
+            try
+            {
+
+                SqlConnection myConnection = new SqlConnection(GetConnectionString());
+                SqlCommand cmd = new SqlCommand("Get_InvoiceCheckIn", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                myConnection.Open();
+
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmd.Connection = myConnection;
+                    sda.SelectCommand = cmd;
+                    using (DataSet dt = new DataSet())
+                    {
+                        sda.Fill(dt);
+
+                       
+                        
+                        ListItem list = new ListItem();
+                        list.Text = "PLEASE SELECT";
+
+                       
+
+                        ddlCheckIn.DataSource = dt.Tables[0];
+                        ddlCheckIn.DataTextField = "CheckIn";
+                        ddlCheckIn.DataValueField = "CheckIn";
+                        ddlCheckIn.DataBind();
+                        ddlCheckIn.Items.Insert(0, list);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
+
+        protected void ddlCheckIn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand("Filter_InvoiceCheckIn", myConnection);
+            {
+                myConnection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cmd.Parameters.Add("@CheckIn", SqlDbType.NVarChar, int.MaxValue).Value = ddlCheckIn.SelectedItem.Text;
+
+                // open connection, call stored procedure, close connection
+                if (ddlCheckIn.SelectedItem.Text == "PLEASE SELECT")
+                {
+                    BindGrid();
+                }
+                else
+                {
+
+
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = myConnection;
+                        sda.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            gvInvoice.DataSource = dt;
+                            gvInvoice.DataBind();
+                        }
+                    }
+
+                    var result = cmd.ExecuteNonQuery();
+                    myConnection.Close();
+
+                }
+            }
         }
     }
 }

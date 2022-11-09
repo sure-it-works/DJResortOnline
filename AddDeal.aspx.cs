@@ -54,6 +54,7 @@ namespace DJResortOnline
                         else
                         {
                             Addimage.SaveAs(Path.Combine(folderPath, Addimage.FileName));
+                            addImgLink.Text = Addimage.FileName;
                             valid = true;
                         }
                     }
@@ -78,6 +79,7 @@ namespace DJResortOnline
                         else
                         {
                             Addimage.SaveAs(Path.Combine(folderPath, Addimage.FileName));
+                            addImgLink.Text = Addimage.FileName;
                             valid = true;
                         }
                     }

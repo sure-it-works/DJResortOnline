@@ -29,7 +29,18 @@
 
     <!-- Template Main CSS File -->
     <link href="Gallery/assets/css/style.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR5BJJ2ZBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PR5BJJ2ZBN');
+    </script>
 </head>
+
 
 <body>
     <form runat="server">
@@ -65,7 +76,7 @@
         <!-- ======= Hero Section ======= -->
         <section id="hero" class="d-flex align-items-center">
             <div class="container">
-                <h1>Welcome to DJ</h1>
+                <h1>Welcome to DJ RESORT</h1>
                 <h2>Spend your time with your family and friends in fun and  affordable way!</h2>
                 <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
@@ -216,11 +227,11 @@
                         <p></p>
                     </div>
                     <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="7" disabled="disabled">To ensure health and safety of our staff in DJ Resort monitoring of the declaration of health is necessary. We kindly ask everyone to complete the form completely and honestly. Make certain that the data is correct and comprehensive. If you have any of the COVID-19 symptoms, please seek emergency medical assistance. Health declaration form is given after your reservation and make sure  to fiill up the form that we provided before going to the Resort.</textarea>
+                        <textarea class="form-control" name="message" rows="7" disabled="disabled" style="border-block-color: white; background-color: white">To ensure health and safety of our staff in DJ Resort monitoring of the declaration of health is necessary. We kindly ask everyone to complete the form completely and honestly. Make certain that the data is correct and comprehensive. If you have any of the COVID-19 symptoms, please seek emergency medical assistance. Health declaration form is given after your reservation and make sure  to fiill up the form that we provided before going to the Resort.</textarea>
                     </div>
                     <br />
                     <div class="text-center">
-                        <asp:Button runat="server" Text="Add Health Declaration" ID="btnAddHealthDec" class="btn btn-primary" OnClick="btnAddHealthDec_Click" />
+                        <asp:Button runat="server" Text="Add Health Declaration" ID="btnAddHealthDec" class="btn btn-primary" OnClick="btnAddHealthDec_Click" CausesValidation="false"/>
                     </div>
                 </div>
             </section>
@@ -266,7 +277,7 @@
             </section>
             <!-- End Services Section -->
 
-            
+
 
             <!-- ======= Announcement Section ======= -->
             <section id="appointment" class="appointment section-bg">
@@ -280,7 +291,7 @@
                     <form role="form" class="php-email-form">
 
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="7" placeholder="No  Announcement for today! :)" disabled="disabled" runat="server" id="txtAnnouncement"></textarea>
+                            <textarea class="form-control" name="message" rows="7" placeholder="No  Announcement for today! :)" disabled="disabled" runat="server" id="txtAnnouncement" style="border-block-color: white; background-color: white"></textarea>
                         </div>
 
                     </form>
@@ -336,17 +347,17 @@
 
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control"  placeholder="Your Name" required="required" runat="server" id="txtName">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"  runat="server" id="txtName">
                                 </div>
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <input type="email" class="form-control"  placeholder="Your Email" required="required" runat="server" id="txtEmail">
+                                    <input type="email" class="form-control" placeholder="Your Email"  runat="server" id="txtEmail">
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control"   placeholder="Subject" required="required" runat="server" id="txtEmailSubject">
+                                <input type="text" class="form-control" placeholder="Subject"  runat="server" id="txtEmailSubject">
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required="required" runat="server" id="txtEmailBody"></textarea>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"  runat="server" id="txtEmailBody"></textarea>
                             </div>
                             <br />
                             <div class="text-center">

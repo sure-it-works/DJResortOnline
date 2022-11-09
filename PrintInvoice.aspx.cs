@@ -59,7 +59,9 @@ namespace DJResortOnline
             myConnection.Open();
 
             string url = Request.Url.AbsoluteUri;
-            string ResID = url.Substring(url.Length - 1);
+            string ResID = url.Substring(url.IndexOf("=") + 1).Trim();
+
+            //string ResID = url.Substring(url.Length - 1);
 
             cmd.Parameters.Add("@ReservationID", SqlDbType.Int).Value = Convert.ToInt32(ResID);
 

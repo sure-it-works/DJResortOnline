@@ -219,7 +219,7 @@
 
                             <asp:GridView ID="gvReservation" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" OnRowCommand="gvReservation_OnRowCommand">
+                                PageSize="10" GridLines="None" OnRowCommand="gvReservation_OnRowCommand" OnPageIndexChanging="gvReservation_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID">
                                         <ItemTemplate>

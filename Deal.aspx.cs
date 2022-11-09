@@ -42,6 +42,7 @@ namespace DJResortOnline
                 int price = 0;
                 string description = "";
                 string path = "~\\image\\Deals\\";
+                string domainpath = "~\\djhosting\\image\\Deals\\";
                 string folderPath = HttpContext.Current.Server.MapPath(path);
                 List<Object> listObj = new List<Object>();
                 datas = new List<Data>();
@@ -55,12 +56,14 @@ namespace DJResortOnline
 
 
                     DirectoryInfo dir = new DirectoryInfo(folderPath);
+                    //DirectoryInfo dir = new DirectoryInfo(domainpath);
                     FileInfo[] imageFiles = dir.GetFiles("*.jpg");
                     datas.Add(new Data
                     {
                         Name = row["DealsName"].ToString(),
 
                         Image = $"image/Deals/{imageFiles.AsEnumerable().Where(file => file.ToString().Contains(row["ImageLink"].ToString())).FirstOrDefault().ToString()}",
+                        //Image = folderPath + row["ImageLink"].ToString(),
 
                         Price = Convert.ToInt32(row["Price"]),
 

@@ -321,7 +321,7 @@
                         <div class="card-body p-0">
                             <asp:GridView ID="gvFeedbacks" runat="server" class="table table-striped projects"
                                 AutoGenerateColumns="false" AllowPaging="true"
-                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvFeedbacks_RowCommand">
+                                PageSize="10" GridLines="None" EditRowStyle-VerticalAlign="Middle" OnRowCommand="gvFeedbacks_RowCommand" OnPageIndexChanging="gvFeedbacks_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="1%">
                                         <ItemTemplate>

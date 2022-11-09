@@ -248,7 +248,12 @@ namespace DJResortOnline
             }
         }
 
-
+        protected void gvReservation_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            BindGrid();
+            gvReservation.PageIndex = e.NewPageIndex;
+            gvReservation.DataBind();
+        }
     }
 
 }
